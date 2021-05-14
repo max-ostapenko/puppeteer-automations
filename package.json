@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@sendgrid/mail": "^7.4.4",
+    "puppeteer": "^9.1.1"
+  },
+  "scripts": {
+    "berlin_termin_scrape": "node ./src/berlin_de/index",
+    "mb_model_overview": "node ./src/mercedes_benz_/tag_manager_tests/model_overview"
+  }
+}
