@@ -2,7 +2,7 @@ const puppeteer = require('puppeteer');
 const fs = require('fs');
 const https = require('https');
 
-const browserURL = 'http://127.0.0.1:21222';
+const browserURL = 'http://localhost:9222';
 const confluence_host = 'confluence.eu.company.com';
 const user_list_path = '/dopeopledirectorysearch.action?startIndex=';
 const user_page_path = '/rest/cup/1.0/profile/';

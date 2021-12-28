@@ -1,6 +1,6 @@
 # Parse list of users from confluence
 
-Puppeteer is configured forto connect to use an installed local browser application.
+Puppeteer is configured to connect to an installed local browser application.
 
 We'll need to shut down Google Chrome application completely on the machine, and do the following steps:
 
