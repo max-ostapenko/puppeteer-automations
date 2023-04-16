@@ -10,45 +10,21 @@ const launchChrome = async () => {
     '--lang=en-US,en',
   ];
 
+  // let browserURL = 'ws://127.0.0.1:9222/devtools/browser/d439787d-6143-40ea-b6d2-c53fd9131583';
   let chrome;
   try {
     chrome = await puppeteer.launch({
-      headless: true,
+      headless: false,
       devtools: false,
       ignoreHTTPSErrors: true,
       args,
       ignoreDefaultArgs: ['--disable-extensions'],
+      // browserWSEndpoint: browserURL,
     });
+    return chrome;
   } catch (e) {
     console.error('Unable to launch chrome', e);
-
-    return [() => {}, () => {}];
   }
-
-  const exitChrome = async () => {
-    if (!chrome) return;
-    try {
-      await chrome.close();
-    } catch (e) {}
-  };
-
-  const newPage = async () => {
-    try {
-      const page = await chrome.newPage();
-      const closePage = async () => {
-        if (!page) return;
-        try {
-          await page.close();
-        } catch (e) {}
-      };
-      return [page, closePage];
-    } catch (e) {
-      console.error('Unable to create a new page');
-      return [];
-    }
-  };
-
-  return [newPage, exitChrome];
 };
 
 module.exports = {launchChrome};

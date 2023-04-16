@@ -2,18 +2,12 @@
 
 Some interesting browser automation use-cases implemented
 
-## mercedes-benz
+## Puppeteer hints
 
-Analytics end-to-end tests implementation.
-
-```bash
-npm run mb_model_overview
-```
-
-## Berlin.de termin
+Run a Puppeteer on an interactive browser window:
 
 ```bash
-echo "export SENDGRID_API_KEY='YOUR_API_KEY'" > sendgrid.env
-source ./sendgrid.env
-npm run berlin_termin_scrape
+/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222
 ```
+
+and copy the websocket URL shown and change it [here](https://github.com/max-ostapenko/puppeteer-automations/blob/331004d45a14025c083df4319c4d39114add0a1c/src/funcs/browser.js#L13).
