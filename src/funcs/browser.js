@@ -1,4 +1,4 @@
-const launchChrome = async () => {
+const launchBrowser = async () => {
   const puppeteer = require('puppeteer');
 
   const args = [
@@ -11,9 +11,9 @@ const launchChrome = async () => {
   ];
 
   // let browserURL = 'ws://127.0.0.1:9222/devtools/browser/d439787d-6143-40ea-b6d2-c53fd9131583';
-  let chrome;
+  let browser;
   try {
-    chrome = await puppeteer.launch({
+    browser = await puppeteer.launch({
       headless: false,
       devtools: false,
       ignoreHTTPSErrors: true,
@@ -21,10 +21,10 @@ const launchChrome = async () => {
       ignoreDefaultArgs: ['--disable-extensions'],
       // browserWSEndpoint: browserURL,
     });
-    return chrome;
+    return browser;
   } catch (e) {
-    console.error('Unable to launch chrome', e);
+    console.error('Unable to launch browser', e);
   }
 };
 
-module.exports = {launchChrome};
+module.exports = {launchBrowser};

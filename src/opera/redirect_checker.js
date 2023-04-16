@@ -1,20 +1,18 @@
 const puppeteer = require('puppeteer');
-const commandLineArgs = require('command-line-args');
 
-const optionDefinitions = [
-    { name: 'clickURL', alias: 'c', type: String },
+const links = [
+    'http://www.goo.gle',
+    'http://www.bit.ly'
 ];
-const options = commandLineArgs(optionDefinitions);
-
 
 (async () => {
     const browser = await puppeteer.launch({});
-    const context = await browser.createIncognitoBrowserContext();
-    const page = await context.newPage();
-    const navigationPromise = page.waitForNavigation();
-    await page.goto(options.clickURL);
-    await navigationPromise;
+    const page = (await browser.pages())[0];
 
-    console.log(await page.evaluate(() => document.location.host));
+    for (link of links) {
+        await page.goto(link, { waitUntil: 'networkidle0', timeout: 30000 });
+        console.log(await page.evaluate(() => document.location));
+    }
+
     await browser.close();
 })()
