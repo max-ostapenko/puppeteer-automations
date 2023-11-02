@@ -1,4 +1,4 @@
-const launchChrome = async () => {
+const launchBrowser = async () => {
   const puppeteer = require('puppeteer');
 
   const args = [
@@ -10,45 +10,21 @@ const launchChrome = async () => {
     '--lang=en-US,en',
   ];
 
-  let chrome;
+  // let browserURL = 'ws://127.0.0.1:9222/devtools/browser/d439787d-6143-40ea-b6d2-c53fd9131583';
+  let browser;
   try {
-    chrome = await puppeteer.launch({
-      headless: true,
+    browser = await puppeteer.launch({
+      headless: false,
       devtools: false,
       ignoreHTTPSErrors: true,
       args,
       ignoreDefaultArgs: ['--disable-extensions'],
+      // browserWSEndpoint: browserURL,
     });
+    return browser;
   } catch (e) {
-    console.error('Unable to launch chrome', e);
-
-    return [() => {}, () => {}];
+    console.error('Unable to launch browser', e);
   }
-
-  const exitChrome = async () => {
-    if (!chrome) return;
-    try {
-      await chrome.close();
-    } catch (e) {}
-  };
-
-  const newPage = async () => {
-    try {
-      const page = await chrome.newPage();
-      const closePage = async () => {
-        if (!page) return;
-        try {
-          await page.close();
-        } catch (e) {}
-      };
-      return [page, closePage];
-    } catch (e) {
-      console.error('Unable to create a new page');
-      return [];
-    }
-  };
-
-  return [newPage, exitChrome];
 };
 
-module.exports = {launchChrome};
+module.exports = {launchBrowser};

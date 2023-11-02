@@ -1,11 +1,15 @@
 {
   "dependencies": {
-    "@sendgrid/mail": "^7.6.0",
-    "command-line-args": "^5.2.1",
+    "@sendgrid/mail": ">=7.6.0",
+    "command-line-args": ">=5.2.1",
     "puppeteer": "^13.3.0"
   },
+  "devDependencies": {
+    "dotenv": ">=16.0.3"
+  },
   "scripts": {
-    "berlin_termin_scrape": "node ./src/berlin_de/index",
-    "mb_model_overview": "node ./src/mercedes_benz_/tag_manager_tests/model_overview"
+    "berlin": "node ./src/berlin_de/index",
+    "mb": "node ./src/mercedes_benz_/tag_manager_tests/model_overview",
+    "similar": "node ./src/similarweb/top_verticals"
   }
 }
