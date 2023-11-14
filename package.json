@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "@sendgrid/mail": ">=7.6.0",
+    "@sendgrid/mail": "^7.6.1",
     "command-line-args": ">=5.2.1",
     "puppeteer": "^13.3.0"
   },
