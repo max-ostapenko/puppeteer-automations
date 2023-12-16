@@ -3,7 +3,7 @@
     "@sendgrid/mail": "^8.0.0",
     "axios": "^1.6.2",
     "command-line-args": ">=5.2.1",
-    "puppeteer": "^19.7.3"
+    "puppeteer": "^19.11.1"
   },
   "devDependencies": {
     "dotenv": ">=16.0.3"
