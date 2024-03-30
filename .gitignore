@@ -2,3 +2,4 @@ node_modules/
 *.env
 src/confluence/confluence_users.js
 package-lock.json
+.DS_Store
