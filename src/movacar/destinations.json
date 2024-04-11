@@ -1,284 +1,150 @@
 {
-    "Hamburg": {
-        "Erfurt": {
-            "url": "https://movacar.com/mietwagen/Hamburg/Erfurt/",
-            "products": [
-                {
-                    "description": "Pickup from 28.03. to 03.04. 09PM / Max. 24h rental period\nRefuel Policy: 1st Tank inclusive!\n500 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-03-28",
-                    "endDate": "2024-04-03",
-                    "distanceKm": "500"
-                }
-            ],
-            "route": "383 km, ca. 3h 49min",
-            "parsedDate": "2024-03-30"
-        },
-        "Göteborg (SE)": {
-            "url": "https://movacar.com/mietwagen/Hamburg/Göteborg (SE)/",
-            "products": [
-                {
-                    "description": "Pickup from 13.04. to 18.04. 01PM / Max. 48h rental period\nRefuel Policy: 1st Tank inclusive!\n800 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-13",
-                    "endDate": "2024-04-18",
-                    "distanceKm": "800"
-                },
-                {
-                    "description": "Pickup from 13.04. to 13.04. 01PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-13",
-                    "endDate": "2024-04-13",
-                    "distanceKm": "All"
-                }
-            ],
-            "route": "621 km, ca. 6h 12min",
-            "parsedDate": "2024-03-30"
-        },
-        "Stockholm (SE)": {
-            "url": "https://movacar.com/mietwagen/Hamburg/Stockholm (SE)/",
-            "products": [
-                {
-                    "description": "Pickup from 18.04. to 22.04. 01PM / Max. 72h rental period\nRefuel Policy: 1st Tank inclusive!\n1,200 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-18",
-                    "endDate": "2024-04-22",
-                    "distanceKm": "1,200"
-                },
-                {
-                    "description": "Pickup from 18.04. to 18.04. 01PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-18",
-                    "endDate": "2024-04-18",
-                    "distanceKm": "All"
-                }
-            ],
-            "route": "1055 km, ca. 10h 33min",
-            "parsedDate": "2024-03-30"
-        },
-        "Frankfurt am Main Flughafen": {
-            "url": "https://movacar.com/mietwagen/Hamburg/Frankfurt am Main Flughafen/",
-            "products": [
-                {
-                    "description": "Pickup from 02.04. to 04.04. 09PM / Max. 24h rental period\nRefuel Policy: Full-Full with fuel reimbursement\n700 km inclusive / Additional km: €0.21",
-                    "startDate": "2024-04-02",
-                    "endDate": "2024-04-04",
-                    "distanceKm": "700"
-                }
-            ],
-            "route": "521 km, ca. 5h 12min",
-            "parsedDate": "2024-03-30"
-        },
-        "Kassel": {
-            "url": "https://movacar.com/mietwagen/Hamburg/Kassel/",
-            "products": [
-                {
-                    "description": "Pickup from 28.03. to 01.04. 09PM / Max. 24h rental period\nRefuel Policy: 1st Tank inclusive!\n500 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-03-28",
-                    "endDate": "2024-04-01",
-                    "distanceKm": "500"
-                }
-            ],
-            "route": "325 km, ca. 3h 15min",
-            "parsedDate": "2024-03-30"
-        }
-    },
     "Bordeaux (FR)": {
-        "Lyon (FR)": {
-            "url": "https://movacar.com/mietwagen/Bordeaux (FR)/Lyon (FR)/",
-            "products": [
-                {
-                    "description": "Pickup from 03.04. to 11.04. 09PM / Max. 48h rental period\nRefuel Policy: 1st Tank inclusive!\n700 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-03",
-                    "endDate": "2024-04-11",
-                    "distanceKm": "700"
-                },
-                {
-                    "description": "Pickup from 03.04. to 11.04. 09PM / Max. 48h rental period\nRefuel Policy: 1st Tank inclusive!\n700 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-03",
-                    "endDate": "2024-04-11",
-                    "distanceKm": "700"
-                },
-                {
-                    "description": "Pickup from 03.04. to 06.04. 09PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-03",
-                    "endDate": "2024-04-06",
-                    "distanceKm": "All"
-                },
-                {
-                    "description": "Pickup from 03.04. to 06.04. 09PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-03",
-                    "endDate": "2024-04-06",
-                    "distanceKm": "All"
-                }
-            ],
-            "route": "569 km, ca. 5h 41min",
-            "parsedDate": "2024-03-30"
-        },
         "Amsterdam (NL)": {
             "url": "https://movacar.com/mietwagen/Bordeaux (FR)/Amsterdam (NL)/",
             "products": [
                 {
-                    "description": "Pickup from 13.04. to 17.04. 09PM / Max. 72h rental period\nRefuel Policy: 1st Tank inclusive!\n1,300 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-13",
-                    "endDate": "2024-04-17",
+                    "description": "Pickup from 10.04. to 17.04. 09PM / Max. 72h rental period\nRefuel Policy: 1st Tank inclusive!\n1,300 km inclusive / Additional km: €0.50",
+                    "startDate": "2024-04-09",
+                    "endDate": "2024-04-16",
                     "distanceKm": "1,300"
                 },
                 {
-                    "description": "Pickup from 13.04. to 13.04. 09PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-13",
-                    "endDate": "2024-04-13",
+                    "description": "Pickup from 10.04. to 13.04. 09PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
+                    "startDate": "2024-04-09",
+                    "endDate": "2024-04-12",
                     "distanceKm": "All"
                 }
             ],
             "route": "1195 km, ca. 11h 57min",
-            "parsedDate": "2024-03-30"
+            "parsedDate": "2024-04-04"
         },
         "Nantes (FR)": {
             "url": "https://movacar.com/mietwagen/Bordeaux (FR)/Nantes (FR)/",
             "products": [
                 {
-                    "description": "Pickup from 03.04. to 12.04. 09PM / Max. 24h rental period\nRefuel Policy: 1st Tank inclusive!\n500 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-03",
-                    "endDate": "2024-04-12",
+                    "description": "Pickup from 06.04. to 19.04. 09PM / Max. 24h rental period\nRefuel Policy: 1st Tank inclusive!\n500 km inclusive / Additional km: €0.50",
+                    "startDate": "2024-04-05",
+                    "endDate": "2024-04-18",
                     "distanceKm": "500"
                 },
                 {
-                    "description": "Pickup from 03.04. to 12.04. 09PM / Max. 24h rental period\nRefuel Policy: 1st Tank inclusive!\n500 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-03",
+                    "description": "Pickup from 06.04. to 13.04. 09PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
+                    "startDate": "2024-04-05",
                     "endDate": "2024-04-12",
-                    "distanceKm": "500"
-                },
-                {
-                    "description": "Pickup from 03.04. to 06.04. 09PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-03",
-                    "endDate": "2024-04-06",
-                    "distanceKm": "All"
-                },
-                {
-                    "description": "Pickup from 03.04. to 06.04. 09PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-03",
-                    "endDate": "2024-04-06",
                     "distanceKm": "All"
                 }
             ],
             "route": "353 km, ca. 3h 31min",
-            "parsedDate": "2024-03-30"
+            "parsedDate": "2024-04-04"
         },
         "Milan (IT)": {
             "url": "https://movacar.com/mietwagen/Bordeaux (FR)/Milan (IT)/",
             "products": [
                 {
-                    "description": "Pickup from 03.04. to 07.04. 09PM / Max. 72h rental period\nRefuel Policy: 1st Tank inclusive!\n1,200 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-03",
-                    "endDate": "2024-04-07",
-                    "distanceKm": "1,200"
-                },
-                {
                     "description": "Pickup from 03.04. to 10.04. 09PM / Max. 72h rental period\nRefuel Policy: 1st Tank inclusive!\n1,200 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-03",
-                    "endDate": "2024-04-10",
+                    "startDate": "2024-04-02",
+                    "endDate": "2024-04-09",
                     "distanceKm": "1,200"
-                },
-                {
-                    "description": "Pickup from 03.04. to 03.04. 09PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-03",
-                    "endDate": "2024-04-03",
-                    "distanceKm": "All"
                 },
                 {
                     "description": "Pickup from 03.04. to 06.04. 09PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-03",
-                    "endDate": "2024-04-06",
+                    "startDate": "2024-04-02",
+                    "endDate": "2024-04-05",
                     "distanceKm": "All"
                 }
             ],
             "route": "1002 km, ca. 10h 1min",
-            "parsedDate": "2024-03-30"
+            "parsedDate": "2024-04-04"
         },
         "Rotterdam (NL)": {
             "url": "https://movacar.com/mietwagen/Bordeaux (FR)/Rotterdam (NL)/",
             "products": [
                 {
                     "description": "Pickup from 11.05. to 11.05. 09PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-05-11",
-                    "endDate": "2024-05-11",
+                    "startDate": "2024-05-10",
+                    "endDate": "2024-05-10",
                     "distanceKm": "All"
                 }
             ],
             "route": "1130 km, ca. 11h 18min",
-            "parsedDate": "2024-03-30"
+            "parsedDate": "2024-04-04"
         },
         "Albrandswaard": {
             "url": "https://movacar.com/mietwagen/Bordeaux (FR)/Albrandswaard/",
             "products": [
                 {
                     "description": "Pickup from 11.05. to 14.05. 09PM / Max. 96h rental period\nRefuel Policy: 1st Tank inclusive!\n1,300 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-05-11",
-                    "endDate": "2024-05-14",
+                    "startDate": "2024-05-10",
+                    "endDate": "2024-05-13",
                     "distanceKm": "1,300"
                 },
                 {
                     "description": "Pickup from 11.05. to 11.05. 09PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-05-11",
-                    "endDate": "2024-05-11",
+                    "startDate": "2024-05-10",
+                    "endDate": "2024-05-10",
                     "distanceKm": "All"
                 }
             ],
             "route": "1118 km, ca. 11h 10min",
-            "parsedDate": "2024-03-30"
+            "parsedDate": "2024-04-04"
+        },
+        "Lyon (FR)": {
+            "url": "https://movacar.com/mietwagen/Bordeaux (FR)/Lyon (FR)/",
+            "products": [
+                {
+                    "description": "Pickup from 10.04. to 18.04. 09PM / Max. 48h rental period\nRefuel Policy: 1st Tank inclusive!\n700 km inclusive / Additional km: €0.50",
+                    "startDate": "2024-04-09",
+                    "endDate": "2024-04-17",
+                    "distanceKm": "700"
+                },
+                {
+                    "description": "Pickup from 10.04. to 13.04. 09PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
+                    "startDate": "2024-04-09",
+                    "endDate": "2024-04-12",
+                    "distanceKm": "All"
+                }
+            ],
+            "route": "569 km, ca. 5h 41min",
+            "parsedDate": "2024-04-04"
         },
         "Paris (FR)": {
             "url": "https://movacar.com/mietwagen/Bordeaux (FR)/Paris (FR)/",
             "products": [
                 {
-                    "description": "Pickup from 03.04. to 11.04. 09PM / Max. 48h rental period\nRefuel Policy: 1st Tank inclusive!\n800 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-03",
-                    "endDate": "2024-04-11",
+                    "description": "Pickup from 06.04. to 18.04. 09PM / Max. 48h rental period\nRefuel Policy: 1st Tank inclusive!\n800 km inclusive / Additional km: €0.50",
+                    "startDate": "2024-04-05",
+                    "endDate": "2024-04-17",
                     "distanceKm": "800"
                 },
                 {
-                    "description": "Pickup from 03.04. to 06.04. 09PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-03",
-                    "endDate": "2024-04-06",
+                    "description": "Pickup from 06.04. to 13.04. 09PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
+                    "startDate": "2024-04-05",
+                    "endDate": "2024-04-12",
                     "distanceKm": "All"
                 }
             ],
             "route": "647 km, ca. 6h 28min",
-            "parsedDate": "2024-03-30"
+            "parsedDate": "2024-04-04"
         },
         "Aach, Hegau": {
             "url": "https://movacar.com/mietwagen/Bordeaux (FR)/Aach, Hegau/",
             "products": [
                 {
-                    "description": "Pickup from 03.04. to 07.04. 09PM / Max. 72h rental period\nRefuel Policy: 1st Tank inclusive!\n1,200 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-03",
-                    "endDate": "2024-04-07",
+                    "description": "Pickup from 10.04. to 14.04. 09PM / Max. 72h rental period\nRefuel Policy: 1st Tank inclusive!\n1,200 km inclusive / Additional km: €0.50",
+                    "startDate": "2024-04-09",
+                    "endDate": "2024-04-13",
                     "distanceKm": "1,200"
                 },
                 {
-                    "description": "Pickup from 03.04. to 03.04. 09PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-03",
-                    "endDate": "2024-04-03",
+                    "description": "Pickup from 10.04. to 10.04. 09PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
+                    "startDate": "2024-04-09",
+                    "endDate": "2024-04-09",
                     "distanceKm": "All"
                 }
             ],
             "route": "1037 km, ca. 10h 22min",
-            "parsedDate": "2024-03-30"
-        },
-        "Saint Alban": {
-            "url": "https://movacar.com/mietwagen/Bordeaux (FR)/Saint Alban/",
-            "products": [
-                {
-                    "description": "Pickup from 03.04. to 12.04. 09PM / Max. 24h rental period\nRefuel Policy: 1st Tank inclusive!\n400 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-03",
-                    "endDate": "2024-04-12",
-                    "distanceKm": "400"
-                },
-                {
-                    "description": "Pickup from 03.04. to 06.04. 09PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-03",
-                    "endDate": "2024-04-06",
-                    "distanceKm": "All"
-                }
-            ],
-            "route": "270 km, ca. 2h 42min",
-            "parsedDate": "2024-03-30"
+            "parsedDate": "2024-04-04"
         }
     },
     "Stockholm (SE)": {
@@ -286,115 +152,99 @@
             "url": "https://movacar.com/mietwagen/Stockholm (SE)/Lehrte/",
             "products": [
                 {
-                    "description": "Pickup from 04.04. to 08.04. 09PM / Max. 72h rental period\nRefuel Policy: 1st Tank inclusive!\n1,400 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-04",
-                    "endDate": "2024-04-08",
+                    "description": "Pickup from 13.04. to 17.04. 09PM / Max. 72h rental period\nRefuel Policy: 1st Tank inclusive!\n1,400 km inclusive / Additional km: €0.50",
+                    "startDate": "2024-04-12",
+                    "endDate": "2024-04-16",
                     "distanceKm": "1,400"
                 },
                 {
-                    "description": "Pickup from 04.04. to 04.04. 09PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-04",
-                    "endDate": "2024-04-04",
+                    "description": "Pickup from 13.04. to 13.04. 09PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
+                    "startDate": "2024-04-12",
+                    "endDate": "2024-04-12",
                     "distanceKm": "All"
                 }
             ],
             "route": "1199 km, ca. 11h 59min",
-            "parsedDate": "2024-03-30"
+            "parsedDate": "2024-04-04"
         },
         "Berlin": {
             "url": "https://movacar.com/mietwagen/Stockholm (SE)/Berlin/",
             "products": [
                 {
-                    "description": "Pickup from 03.04. to 07.04. 01PM / Max. 72h rental period\nRefuel Policy: 1st Tank inclusive!\n1,200 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-03",
-                    "endDate": "2024-04-07",
+                    "description": "Pickup from 12.04. to 16.04. 01PM / Max. 72h rental period\nRefuel Policy: 1st Tank inclusive!\n1,200 km inclusive / Additional km: €0.50",
+                    "startDate": "2024-04-11",
+                    "endDate": "2024-04-15",
                     "distanceKm": "1,200"
                 },
                 {
-                    "description": "Pickup from 03.04. to 03.04. 09PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-03",
-                    "endDate": "2024-04-03",
+                    "description": "Pickup from 12.04. to 12.04. 01PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
+                    "startDate": "2024-04-11",
+                    "endDate": "2024-04-11",
                     "distanceKm": "All"
                 }
             ],
             "route": "1053 km, ca. 10h 31min",
-            "parsedDate": "2024-03-30"
+            "parsedDate": "2024-04-04"
         },
         "Bremen": {
-            "url": "https://movacar.com/mietwagen/Stockholm (SE)/Bremen/",
-            "products": [
-                {
-                    "description": "Pickup from 03.04. to 07.04. 01PM / Max. 72h rental period\nRefuel Policy: 1st Tank inclusive!\n1,300 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-03",
-                    "endDate": "2024-04-07",
-                    "distanceKm": "1,300"
-                },
-                {
-                    "description": "Pickup from 03.04. to 10.04. 01PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-03",
-                    "endDate": "2024-04-10",
-                    "distanceKm": "All"
-                }
-            ],
-            "route": "1169 km, ca. 11h 41min",
-            "parsedDate": "2024-03-30"
-        },
-        "Bonn": {
-            "url": "https://movacar.com/mietwagen/Stockholm (SE)/Bonn/",
-            "products": [
-                {
-                    "description": "Pickup from 19.04. to 22.04. 01PM / Max. 96h rental period\nRefuel Policy: 1st Tank inclusive!\n1,700 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-19",
-                    "endDate": "2024-04-22",
-                    "distanceKm": "1,700"
-                },
-                {
-                    "description": "Pickup from 19.04. to 19.04. 01PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-19",
-                    "endDate": "2024-04-19",
-                    "distanceKm": "All"
-                }
-            ],
-            "route": "1535 km, ca. 15h 21min",
-            "parsedDate": "2024-03-30"
+            "url": "https://movacar.com/mietwagen/Stockholm (SE)/Bremen/"
         },
         "Dormagen": {
             "url": "https://movacar.com/mietwagen/Stockholm (SE)/Dormagen/",
             "products": [
                 {
-                    "description": "Pickup from 04.04. to 07.04. 01PM / Max. 96h rental period\nRefuel Policy: 1st Tank inclusive!\n1,700 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-04",
-                    "endDate": "2024-04-07",
+                    "description": "Pickup from 13.04. to 16.04. 03PM / Max. 96h rental period\nRefuel Policy: 1st Tank inclusive!\n1,700 km inclusive / Additional km: €0.50",
+                    "startDate": "2024-04-12",
+                    "endDate": "2024-04-15",
                     "distanceKm": "1,700"
                 },
                 {
-                    "description": "Pickup from 04.04. to 04.04. 01PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-04",
-                    "endDate": "2024-04-04",
+                    "description": "Pickup from 13.04. to 13.04. 03PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
+                    "startDate": "2024-04-12",
+                    "endDate": "2024-04-12",
                     "distanceKm": "All"
                 }
             ],
             "route": "1503 km, ca. 15h 1min",
-            "parsedDate": "2024-03-30"
+            "parsedDate": "2024-04-04"
+        },
+        "Bonn": {
+            "url": "https://movacar.com/mietwagen/Stockholm (SE)/Bonn/",
+            "products": [
+                {
+                    "description": "Pickup from 15.04. to 18.04. 01PM / Max. 96h rental period\nRefuel Policy: 1st Tank inclusive!\n1,700 km inclusive / Additional km: €0.50",
+                    "startDate": "2024-04-14",
+                    "endDate": "2024-04-17",
+                    "distanceKm": "1,700"
+                },
+                {
+                    "description": "Pickup from 15.04. to 15.04. 01PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
+                    "startDate": "2024-04-14",
+                    "endDate": "2024-04-14",
+                    "distanceKm": "All"
+                }
+            ],
+            "route": "1535 km, ca. 15h 21min",
+            "parsedDate": "2024-04-04"
         },
         "München": {
             "url": "https://movacar.com/mietwagen/Stockholm (SE)/München/",
             "products": [
                 {
                     "description": "Pickup from 17.04. to 20.04. 01PM / Max. 96h rental period\nRefuel Policy: 1st Tank inclusive!\n1,800 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-17",
-                    "endDate": "2024-04-20",
+                    "startDate": "2024-04-16",
+                    "endDate": "2024-04-19",
                     "distanceKm": "1,800"
                 },
                 {
                     "description": "Pickup from 17.04. to 17.04. 01PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-17",
-                    "endDate": "2024-04-17",
+                    "startDate": "2024-04-16",
+                    "endDate": "2024-04-16",
                     "distanceKm": "All"
                 }
             ],
             "route": "1708 km, ca. 17h 4min",
-            "parsedDate": "2024-03-30"
+            "parsedDate": "2024-04-04"
         }
     },
     "Malmö (SE)": {
@@ -402,98 +252,58 @@
             "url": "https://movacar.com/mietwagen/Malmö (SE)/Lehrte/",
             "products": [
                 {
-                    "description": "Pickup from 06.04. to 11.04. 01PM / Max. 48h rental period\nRefuel Policy: 1st Tank inclusive!\n700 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-06",
-                    "endDate": "2024-04-11",
+                    "description": "Pickup from 10.04. to 15.04. 01PM / Max. 48h rental period\nRefuel Policy: 1st Tank inclusive!\n700 km inclusive / Additional km: €0.50",
+                    "startDate": "2024-04-09",
+                    "endDate": "2024-04-14",
                     "distanceKm": "700"
                 },
                 {
-                    "description": "Pickup from 06.04. to 13.04. 01PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-06",
-                    "endDate": "2024-04-13",
+                    "description": "Pickup from 10.04. to 10.04. 01PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
+                    "startDate": "2024-04-09",
+                    "endDate": "2024-04-09",
                     "distanceKm": "All"
                 }
             ],
             "route": "533 km, ca. 5h 19min",
-            "parsedDate": "2024-03-30"
+            "parsedDate": "2024-04-04"
         },
         "Aach, Hegau": {
             "url": "https://movacar.com/mietwagen/Malmö (SE)/Aach, Hegau/",
             "products": [
                 {
-                    "description": "Pickup from 05.04. to 09.04. 01PM / Max. 72h rental period\nRefuel Policy: 1st Tank inclusive!\n1,300 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-05",
-                    "endDate": "2024-04-09",
+                    "description": "Pickup from 19.04. to 23.04. 01PM / Max. 72h rental period\nRefuel Policy: 1st Tank inclusive!\n1,300 km inclusive / Additional km: €0.50",
+                    "startDate": "2024-04-18",
+                    "endDate": "2024-04-22",
                     "distanceKm": "1,300"
                 },
                 {
-                    "description": "Pickup from 05.04. to 05.04. 01PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-05",
-                    "endDate": "2024-04-05",
+                    "description": "Pickup from 19.04. to 19.04. 01PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
+                    "startDate": "2024-04-18",
+                    "endDate": "2024-04-18",
                     "distanceKm": "All"
                 }
             ],
             "route": "1181 km, ca. 11h 48min",
-            "parsedDate": "2024-03-30"
-        },
-        "Dormagen": {
-            "url": "https://movacar.com/mietwagen/Malmö (SE)/Dormagen/",
-            "products": [
-                {
-                    "description": "Pickup from 04.04. to 09.04. 01PM / Max. 48h rental period\nRefuel Policy: 1st Tank inclusive!\n1,000 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-04",
-                    "endDate": "2024-04-09",
-                    "distanceKm": "1,000"
-                },
-                {
-                    "description": "Pickup from 04.04. to 11.04. 01PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-04",
-                    "endDate": "2024-04-11",
-                    "distanceKm": "All"
-                }
-            ],
-            "route": "840 km, ca. 8h 24min",
-            "parsedDate": "2024-03-30"
+            "parsedDate": "2024-04-04"
         },
         "Hamburg": {
             "url": "https://movacar.com/mietwagen/Malmö (SE)/Hamburg/",
             "products": [
                 {
                     "description": "Pickup from 10.04. to 15.04. 01PM / Max. 48h rental period\nRefuel Policy: 1st Tank inclusive!\n500 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-10",
-                    "endDate": "2024-04-15",
+                    "startDate": "2024-04-09",
+                    "endDate": "2024-04-14",
                     "distanceKm": "500"
                 },
                 {
                     "description": "Pickup from 10.04. to 10.04. 01PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-10",
-                    "endDate": "2024-04-10",
+                    "startDate": "2024-04-09",
+                    "endDate": "2024-04-09",
                     "distanceKm": "All"
                 }
             ],
             "route": "390 km, ca. 3h 54min",
-            "parsedDate": "2024-03-30"
-        }
-    },
-    "Genf (CH)": {
-        "Bonn": {
-            "url": "https://movacar.com/mietwagen/Genf (CH)/Bonn/",
-            "products": [
-                {
-                    "description": "Pickup from 05.04. to 10.04. 04PM / Max. 48h rental period\nRefuel Policy: 1st Tank inclusive!\n800 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-05",
-                    "endDate": "2024-04-10",
-                    "distanceKm": "800"
-                },
-                {
-                    "description": "Pickup from 05.04. to 05.04. 04PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-05",
-                    "endDate": "2024-04-05",
-                    "distanceKm": "All"
-                }
-            ],
-            "route": "661 km, ca. 6h 36min",
-            "parsedDate": "2024-03-30"
+            "parsedDate": "2024-04-04"
         }
     },
     "München": {
@@ -501,172 +311,309 @@
             "url": "https://movacar.com/mietwagen/München/Malmö (SE)/",
             "products": [
                 {
-                    "description": "Pickup from 05.04. to 09.04. 01PM / Max. 72h rental period\nRefuel Policy: 1st Tank inclusive!\n1,200 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-05",
-                    "endDate": "2024-04-09",
+                    "description": "Pickup from 12.04. to 16.04. 01PM / Max. 72h rental period\nRefuel Policy: 1st Tank inclusive!\n1,200 km inclusive / Additional km: €0.50",
+                    "startDate": "2024-04-11",
+                    "endDate": "2024-04-15",
                     "distanceKm": "1,200"
                 },
                 {
-                    "description": "Pickup from 05.04. to 05.04. 01PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-05",
-                    "endDate": "2024-04-05",
+                    "description": "Pickup from 12.04. to 12.04. 01PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
+                    "startDate": "2024-04-11",
+                    "endDate": "2024-04-11",
                     "distanceKm": "All"
                 }
             ],
             "route": "1086 km, ca. 10h 51min",
-            "parsedDate": "2024-03-30"
+            "parsedDate": "2024-04-04"
         },
         "Nantes (FR)": {
             "url": "https://movacar.com/mietwagen/München/Nantes (FR)/",
             "products": [
                 {
                     "description": "Pickup from 11.04. to 14.04. 01PM / Max. 96h rental period\nRefuel Policy: 1st Tank inclusive!\n1,400 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-11",
-                    "endDate": "2024-04-14",
+                    "startDate": "2024-04-10",
+                    "endDate": "2024-04-13",
                     "distanceKm": "1,400"
                 },
                 {
                     "description": "Pickup from 11.04. to 11.04. 01PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-11",
-                    "endDate": "2024-04-11",
+                    "startDate": "2024-04-10",
+                    "endDate": "2024-04-10",
                     "distanceKm": "All"
                 }
             ],
             "route": "1283 km, ca. 12h 49min",
-            "parsedDate": "2024-03-30"
+            "parsedDate": "2024-04-04"
+        },
+        "Toulouse (FR)": {
+            "url": "https://movacar.com/mietwagen/München/Toulouse (FR)/",
+            "products": [
+                {
+                    "description": "Pickup from 11.04. to 14.04. 01PM / Max. 96h rental period\nRefuel Policy: 1st Tank inclusive!\n1,400 km inclusive / Additional km: €0.50",
+                    "startDate": "2024-04-10",
+                    "endDate": "2024-04-13",
+                    "distanceKm": "1,400"
+                },
+                {
+                    "description": "Pickup from 11.04. to 11.04. 01PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
+                    "startDate": "2024-04-10",
+                    "endDate": "2024-04-10",
+                    "distanceKm": "All"
+                }
+            ],
+            "route": "1210 km, ca. 12h 6min",
+            "parsedDate": "2024-04-04"
         },
         "Seclin": {
             "url": "https://movacar.com/mietwagen/München/Seclin/",
             "products": [
                 {
-                    "description": "Pickup from 03.04. to 07.04. 09PM / Max. 72h rental period\nRefuel Policy: 1st Tank inclusive!\n1,000 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-03",
-                    "endDate": "2024-04-07",
+                    "description": "Pickup from 10.04. to 14.04. 09PM / Max. 72h rental period\nRefuel Policy: 1st Tank inclusive!\n1,000 km inclusive / Additional km: €0.50",
+                    "startDate": "2024-04-09",
+                    "endDate": "2024-04-13",
                     "distanceKm": "1,000"
                 },
                 {
-                    "description": "Pickup from 03.04. to 03.04. 09PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-03",
-                    "endDate": "2024-04-03",
+                    "description": "Pickup from 10.04. to 10.04. 09PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
+                    "startDate": "2024-04-09",
+                    "endDate": "2024-04-09",
                     "distanceKm": "All"
                 }
             ],
             "route": "876 km, ca. 8h 45min",
-            "parsedDate": "2024-03-30"
+            "parsedDate": "2024-04-04"
         },
-        "Stockholm (SE)": {
-            "url": "https://movacar.com/mietwagen/München/Stockholm (SE)/",
+        "Bilbao (ES)": {
+            "url": "https://movacar.com/mietwagen/München/Bilbao (ES)/",
             "products": [
                 {
-                    "description": "Pickup from 04.04. to 07.04. 05PM / Max. 96h rental period\nRefuel Policy: 1st Tank inclusive!\n1,800 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-04",
-                    "endDate": "2024-04-07",
+                    "description": "Pickup from 10.04. to 13.04. 09PM / Max. 96h rental period\nRefuel Policy: 1st Tank inclusive!\n1,800 km inclusive / Additional km: €0.50",
+                    "startDate": "2024-04-09",
+                    "endDate": "2024-04-12",
                     "distanceKm": "1,800"
                 },
                 {
-                    "description": "Pickup from 04.04. to 04.04. 05PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-04",
-                    "endDate": "2024-04-04",
+                    "description": "Pickup from 10.04. to 10.04. 09PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
+                    "startDate": "2024-04-09",
+                    "endDate": "2024-04-09",
                     "distanceKm": "All"
                 }
             ],
-            "route": "1708 km, ca. 17h 4min",
-            "parsedDate": "2024-03-30"
-        },
-        "Porto (PT)": {
-            "url": "https://movacar.com/mietwagen/München/Porto (PT)/",
-            "products": [
-                {
-                    "description": "Pickup from 04.04. to 07.04. 09PM / Max. 96h rental period\nRefuel Policy: 1st Tank inclusive!\n2,400 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-04",
-                    "endDate": "2024-04-07",
-                    "distanceKm": "2,400"
-                },
-                {
-                    "description": "Pickup from 04.04. to 04.04. 09PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-04",
-                    "endDate": "2024-04-04",
-                    "distanceKm": "All"
-                }
-            ],
-            "route": "2296 km, ca. 22h 57min",
-            "parsedDate": "2024-03-30"
-        },
-        "Albrandswaard": {
-            "url": "https://movacar.com/mietwagen/München/Albrandswaard/",
-            "products": [
-                {
-                    "description": "Pickup from 18.04. to 23.04. 05PM / Max. 48h rental period\nRefuel Policy: 1st Tank inclusive!\n1,000 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-18",
-                    "endDate": "2024-04-23",
-                    "distanceKm": "1,000"
-                },
-                {
-                    "description": "Pickup from 18.04. to 18.04. 05PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-18",
-                    "endDate": "2024-04-18",
-                    "distanceKm": "All"
-                }
-            ],
-            "route": "856 km, ca. 8h 33min",
-            "parsedDate": "2024-03-30"
+            "route": "1622 km, ca. 16h 13min",
+            "parsedDate": "2024-04-04"
         },
         "Alcalá de Guadaira": {
-            "url": "https://movacar.com/mietwagen/München/Alcalá de Guadaira/",
-            "products": [
-                {
-                    "description": "Pickup from 04.04. to 07.04. 09PM / Max. 96h rental period\nRefuel Policy: 1st Tank inclusive!\n2,600 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-04",
-                    "endDate": "2024-04-07",
-                    "distanceKm": "2,600"
-                },
-                {
-                    "description": "Pickup from 04.04. to 04.04. 09PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-04",
-                    "endDate": "2024-04-04",
-                    "distanceKm": "All"
-                }
-            ],
-            "route": "2410 km, ca. 24h 6min",
-            "parsedDate": "2024-03-30"
+            "url": "https://movacar.com/mietwagen/München/Alcalá de Guadaira/"
         },
         "Faro (PT)": {
             "url": "https://movacar.com/mietwagen/München/Faro (PT)/",
             "products": [
                 {
-                    "description": "Pickup from 04.04. to 07.04. 09PM / Max. 96h rental period\nRefuel Policy: 1st Tank inclusive!\n2,800 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-04",
-                    "endDate": "2024-04-07",
+                    "description": "Pickup from 10.04. to 13.04. 09PM / Max. 96h rental period\nRefuel Policy: 1st Tank inclusive!\n2,800 km inclusive / Additional km: €0.50",
+                    "startDate": "2024-04-09",
+                    "endDate": "2024-04-12",
                     "distanceKm": "2,800"
                 },
                 {
-                    "description": "Pickup from 04.04. to 04.04. 09PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-04",
-                    "endDate": "2024-04-04",
+                    "description": "Pickup from 10.04. to 10.04. 09PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
+                    "startDate": "2024-04-09",
+                    "endDate": "2024-04-09",
                     "distanceKm": "All"
                 }
             ],
             "route": "2612 km, ca. 26h 7min",
-            "parsedDate": "2024-03-30"
+            "parsedDate": "2024-04-04"
         },
         "Lisbon (PT)": {
             "url": "https://movacar.com/mietwagen/München/Lisbon (PT)/",
             "products": [
                 {
-                    "description": "Pickup from 04.04. to 07.04. 09PM / Max. 96h rental period\nRefuel Policy: 1st Tank inclusive!\n2,700 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-04",
-                    "endDate": "2024-04-07",
+                    "description": "Pickup from 11.04. to 14.04. 09PM / Max. 96h rental period\nRefuel Policy: 1st Tank inclusive!\n2,700 km inclusive / Additional km: €0.50",
+                    "startDate": "2024-04-10",
+                    "endDate": "2024-04-13",
                     "distanceKm": "2,700"
                 },
                 {
-                    "description": "Pickup from 04.04. to 04.04. 09PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-04",
-                    "endDate": "2024-04-04",
+                    "description": "Pickup from 11.04. to 14.04. 09PM / Max. 96h rental period\nRefuel Policy: 1st Tank inclusive!\n2,700 km inclusive / Additional km: €0.50",
+                    "startDate": "2024-04-10",
+                    "endDate": "2024-04-13",
+                    "distanceKm": "2,700"
+                },
+                {
+                    "description": "Pickup from 11.04. to 11.04. 09PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
+                    "startDate": "2024-04-10",
+                    "endDate": "2024-04-10",
+                    "distanceKm": "All"
+                },
+                {
+                    "description": "Pickup from 11.04. to 11.04. 09PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
+                    "startDate": "2024-04-10",
+                    "endDate": "2024-04-10",
                     "distanceKm": "All"
                 }
             ],
             "route": "2554 km, ca. 25h 32min",
-            "parsedDate": "2024-03-30"
+            "parsedDate": "2024-04-04"
+        },
+        "Porto (PT)": {
+            "url": "https://movacar.com/mietwagen/München/Porto (PT)/",
+            "products": [
+                {
+                    "description": "Pickup from 10.04. to 13.04. 09PM / Max. 96h rental period\nRefuel Policy: 1st Tank inclusive!\n2,400 km inclusive / Additional km: €0.50",
+                    "startDate": "2024-04-09",
+                    "endDate": "2024-04-12",
+                    "distanceKm": "2,400"
+                },
+                {
+                    "description": "Pickup from 10.04. to 10.04. 09PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
+                    "startDate": "2024-04-09",
+                    "endDate": "2024-04-09",
+                    "distanceKm": "All"
+                }
+            ],
+            "route": "2296 km, ca. 22h 57min",
+            "parsedDate": "2024-04-04"
+        },
+        "Wiesing": {
+            "url": "https://movacar.com/mietwagen/München/Wiesing/",
+            "products": [
+                {
+                    "description": "Pickup from 10.04. to 16.04. 09PM / Max. 24h rental period\nRefuel Policy: 1st Tank inclusive!\n300 km inclusive / Additional km: €0.50",
+                    "startDate": "2024-04-09",
+                    "endDate": "2024-04-15",
+                    "distanceKm": "300"
+                }
+            ],
+            "route": "108 km, ca. 1h 4min",
+            "parsedDate": "2024-04-04"
+        },
+        "Korntal Münchingen": {
+            "url": "https://movacar.com/mietwagen/München/Korntal Münchingen/",
+            "products": [
+                {
+                    "description": "Pickup from 08.04. to 14.04. 09PM / Max. 24h rental period\nRefuel Policy: 1st Tank inclusive!\n400 km inclusive / Additional km: €0.50",
+                    "startDate": "2024-04-07",
+                    "endDate": "2024-04-13",
+                    "distanceKm": "400"
+                }
+            ],
+            "route": "256 km, ca. 2h 33min",
+            "parsedDate": "2024-04-04"
+        }
+    },
+    "Hamburg": {
+        "Aach, Hegau": {
+            "url": "https://movacar.com/mietwagen/Hamburg/Aach, Hegau/",
+            "products": [
+                {
+                    "description": "Pickup from 11.04. to 16.04. 09PM / Max. 48h rental period\nRefuel Policy: 1st Tank inclusive!\n1,000 km inclusive / Additional km: €0.50",
+                    "startDate": "2024-04-10",
+                    "endDate": "2024-04-15",
+                    "distanceKm": "1,000"
+                },
+                {
+                    "description": "Pickup from 11.04. to 11.04. 09PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
+                    "startDate": "2024-04-10",
+                    "endDate": "2024-04-10",
+                    "distanceKm": "All"
+                }
+            ],
+            "route": "831 km, ca. 8h 18min",
+            "parsedDate": "2024-04-04"
+        },
+        "Göteborg (SE)": {
+            "url": "https://movacar.com/mietwagen/Hamburg/Göteborg (SE)/",
+            "products": [
+                {
+                    "description": "Pickup from 17.04. to 22.04. 01PM / Max. 48h rental period\nRefuel Policy: 1st Tank inclusive!\n800 km inclusive / Additional km: €0.50",
+                    "startDate": "2024-04-16",
+                    "endDate": "2024-04-21",
+                    "distanceKm": "800"
+                },
+                {
+                    "description": "Pickup from 17.04. to 17.04. 01PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
+                    "startDate": "2024-04-16",
+                    "endDate": "2024-04-16",
+                    "distanceKm": "All"
+                }
+            ],
+            "route": "621 km, ca. 6h 12min",
+            "parsedDate": "2024-04-04"
+        },
+        "Frankfurt am Main Flughafen": {
+            "url": "https://movacar.com/mietwagen/Hamburg/Frankfurt am Main Flughafen/",
+            "products": [
+                {
+                    "description": "Pickup from 02.04. to 04.04. 09PM / Max. 24h rental period\nRefuel Policy: Full-Full with fuel reimbursement\n700 km inclusive / Additional km: €0.21",
+                    "startDate": "2024-04-01",
+                    "endDate": "2024-04-03",
+                    "distanceKm": "700"
+                }
+            ],
+            "route": "521 km, ca. 5h 12min",
+            "parsedDate": "2024-04-04"
+        },
+        "Stockholm (SE)": {
+            "url": "https://movacar.com/mietwagen/Hamburg/Stockholm (SE)/",
+            "products": [
+                {
+                    "description": "Pickup from 12.04. to 16.04. 09PM / Max. 72h rental period\nRefuel Policy: 1st Tank inclusive!\n1,200 km inclusive / Additional km: €0.50",
+                    "startDate": "2024-04-11",
+                    "endDate": "2024-04-15",
+                    "distanceKm": "1,200"
+                },
+                {
+                    "description": "Pickup from 12.04. to 12.04. 09PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
+                    "startDate": "2024-04-11",
+                    "endDate": "2024-04-11",
+                    "distanceKm": "All"
+                }
+            ],
+            "route": "1055 km, ca. 10h 33min",
+            "parsedDate": "2024-04-04"
+        }
+    },
+    "Göteborg (SE)": {
+        "Lehrte": {
+            "url": "https://movacar.com/mietwagen/Göteborg (SE)/Lehrte/",
+            "products": [
+                {
+                    "description": "Pickup from 10.04. to 15.04. 01PM / Max. 48h rental period\nRefuel Policy: 1st Tank inclusive!\n900 km inclusive / Additional km: €0.50",
+                    "startDate": "2024-04-09",
+                    "endDate": "2024-04-14",
+                    "distanceKm": "900"
+                },
+                {
+                    "description": "Pickup from 10.04. to 10.04. 01PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
+                    "startDate": "2024-04-09",
+                    "endDate": "2024-04-09",
+                    "distanceKm": "All"
+                }
+            ],
+            "route": "787 km, ca. 7h 52min",
+            "parsedDate": "2024-04-04"
+        },
+        "Frankfurt am Main": {
+            "url": "https://movacar.com/mietwagen/Göteborg (SE)/Frankfurt am Main/",
+            "products": [
+                {
+                    "description": "Pickup from 17.04. to 21.04. 01PM / Max. 72h rental period\nRefuel Policy: 1st Tank inclusive!\n1,300 km inclusive / Additional km: €0.50",
+                    "startDate": "2024-04-16",
+                    "endDate": "2024-04-20",
+                    "distanceKm": "1,300"
+                },
+                {
+                    "description": "Pickup from 17.04. to 17.04. 01PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
+                    "startDate": "2024-04-16",
+                    "endDate": "2024-04-16",
+                    "distanceKm": "All"
+                }
+            ],
+            "route": "1131 km, ca. 11h 18min",
+            "parsedDate": "2024-04-04"
+        },
+        "Bremen": {
+            "url": "https://movacar.com/mietwagen/Göteborg (SE)/Bremen/"
         }
     },
     "Berlin": {
@@ -674,108 +621,103 @@
             "url": "https://movacar.com/mietwagen/Berlin/Stockholm (SE)/",
             "products": [
                 {
-                    "description": "Pickup from 03.04. to 07.04. 09PM / Max. 72h rental period\nRefuel Policy: 1st Tank inclusive!\n1,200 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-03",
-                    "endDate": "2024-04-07",
+                    "description": "Pickup from 10.04. to 14.04. 01PM / Max. 72h rental period\nRefuel Policy: 1st Tank inclusive!\n1,200 km inclusive / Additional km: €0.50",
+                    "startDate": "2024-04-09",
+                    "endDate": "2024-04-13",
                     "distanceKm": "1,200"
                 },
                 {
-                    "description": "Pickup from 03.04. to 03.04. 09PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-03",
-                    "endDate": "2024-04-03",
+                    "description": "Pickup from 10.04. to 10.04. 01PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
+                    "startDate": "2024-04-09",
+                    "endDate": "2024-04-09",
                     "distanceKm": "All"
                 }
             ],
             "route": "1053 km, ca. 10h 31min",
-            "parsedDate": "2024-03-30"
+            "parsedDate": "2024-04-04"
+        },
+        "Malmö (SE)": {
+            "url": "https://movacar.com/mietwagen/Berlin/Malmö (SE)/",
+            "products": [
+                {
+                    "description": "Pickup from 05.04. to 10.04. 05PM / Max. 48h rental period\nRefuel Policy: 1st Tank inclusive!\n600 km inclusive / Additional km: €0.50",
+                    "startDate": "2024-04-04",
+                    "endDate": "2024-04-09",
+                    "distanceKm": "600"
+                },
+                {
+                    "description": "Pickup from 05.04. to 05.04. 05PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
+                    "startDate": "2024-04-04",
+                    "endDate": "2024-04-04",
+                    "distanceKm": "All"
+                }
+            ],
+            "route": "447 km, ca. 4h 28min",
+            "parsedDate": "2024-04-04"
         },
         "Göteborg (SE)": {
             "url": "https://movacar.com/mietwagen/Berlin/Göteborg (SE)/",
             "products": [
                 {
                     "description": "Pickup from 11.04. to 16.04. 01PM / Max. 48h rental period\nRefuel Policy: 1st Tank inclusive!\n900 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-11",
-                    "endDate": "2024-04-16",
-                    "distanceKm": "900"
-                },
-                {
-                    "description": "Pickup from 11.04. to 11.04. 01PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-11",
-                    "endDate": "2024-04-11",
-                    "distanceKm": "All"
-                }
-            ],
-            "route": "757 km, ca. 7h 34min",
-            "parsedDate": "2024-03-30"
-        },
-        "Malmö (SE)": {
-            "url": "https://movacar.com/mietwagen/Berlin/Malmö (SE)/",
-            "products": [
-                {
-                    "description": "Pickup from 13.04. to 18.04. 01PM / Max. 48h rental period\nRefuel Policy: 1st Tank inclusive!\n600 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-13",
-                    "endDate": "2024-04-18",
-                    "distanceKm": "600"
-                },
-                {
-                    "description": "Pickup from 13.04. to 18.04. 01PM / Max. 48h rental period\nRefuel Policy: 1st Tank inclusive!\n600 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-13",
-                    "endDate": "2024-04-18",
-                    "distanceKm": "600"
-                },
-                {
-                    "description": "Pickup from 13.04. to 13.04. 01PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-13",
-                    "endDate": "2024-04-13",
-                    "distanceKm": "All"
-                },
-                {
-                    "description": "Pickup from 13.04. to 13.04. 01PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-13",
-                    "endDate": "2024-04-13",
-                    "distanceKm": "All"
-                }
-            ],
-            "route": "447 km, ca. 4h 28min",
-            "parsedDate": "2024-03-30"
-        },
-        "Albrandswaard": {
-            "url": "https://movacar.com/mietwagen/Berlin/Albrandswaard/",
-            "products": [
-                {
-                    "description": "Pickup from 09.04. to 15.04. 09PM / Max. 24h rental period\nRefuel Policy: 1st Tank inclusive!\n900 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-09",
+                    "startDate": "2024-04-10",
                     "endDate": "2024-04-15",
                     "distanceKm": "900"
                 },
                 {
-                    "description": "Pickup from 09.04. to 09.04. 09PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-09",
-                    "endDate": "2024-04-09",
+                    "description": "Pickup from 11.04. to 11.04. 01PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
+                    "startDate": "2024-04-10",
+                    "endDate": "2024-04-10",
                     "distanceKm": "All"
                 }
             ],
-            "route": "804 km, ca. 8h 2min",
-            "parsedDate": "2024-03-30"
+            "route": "757 km, ca. 7h 34min",
+            "parsedDate": "2024-04-04"
         },
         "Amsterdam (NL)": {
             "url": "https://movacar.com/mietwagen/Berlin/Amsterdam (NL)/",
             "products": [
                 {
                     "description": "Pickup from 18.04. to 23.04. 09PM / Max. 48h rental period\nRefuel Policy: 1st Tank inclusive!\n900 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-18",
-                    "endDate": "2024-04-23",
+                    "startDate": "2024-04-17",
+                    "endDate": "2024-04-22",
                     "distanceKm": "900"
                 },
                 {
                     "description": "Pickup from 18.04. to 18.04. 09PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-18",
-                    "endDate": "2024-04-18",
+                    "startDate": "2024-04-17",
+                    "endDate": "2024-04-17",
                     "distanceKm": "All"
                 }
             ],
             "route": "754 km, ca. 7h 32min",
-            "parsedDate": "2024-03-30"
+            "parsedDate": "2024-04-04"
+        },
+        "Halle, Saale": {
+            "url": "https://movacar.com/mietwagen/Berlin/Halle, Saale/",
+            "products": [
+                {
+                    "description": "Pickup from 02.04. to 04.04. 09PM / Max. 24h rental period\nRefuel Policy: 1st Tank inclusive!\n300 km inclusive / Additional km: €0.21",
+                    "startDate": "2024-04-01",
+                    "endDate": "2024-04-03",
+                    "distanceKm": "300"
+                }
+            ],
+            "route": "198 km, ca. 1h 58min",
+            "parsedDate": "2024-04-04"
+        },
+        "Dresden": {
+            "url": "https://movacar.com/mietwagen/Berlin/Dresden/",
+            "products": [
+                {
+                    "description": "Pickup from 03.04. to 04.04. 09PM / Max. 24h rental period\nRefuel Policy: 1st Tank inclusive!\n400 km inclusive / Additional km: €0.21",
+                    "startDate": "2024-04-02",
+                    "endDate": "2024-04-03",
+                    "distanceKm": "400"
+                }
+            ],
+            "route": "214 km, ca. 2h 8min",
+            "parsedDate": "2024-04-04"
         }
     },
     "Dormagen": {
@@ -784,69 +726,109 @@
             "products": [
                 {
                     "description": "Pickup from 18.04. to 23.04. 09PM / Max. 48h rental period\nRefuel Policy: 1st Tank inclusive!\n1,000 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-18",
-                    "endDate": "2024-04-23",
+                    "startDate": "2024-04-17",
+                    "endDate": "2024-04-22",
                     "distanceKm": "1,000"
                 },
                 {
                     "description": "Pickup from 18.04. to 18.04. 09PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-18",
-                    "endDate": "2024-04-18",
+                    "startDate": "2024-04-17",
+                    "endDate": "2024-04-17",
                     "distanceKm": "All"
                 }
             ],
             "route": "840 km, ca. 8h 24min",
-            "parsedDate": "2024-03-30"
+            "parsedDate": "2024-04-04"
         },
         "Nantes (FR)": {
             "url": "https://movacar.com/mietwagen/Dormagen/Nantes (FR)/",
             "products": [
                 {
                     "description": "Pickup from 13.04. to 17.04. 01PM / Max. 72h rental period\nRefuel Policy: 1st Tank inclusive!\n1,100 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-13",
-                    "endDate": "2024-04-17",
+                    "startDate": "2024-04-12",
+                    "endDate": "2024-04-16",
                     "distanceKm": "1,100"
                 },
                 {
                     "description": "Pickup from 13.04. to 13.04. 01PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-13",
-                    "endDate": "2024-04-13",
+                    "startDate": "2024-04-12",
+                    "endDate": "2024-04-12",
                     "distanceKm": "All"
                 }
             ],
             "route": "970 km, ca. 9h 42min",
-            "parsedDate": "2024-03-30"
+            "parsedDate": "2024-04-04"
         },
         "Stockholm (SE)": {
             "url": "https://movacar.com/mietwagen/Dormagen/Stockholm (SE)/",
             "products": [
                 {
                     "description": "Pickup from 17.04. to 20.04. 01PM / Max. 96h rental period\nRefuel Policy: 1st Tank inclusive!\n1,700 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-17",
-                    "endDate": "2024-04-20",
+                    "startDate": "2024-04-16",
+                    "endDate": "2024-04-19",
                     "distanceKm": "1,700"
                 },
                 {
                     "description": "Pickup from 17.04. to 20.04. 01PM / Max. 96h rental period\nRefuel Policy: 1st Tank inclusive!\n1,700 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-17",
-                    "endDate": "2024-04-20",
+                    "startDate": "2024-04-16",
+                    "endDate": "2024-04-19",
                     "distanceKm": "1,700"
                 },
                 {
                     "description": "Pickup from 17.04. to 17.04. 01PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-17",
-                    "endDate": "2024-04-17",
+                    "startDate": "2024-04-16",
+                    "endDate": "2024-04-16",
                     "distanceKm": "All"
                 },
                 {
                     "description": "Pickup from 17.04. to 17.04. 01PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-17",
-                    "endDate": "2024-04-17",
+                    "startDate": "2024-04-16",
+                    "endDate": "2024-04-16",
                     "distanceKm": "All"
                 }
             ],
             "route": "1503 km, ca. 15h 1min",
-            "parsedDate": "2024-03-30"
+            "parsedDate": "2024-04-04"
+        }
+    },
+    "Graz (AT)": {
+        "Aach, Hegau": {
+            "url": "https://movacar.com/mietwagen/Graz (AT)/Aach, Hegau/",
+            "products": [
+                {
+                    "description": "Pickup from 11.04. to 16.04. 01PM / Max. 48h rental period\nRefuel Policy: 1st Tank inclusive!\n800 km inclusive / Additional km: €0.50",
+                    "startDate": "2024-04-10",
+                    "endDate": "2024-04-15",
+                    "distanceKm": "800"
+                },
+                {
+                    "description": "Pickup from 11.04. to 11.04. 01PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
+                    "startDate": "2024-04-10",
+                    "endDate": "2024-04-10",
+                    "distanceKm": "All"
+                }
+            ],
+            "route": "653 km, ca. 6h 31min",
+            "parsedDate": "2024-04-04"
+        },
+        "Lehrte": {
+            "url": "https://movacar.com/mietwagen/Graz (AT)/Lehrte/",
+            "products": [
+                {
+                    "description": "Pickup from 13.04. to 17.04. 01PM / Max. 72h rental period\nRefuel Policy: 1st Tank inclusive!\n1,100 km inclusive / Additional km: €0.50",
+                    "startDate": "2024-04-12",
+                    "endDate": "2024-04-16",
+                    "distanceKm": "1,100"
+                },
+                {
+                    "description": "Pickup from 13.04. to 13.04. 01PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
+                    "startDate": "2024-04-12",
+                    "endDate": "2024-04-12",
+                    "distanceKm": "All"
+                }
+            ],
+            "route": "920 km, ca. 9h 12min",
+            "parsedDate": "2024-04-04"
         }
     },
     "Leipzig": {
@@ -855,428 +837,246 @@
             "products": [
                 {
                     "description": "Pickup from 11.04. to 16.04. 01PM / Max. 48h rental period\nRefuel Policy: 1st Tank inclusive!\n800 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-11",
-                    "endDate": "2024-04-16",
+                    "startDate": "2024-04-10",
+                    "endDate": "2024-04-15",
                     "distanceKm": "800"
                 },
                 {
                     "description": "Pickup from 11.04. to 11.04. 01PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-11",
-                    "endDate": "2024-04-11",
+                    "startDate": "2024-04-10",
+                    "endDate": "2024-04-10",
                     "distanceKm": "All"
                 }
             ],
             "route": "619 km, ca. 6h 11min",
-            "parsedDate": "2024-03-30"
-        },
-        "Chemnitz": {
-            "url": "https://movacar.com/mietwagen/Leipzig/Chemnitz/",
-            "products": [
-                {
-                    "description": "Pickup from 30.03. to 02.04. 09PM / Max. 24h rental period\nRefuel Policy: 1st Tank inclusive!\n200 km inclusive / Additional km: €0.21",
-                    "startDate": "2024-03-30",
-                    "endDate": "2024-04-02",
-                    "distanceKm": "200"
-                }
-            ],
-            "route": "88 km, ca. 0h 52min",
-            "parsedDate": "2024-03-30"
-        },
-        "Erfurt": {
-            "url": "https://movacar.com/mietwagen/Leipzig/Erfurt/",
-            "products": [
-                {
-                    "description": "Pickup from 29.03. to 01.04. 09PM / Max. 24h rental period\nRefuel Policy: 1st Tank inclusive!\n300 km inclusive / Additional km: €0.21",
-                    "startDate": "2024-03-29",
-                    "endDate": "2024-04-01",
-                    "distanceKm": "300"
-                }
-            ],
-            "route": "133 km, ca. 1h 19min",
-            "parsedDate": "2024-03-30"
+            "parsedDate": "2024-04-04"
         }
     },
     "Bremen": {
         "Brüssel (BE)": {
-            "url": "https://movacar.com/mietwagen/Bremen/Brüssel (BE)/",
-            "products": [
-                {
-                    "description": "Pickup from 12.04. to 17.04. 01PM / Max. 48h rental period\nRefuel Policy: 1st Tank inclusive!\n700 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-12",
-                    "endDate": "2024-04-17",
-                    "distanceKm": "700"
-                },
-                {
-                    "description": "Pickup from 12.04. to 12.04. 01PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-12",
-                    "endDate": "2024-04-12",
-                    "distanceKm": "All"
-                }
-            ],
-            "route": "510 km, ca. 5h 6min",
-            "parsedDate": "2024-03-30"
+            "url": "https://movacar.com/mietwagen/Bremen/Brüssel (BE)/"
         },
         "Stockholm (SE)": {
             "url": "https://movacar.com/mietwagen/Bremen/Stockholm (SE)/",
             "products": [
                 {
-                    "description": "Pickup from 04.04. to 08.04. 09PM / Max. 72h rental period\nRefuel Policy: 1st Tank inclusive!\n1,300 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-04",
-                    "endDate": "2024-04-08",
+                    "description": "Pickup from 11.04. to 15.04. 09PM / Max. 72h rental period\nRefuel Policy: 1st Tank inclusive!\n1,300 km inclusive / Additional km: €0.50",
+                    "startDate": "2024-04-10",
+                    "endDate": "2024-04-14",
                     "distanceKm": "1,300"
                 },
                 {
-                    "description": "Pickup from 04.04. to 04.04. 09PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-04",
-                    "endDate": "2024-04-04",
+                    "description": "Pickup from 11.04. to 11.04. 09PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
+                    "startDate": "2024-04-10",
+                    "endDate": "2024-04-10",
                     "distanceKm": "All"
                 }
             ],
             "route": "1169 km, ca. 11h 41min",
-            "parsedDate": "2024-03-30"
+            "parsedDate": "2024-04-04"
         },
         "Antwerpen (BE)": {
             "url": "https://movacar.com/mietwagen/Bremen/Antwerpen (BE)/",
             "products": [
                 {
                     "description": "Pickup from 13.04. to 18.04. 01PM / Max. 48h rental period\nRefuel Policy: 1st Tank inclusive!\n600 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-13",
-                    "endDate": "2024-04-18",
+                    "startDate": "2024-04-12",
+                    "endDate": "2024-04-17",
                     "distanceKm": "600"
                 },
                 {
                     "description": "Pickup from 13.04. to 13.04. 01PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-13",
-                    "endDate": "2024-04-13",
+                    "startDate": "2024-04-12",
+                    "endDate": "2024-04-12",
                     "distanceKm": "All"
                 }
             ],
             "route": "473 km, ca. 4h 43min",
-            "parsedDate": "2024-03-30"
+            "parsedDate": "2024-04-04"
         },
         "Göteborg (SE)": {
             "url": "https://movacar.com/mietwagen/Bremen/Göteborg (SE)/",
             "products": [
                 {
                     "description": "Pickup from 13.04. to 18.04. 01PM / Max. 48h rental period\nRefuel Policy: 1st Tank inclusive!\n900 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-13",
-                    "endDate": "2024-04-18",
+                    "startDate": "2024-04-12",
+                    "endDate": "2024-04-17",
                     "distanceKm": "900"
                 },
                 {
                     "description": "Pickup from 13.04. to 13.04. 01PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-13",
-                    "endDate": "2024-04-13",
+                    "startDate": "2024-04-12",
+                    "endDate": "2024-04-12",
                     "distanceKm": "All"
                 }
             ],
             "route": "717 km, ca. 7h 10min",
-            "parsedDate": "2024-03-30"
-        },
-        "Malmö (SE)": {
-            "url": "https://movacar.com/mietwagen/Bremen/Malmö (SE)/",
-            "products": [
-                {
-                    "description": "Pickup from 13.04. to 18.04. 01PM / Max. 48h rental period\nRefuel Policy: 1st Tank inclusive!\n700 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-13",
-                    "endDate": "2024-04-18",
-                    "distanceKm": "700"
-                },
-                {
-                    "description": "Pickup from 13.04. to 13.04. 01PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-13",
-                    "endDate": "2024-04-13",
-                    "distanceKm": "All"
-                }
-            ],
-            "route": "508 km, ca. 5h 4min",
-            "parsedDate": "2024-03-30"
+            "parsedDate": "2024-04-04"
         },
         "Paris (FR)": {
             "url": "https://movacar.com/mietwagen/Bremen/Paris (FR)/",
             "products": [
                 {
                     "description": "Pickup from 15.04. to 20.04. 01PM / Max. 48h rental period\nRefuel Policy: 1st Tank inclusive!\n1,000 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-15",
-                    "endDate": "2024-04-20",
+                    "startDate": "2024-04-14",
+                    "endDate": "2024-04-19",
                     "distanceKm": "1,000"
                 },
                 {
                     "description": "Pickup from 15.04. to 15.04. 01PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-15",
-                    "endDate": "2024-04-15",
+                    "startDate": "2024-04-14",
+                    "endDate": "2024-04-14",
                     "distanceKm": "All"
                 }
             ],
             "route": "846 km, ca. 8h 27min",
-            "parsedDate": "2024-03-30"
+            "parsedDate": "2024-04-04"
         },
         "Goussainville": {
             "url": "https://movacar.com/mietwagen/Bremen/Goussainville/",
             "products": [
                 {
                     "description": "Pickup from 15.04. to 20.04. 01PM / Max. 48h rental period\nRefuel Policy: 1st Tank inclusive!\n1,000 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-15",
-                    "endDate": "2024-04-20",
+                    "startDate": "2024-04-14",
+                    "endDate": "2024-04-19",
                     "distanceKm": "1,000"
                 },
                 {
                     "description": "Pickup from 15.04. to 15.04. 01PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-15",
-                    "endDate": "2024-04-15",
+                    "startDate": "2024-04-14",
+                    "endDate": "2024-04-14",
                     "distanceKm": "All"
                 }
             ],
             "route": "820 km, ca. 8h 12min",
-            "parsedDate": "2024-03-30"
+            "parsedDate": "2024-04-04"
+        },
+        "Malmö (SE)": {
+            "url": "https://movacar.com/mietwagen/Bremen/Malmö (SE)/",
+            "products": [
+                {
+                    "description": "Pickup from 17.04. to 22.04. 01PM / Max. 48h rental period\nRefuel Policy: 1st Tank inclusive!\n700 km inclusive / Additional km: €0.50",
+                    "startDate": "2024-04-16",
+                    "endDate": "2024-04-21",
+                    "distanceKm": "700"
+                },
+                {
+                    "description": "Pickup from 17.04. to 22.04. 01PM / Max. 48h rental period\nRefuel Policy: 1st Tank inclusive!\n700 km inclusive / Additional km: €0.50",
+                    "startDate": "2024-04-16",
+                    "endDate": "2024-04-21",
+                    "distanceKm": "700"
+                },
+                {
+                    "description": "Pickup from 17.04. to 17.04. 01PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
+                    "startDate": "2024-04-16",
+                    "endDate": "2024-04-16",
+                    "distanceKm": "All"
+                },
+                {
+                    "description": "Pickup from 17.04. to 17.04. 01PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
+                    "startDate": "2024-04-16",
+                    "endDate": "2024-04-16",
+                    "distanceKm": "All"
+                }
+            ],
+            "route": "508 km, ca. 5h 4min",
+            "parsedDate": "2024-04-04"
         },
         "Albrandswaard": {
             "url": "https://movacar.com/mietwagen/Bremen/Albrandswaard/",
             "products": [
                 {
                     "description": "Pickup from 18.04. to 24.04. 05PM / Max. 24h rental period\nRefuel Policy: 1st Tank inclusive!\n600 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-18",
-                    "endDate": "2024-04-24",
+                    "startDate": "2024-04-17",
+                    "endDate": "2024-04-23",
                     "distanceKm": "600"
                 },
                 {
                     "description": "Pickup from 18.04. to 18.04. 05PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-18",
-                    "endDate": "2024-04-18",
+                    "startDate": "2024-04-17",
+                    "endDate": "2024-04-17",
                     "distanceKm": "All"
                 }
             ],
             "route": "426 km, ca. 4h 15min",
-            "parsedDate": "2024-03-30"
+            "parsedDate": "2024-04-04"
         },
         "Amsterdam (NL)": {
             "url": "https://movacar.com/mietwagen/Bremen/Amsterdam (NL)/",
             "products": [
                 {
-                    "description": "Pickup from 17.04. to 23.04. 05PM / Max. 24h rental period\nRefuel Policy: 1st Tank inclusive!\n500 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-17",
-                    "endDate": "2024-04-23",
+                    "description": "Pickup from 13.04. to 19.04. 09PM / Max. 24h rental period\nRefuel Policy: 1st Tank inclusive!\n500 km inclusive / Additional km: €0.50",
+                    "startDate": "2024-04-12",
+                    "endDate": "2024-04-18",
                     "distanceKm": "500"
                 },
                 {
-                    "description": "Pickup from 17.04. to 17.04. 05PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-17",
-                    "endDate": "2024-04-17",
-                    "distanceKm": "All"
-                }
-            ],
-            "route": "363 km, ca. 3h 37min",
-            "parsedDate": "2024-03-30"
-        }
-    },
-    "Florence (IT)": {
-        "Leipzig": {
-            "url": "https://movacar.com/mietwagen/Florence (IT)/Leipzig/",
-            "products": [
-                {
-                    "description": "Pickup from 17.04. to 21.04. 01PM / Max. 72h rental period\nRefuel Policy: 1st Tank inclusive!\n1,300 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-17",
-                    "endDate": "2024-04-21",
-                    "distanceKm": "1,300"
-                },
-                {
-                    "description": "Pickup from 17.04. to 17.04. 01PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-17",
-                    "endDate": "2024-04-17",
-                    "distanceKm": "All"
-                }
-            ],
-            "route": "1100 km, ca. 11h",
-            "parsedDate": "2024-03-30"
-        }
-    },
-    "Freiburg im Breisgau": {
-        "Brüssel (BE)": {
-            "url": "https://movacar.com/mietwagen/Freiburg im Breisgau/Brüssel (BE)/",
-            "products": [
-                {
-                    "description": "Pickup from 12.04. to 17.04. 01PM / Max. 48h rental period\nRefuel Policy: 1st Tank inclusive!\n700 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-12",
-                    "endDate": "2024-04-17",
-                    "distanceKm": "700"
-                },
-                {
-                    "description": "Pickup from 12.04. to 12.04. 01PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
+                    "description": "Pickup from 13.04. to 13.04. 09PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
                     "startDate": "2024-04-12",
                     "endDate": "2024-04-12",
                     "distanceKm": "All"
                 }
             ],
-            "route": "527 km, ca. 5h 16min",
-            "parsedDate": "2024-03-30"
-        },
-        "Graz (AT)": {
-            "url": "https://movacar.com/mietwagen/Freiburg im Breisgau/Graz (AT)/",
+            "route": "363 km, ca. 3h 37min",
+            "parsedDate": "2024-04-04"
+        }
+    },
+    "Lehrte": {
+        "Göteborg (SE)": {
+            "url": "https://movacar.com/mietwagen/Lehrte/Göteborg (SE)/",
             "products": [
                 {
-                    "description": "Pickup from 12.04. to 16.04. 01PM / Max. 72h rental period\nRefuel Policy: 1st Tank inclusive!\n900 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-12",
+                    "description": "Pickup from 12.04. to 17.04. 01PM / Max. 48h rental period\nRefuel Policy: 1st Tank inclusive!\n900 km inclusive / Additional km: €0.50",
+                    "startDate": "2024-04-11",
                     "endDate": "2024-04-16",
                     "distanceKm": "900"
                 },
                 {
                     "description": "Pickup from 12.04. to 12.04. 01PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-12",
-                    "endDate": "2024-04-12",
+                    "startDate": "2024-04-11",
+                    "endDate": "2024-04-11",
                     "distanceKm": "All"
                 }
             ],
-            "route": "752 km, ca. 7h 31min",
-            "parsedDate": "2024-03-30"
+            "route": "787 km, ca. 7h 52min",
+            "parsedDate": "2024-04-04"
         },
-        "Faro (PT)": {
-            "url": "https://movacar.com/mietwagen/Freiburg im Breisgau/Faro (PT)/",
-            "products": [
-                {
-                    "description": "Pickup from 12.04. to 15.04. 09PM / Max. 96h rental period\nRefuel Policy: 1st Tank inclusive!\n2,500 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-12",
-                    "endDate": "2024-04-15",
-                    "distanceKm": "2,500"
-                },
-                {
-                    "description": "Pickup from 12.04. to 12.04. 09PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-12",
-                    "endDate": "2024-04-12",
-                    "distanceKm": "All"
-                }
-            ],
-            "route": "2302 km, ca. 23h 1min",
-            "parsedDate": "2024-03-30"
-        },
-        "Lisbon (PT)": {
-            "url": "https://movacar.com/mietwagen/Freiburg im Breisgau/Lisbon (PT)/",
-            "products": [
-                {
-                    "description": "Pickup from 19.04. to 22.04. 09PM / Max. 96h rental period\nRefuel Policy: 1st Tank inclusive!\n2,400 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-19",
-                    "endDate": "2024-04-22",
-                    "distanceKm": "2,400"
-                },
-                {
-                    "description": "Pickup from 19.04. to 19.04. 09PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-19",
-                    "endDate": "2024-04-19",
-                    "distanceKm": "All"
-                }
-            ],
-            "route": "2225 km, ca. 22h 15min",
-            "parsedDate": "2024-03-30"
-        }
-    },
-    "Göteborg (SE)": {
-        "Hamburg": {
-            "url": "https://movacar.com/mietwagen/Göteborg (SE)/Hamburg/",
-            "products": [
-                {
-                    "description": "Pickup from 13.04. to 18.04. 01PM / Max. 48h rental period\nRefuel Policy: 1st Tank inclusive!\n800 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-13",
-                    "endDate": "2024-04-18",
-                    "distanceKm": "800"
-                },
-                {
-                    "description": "Pickup from 13.04. to 13.04. 01PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-13",
-                    "endDate": "2024-04-13",
-                    "distanceKm": "All"
-                }
-            ],
-            "route": "621 km, ca. 6h 12min",
-            "parsedDate": "2024-03-30"
-        },
-        "Frankfurt am Main": {
-            "url": "https://movacar.com/mietwagen/Göteborg (SE)/Frankfurt am Main/",
-            "products": [
-                {
-                    "description": "Pickup from 17.04. to 21.04. 01PM / Max. 72h rental period\nRefuel Policy: 1st Tank inclusive!\n1,300 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-17",
-                    "endDate": "2024-04-21",
-                    "distanceKm": "1,300"
-                },
-                {
-                    "description": "Pickup from 17.04. to 17.04. 01PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-17",
-                    "endDate": "2024-04-17",
-                    "distanceKm": "All"
-                }
-            ],
-            "route": "1131 km, ca. 11h 18min",
-            "parsedDate": "2024-03-30"
-        },
-        "Bremen": {
-            "url": "https://movacar.com/mietwagen/Göteborg (SE)/Bremen/",
-            "products": [
-                {
-                    "description": "Pickup from 17.04. to 22.04. 01PM / Max. 48h rental period\nRefuel Policy: 1st Tank inclusive!\n900 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-17",
-                    "endDate": "2024-04-22",
-                    "distanceKm": "900"
-                },
-                {
-                    "description": "Pickup from 17.04. to 22.04. 01PM / Max. 48h rental period\nRefuel Policy: 1st Tank inclusive!\n900 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-17",
-                    "endDate": "2024-04-22",
-                    "distanceKm": "900"
-                },
-                {
-                    "description": "Pickup from 17.04. to 17.04. 01PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-17",
-                    "endDate": "2024-04-17",
-                    "distanceKm": "All"
-                },
-                {
-                    "description": "Pickup from 17.04. to 17.04. 01PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-17",
-                    "endDate": "2024-04-17",
-                    "distanceKm": "All"
-                }
-            ],
-            "route": "717 km, ca. 7h 10min",
-            "parsedDate": "2024-03-30"
-        }
-    },
-    "Lehrte": {
         "Paris (FR)": {
             "url": "https://movacar.com/mietwagen/Lehrte/Paris (FR)/",
             "products": [
                 {
                     "description": "Pickup from 13.04. to 18.04. 01PM / Max. 48h rental period\nRefuel Policy: 1st Tank inclusive!\n1,000 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-13",
-                    "endDate": "2024-04-18",
+                    "startDate": "2024-04-12",
+                    "endDate": "2024-04-17",
                     "distanceKm": "1,000"
                 },
                 {
                     "description": "Pickup from 13.04. to 13.04. 01PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-13",
-                    "endDate": "2024-04-13",
+                    "startDate": "2024-04-12",
+                    "endDate": "2024-04-12",
                     "distanceKm": "All"
                 }
             ],
             "route": "863 km, ca. 8h 37min",
-            "parsedDate": "2024-03-30"
-        },
-        "Amsterdam (NL)": {
-            "url": "https://movacar.com/mietwagen/Lehrte/Amsterdam (NL)/",
+            "parsedDate": "2024-04-04"
+        }
+    },
+    "Freiburg im Breisgau": {
+        "Saint Alban": {
+            "url": "https://movacar.com/mietwagen/Freiburg im Breisgau/Saint Alban/",
             "products": [
                 {
-                    "description": "Pickup from 03.05. to 09.05. 05PM / Max. 24h rental period\nRefuel Policy: 1st Tank inclusive!\n600 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-05-03",
-                    "endDate": "2024-05-09",
-                    "distanceKm": "600"
-                },
-                {
-                    "description": "Pickup from 03.05. to 03.05. 05PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-05-03",
-                    "endDate": "2024-05-03",
+                    "description": "Pickup from 12.04. to 12.04. 01PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
+                    "startDate": "2024-04-11",
+                    "endDate": "2024-04-11",
                     "distanceKm": "All"
                 }
             ],
-            "route": "451 km, ca. 4h 30min",
-            "parsedDate": "2024-03-30"
+            "route": "898 km, ca. 8h 58min",
+            "parsedDate": "2024-04-04"
+        },
+        "Toulouse (FR)": {
+            "url": "https://movacar.com/mietwagen/Freiburg im Breisgau/Toulouse (FR)/"
         }
     },
     "Nürnberg": {
@@ -1285,19 +1085,38 @@
             "products": [
                 {
                     "description": "Pickup from 17.04. to 20.04. 01PM / Max. 96h rental period\nRefuel Policy: 1st Tank inclusive!\n1,400 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-17",
-                    "endDate": "2024-04-20",
+                    "startDate": "2024-04-16",
+                    "endDate": "2024-04-19",
                     "distanceKm": "1,400"
                 },
                 {
                     "description": "Pickup from 17.04. to 17.04. 01PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-17",
-                    "endDate": "2024-04-17",
+                    "startDate": "2024-04-16",
+                    "endDate": "2024-04-16",
                     "distanceKm": "All"
                 }
             ],
             "route": "1269 km, ca. 12h 41min",
-            "parsedDate": "2024-03-30"
+            "parsedDate": "2024-04-04"
+        },
+        "Nantes (FR)": {
+            "url": "https://movacar.com/mietwagen/Nürnberg/Nantes (FR)/",
+            "products": [
+                {
+                    "description": "Pickup from 20.04. to 24.04. 01PM / Max. 72h rental period\nRefuel Policy: 1st Tank inclusive!\n1,400 km inclusive / Additional km: €0.50",
+                    "startDate": "2024-04-19",
+                    "endDate": "2024-04-23",
+                    "distanceKm": "1,400"
+                },
+                {
+                    "description": "Pickup from 20.04. to 20.04. 01PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
+                    "startDate": "2024-04-19",
+                    "endDate": "2024-04-19",
+                    "distanceKm": "All"
+                }
+            ],
+            "route": "1254 km, ca. 12h 32min",
+            "parsedDate": "2024-04-04"
         }
     },
     "Dresden": {
@@ -1306,38 +1125,38 @@
             "products": [
                 {
                     "description": "Pickup from 17.04. to 22.04. 01PM / Max. 48h rental period\nRefuel Policy: 1st Tank inclusive!\n1,000 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-17",
-                    "endDate": "2024-04-22",
+                    "startDate": "2024-04-16",
+                    "endDate": "2024-04-21",
                     "distanceKm": "1,000"
                 },
                 {
                     "description": "Pickup from 17.04. to 17.04. 01PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-17",
-                    "endDate": "2024-04-17",
+                    "startDate": "2024-04-16",
+                    "endDate": "2024-04-16",
                     "distanceKm": "All"
                 }
             ],
             "route": "846 km, ca. 8h 27min",
-            "parsedDate": "2024-03-30"
+            "parsedDate": "2024-04-04"
         },
         "Stockholm (SE)": {
             "url": "https://movacar.com/mietwagen/Dresden/Stockholm (SE)/",
             "products": [
                 {
                     "description": "Pickup from 17.04. to 20.04. 01PM / Max. 96h rental period\nRefuel Policy: 1st Tank inclusive!\n1,400 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-17",
-                    "endDate": "2024-04-20",
+                    "startDate": "2024-04-16",
+                    "endDate": "2024-04-19",
                     "distanceKm": "1,400"
                 },
                 {
                     "description": "Pickup from 17.04. to 17.04. 01PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-17",
-                    "endDate": "2024-04-17",
+                    "startDate": "2024-04-16",
+                    "endDate": "2024-04-16",
                     "distanceKm": "All"
                 }
             ],
             "route": "1248 km, ca. 12h 28min",
-            "parsedDate": "2024-03-30"
+            "parsedDate": "2024-04-04"
         }
     },
     "Frankfurt am Main": {
@@ -1346,19 +1165,19 @@
             "products": [
                 {
                     "description": "Pickup from 17.04. to 20.04. 01PM / Max. 96h rental period\nRefuel Policy: 1st Tank inclusive!\n1,700 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-17",
-                    "endDate": "2024-04-20",
+                    "startDate": "2024-04-16",
+                    "endDate": "2024-04-19",
                     "distanceKm": "1,700"
                 },
                 {
                     "description": "Pickup from 17.04. to 17.04. 01PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-17",
-                    "endDate": "2024-04-17",
+                    "startDate": "2024-04-16",
+                    "endDate": "2024-04-16",
                     "distanceKm": "All"
                 }
             ],
             "route": "1542 km, ca. 15h 25min",
-            "parsedDate": "2024-03-30"
+            "parsedDate": "2024-04-04"
         }
     },
     "Bonn": {
@@ -1367,97 +1186,38 @@
             "products": [
                 {
                     "description": "Pickup from 20.04. to 24.04. 01PM / Max. 72h rental period\nRefuel Policy: 1st Tank inclusive!\n1,300 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-20",
-                    "endDate": "2024-04-24",
+                    "startDate": "2024-04-19",
+                    "endDate": "2024-04-23",
                     "distanceKm": "1,300"
                 },
                 {
                     "description": "Pickup from 20.04. to 20.04. 01PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-20",
-                    "endDate": "2024-04-20",
+                    "startDate": "2024-04-19",
+                    "endDate": "2024-04-19",
                     "distanceKm": "All"
                 }
             ],
             "route": "1130 km, ca. 11h 18min",
-            "parsedDate": "2024-03-30"
-        },
-        "Amsterdam (NL)": {
-            "url": "https://movacar.com/mietwagen/Bonn/Amsterdam (NL)/",
-            "products": [
-                {
-                    "description": "Pickup from 10.04. to 16.04. 05PM / Max. 24h rental period\nRefuel Policy: 1st Tank inclusive!\n400 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-10",
-                    "endDate": "2024-04-16",
-                    "distanceKm": "400"
-                },
-                {
-                    "description": "Pickup from 10.04. to 10.04. 05PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-10",
-                    "endDate": "2024-04-10",
-                    "distanceKm": "All"
-                }
-            ],
-            "route": "303 km, ca. 3h 1min",
-            "parsedDate": "2024-03-30"
+            "parsedDate": "2024-04-04"
         },
         "Seclin": {
             "url": "https://movacar.com/mietwagen/Bonn/Seclin/",
             "products": [
                 {
-                    "description": "Pickup from 05.04. to 11.04. 09PM / Max. 24h rental period\nRefuel Policy: 1st Tank inclusive!\n500 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-05",
-                    "endDate": "2024-04-11",
+                    "description": "Pickup from 12.04. to 18.04. 09PM / Max. 24h rental period\nRefuel Policy: 1st Tank inclusive!\n500 km inclusive / Additional km: €0.50",
+                    "startDate": "2024-04-11",
+                    "endDate": "2024-04-17",
                     "distanceKm": "500"
                 },
                 {
-                    "description": "Pickup from 05.04. to 05.04. 09PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-05",
-                    "endDate": "2024-04-05",
+                    "description": "Pickup from 12.04. to 12.04. 09PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
+                    "startDate": "2024-04-11",
+                    "endDate": "2024-04-11",
                     "distanceKm": "All"
                 }
             ],
             "route": "373 km, ca. 3h 43min",
-            "parsedDate": "2024-03-30"
-        }
-    },
-    "Aach, Hegau": {
-        "Graz (AT)": {
-            "url": "https://movacar.com/mietwagen/Aach, Hegau/Graz (AT)/",
-            "products": [
-                {
-                    "description": "Pickup from 20.04. to 25.04. 01PM / Max. 48h rental period\nRefuel Policy: 1st Tank inclusive!\n800 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-20",
-                    "endDate": "2024-04-25",
-                    "distanceKm": "800"
-                },
-                {
-                    "description": "Pickup from 20.04. to 20.04. 01PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-20",
-                    "endDate": "2024-04-20",
-                    "distanceKm": "All"
-                }
-            ],
-            "route": "653 km, ca. 6h 31min",
-            "parsedDate": "2024-03-30"
-        },
-        "Seclin": {
-            "url": "https://movacar.com/mietwagen/Aach, Hegau/Seclin/",
-            "products": [
-                {
-                    "description": "Pickup from 05.04. to 10.04. 09PM / Max. 48h rental period\nRefuel Policy: 1st Tank inclusive!\n800 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-05",
-                    "endDate": "2024-04-10",
-                    "distanceKm": "800"
-                },
-                {
-                    "description": "Pickup from 05.04. to 05.04. 09PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-05",
-                    "endDate": "2024-04-05",
-                    "distanceKm": "All"
-                }
-            ],
-            "route": "674 km, ca. 6h 44min",
-            "parsedDate": "2024-03-30"
+            "parsedDate": "2024-04-04"
         }
     },
     "Marburg": {
@@ -1465,330 +1225,296 @@
             "url": "https://movacar.com/mietwagen/Marburg/Mölndal/",
             "products": [
                 {
-                    "description": "Pickup from 28.03. to 01.04. 09PM / Max. 72h rental period\nRefuel Policy: 1st Tank inclusive!\n1,200 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-03-28",
-                    "endDate": "2024-04-01",
+                    "description": "Pickup from 11.04. to 15.04. 09PM / Max. 72h rental period\nRefuel Policy: 1st Tank inclusive!\n1,200 km inclusive / Additional km: €0.50",
+                    "startDate": "2024-04-10",
+                    "endDate": "2024-04-14",
                     "distanceKm": "1,200"
+                },
+                {
+                    "description": "Pickup from 11.04. to 11.04. 09PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
+                    "startDate": "2024-04-10",
+                    "endDate": "2024-04-10",
+                    "distanceKm": "All"
                 }
             ],
             "route": "1025 km, ca. 10h 15min",
-            "parsedDate": "2024-03-30"
+            "parsedDate": "2024-04-04"
         },
         "Göteborg (SE)": {
             "url": "https://movacar.com/mietwagen/Marburg/Göteborg (SE)/",
             "products": [
                 {
                     "description": "Pickup from 08.04. to 12.04. 05PM / Max. 72h rental period\nRefuel Policy: 1st Tank inclusive!\n1,200 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-08",
-                    "endDate": "2024-04-12",
+                    "startDate": "2024-04-07",
+                    "endDate": "2024-04-11",
                     "distanceKm": "1,200"
                 },
                 {
                     "description": "Pickup from 08.04. to 12.04. 05PM / Max. 72h rental period\nRefuel Policy: 1st Tank inclusive!\n1,200 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-08",
-                    "endDate": "2024-04-12",
+                    "startDate": "2024-04-07",
+                    "endDate": "2024-04-11",
                     "distanceKm": "1,200"
                 },
                 {
                     "description": "Pickup from 08.04. to 08.04. 05PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-08",
-                    "endDate": "2024-04-08",
+                    "startDate": "2024-04-07",
+                    "endDate": "2024-04-07",
                     "distanceKm": "All"
                 },
                 {
                     "description": "Pickup from 08.04. to 08.04. 05PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-08",
-                    "endDate": "2024-04-08",
+                    "startDate": "2024-04-07",
+                    "endDate": "2024-04-07",
                     "distanceKm": "All"
                 }
             ],
             "route": "1031 km, ca. 10h 18min",
-            "parsedDate": "2024-03-30"
+            "parsedDate": "2024-04-04"
         },
         "Seclin": {
             "url": "https://movacar.com/mietwagen/Marburg/Seclin/",
             "products": [
                 {
                     "description": "Pickup from 08.04. to 13.04. 05PM / Max. 48h rental period\nRefuel Policy: 1st Tank inclusive!\n700 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-08",
-                    "endDate": "2024-04-13",
+                    "startDate": "2024-04-07",
+                    "endDate": "2024-04-12",
                     "distanceKm": "700"
                 },
                 {
                     "description": "Pickup from 08.04. to 08.04. 05PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
+                    "startDate": "2024-04-07",
+                    "endDate": "2024-04-07",
+                    "distanceKm": "All"
+                }
+            ],
+            "route": "526 km, ca. 5h 15min",
+            "parsedDate": "2024-04-04"
+        },
+        "Graz (AT)": {
+            "url": "https://movacar.com/mietwagen/Marburg/Graz (AT)/",
+            "products": [
+                {
+                    "description": "Pickup from 09.04. to 14.04. 05PM / Max. 48h rental period\nRefuel Policy: 1st Tank inclusive!\n1,000 km inclusive / Additional km: €0.50",
+                    "startDate": "2024-04-08",
+                    "endDate": "2024-04-13",
+                    "distanceKm": "1,000"
+                },
+                {
+                    "description": "Pickup from 09.04. to 09.04. 05PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
                     "startDate": "2024-04-08",
                     "endDate": "2024-04-08",
                     "distanceKm": "All"
                 }
             ],
-            "route": "526 km, ca. 5h 15min",
-            "parsedDate": "2024-03-30"
+            "route": "832 km, ca. 8h 19min",
+            "parsedDate": "2024-04-04"
         },
         "Malmö (SE)": {
-            "url": "https://movacar.com/mietwagen/Marburg/Malmö (SE)/",
-            "products": [
-                {
-                    "description": "Pickup from 09.04. to 14.04. 05PM / Max. 48h rental period\nRefuel Policy: 1st Tank inclusive!\n900 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-09",
-                    "endDate": "2024-04-14",
-                    "distanceKm": "900"
-                },
-                {
-                    "description": "Pickup from 09.04. to 09.04. 05PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-09",
-                    "endDate": "2024-04-09",
-                    "distanceKm": "All"
-                }
-            ],
-            "route": "783 km, ca. 7h 49min",
-            "parsedDate": "2024-03-30"
+            "url": "https://movacar.com/mietwagen/Marburg/Malmö (SE)/"
         },
         "Paris (FR)": {
             "url": "https://movacar.com/mietwagen/Marburg/Paris (FR)/",
             "products": [
                 {
                     "description": "Pickup from 11.04. to 16.04. 05PM / Max. 48h rental period\nRefuel Policy: 1st Tank inclusive!\n800 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-11",
-                    "endDate": "2024-04-16",
+                    "startDate": "2024-04-10",
+                    "endDate": "2024-04-15",
                     "distanceKm": "800"
                 },
                 {
                     "description": "Pickup from 11.04. to 11.04. 05PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-11",
-                    "endDate": "2024-04-11",
+                    "startDate": "2024-04-10",
+                    "endDate": "2024-04-10",
                     "distanceKm": "All"
                 }
             ],
             "route": "661 km, ca. 6h 36min",
-            "parsedDate": "2024-03-30"
+            "parsedDate": "2024-04-04"
         },
         "Salzburg": {
             "url": "https://movacar.com/mietwagen/Marburg/Salzburg/",
             "products": [
                 {
                     "description": "Pickup from 12.04. to 17.04. 05PM / Max. 48h rental period\nRefuel Policy: 1st Tank inclusive!\n700 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-12",
-                    "endDate": "2024-04-17",
+                    "startDate": "2024-04-11",
+                    "endDate": "2024-04-16",
                     "distanceKm": "700"
                 },
                 {
                     "description": "Pickup from 12.04. to 17.04. 05PM / Max. 48h rental period\nRefuel Policy: 1st Tank inclusive!\n700 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-12",
-                    "endDate": "2024-04-17",
+                    "startDate": "2024-04-11",
+                    "endDate": "2024-04-16",
                     "distanceKm": "700"
                 },
                 {
                     "description": "Pickup from 12.04. to 12.04. 05PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-12",
-                    "endDate": "2024-04-12",
+                    "startDate": "2024-04-11",
+                    "endDate": "2024-04-11",
                     "distanceKm": "All"
                 },
                 {
                     "description": "Pickup from 12.04. to 12.04. 05PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-12",
-                    "endDate": "2024-04-12",
+                    "startDate": "2024-04-11",
+                    "endDate": "2024-04-11",
                     "distanceKm": "All"
                 }
             ],
             "route": "594 km, ca. 5h 56min",
-            "parsedDate": "2024-03-30"
+            "parsedDate": "2024-04-04"
         },
         "Stockholm (SE)": {
             "url": "https://movacar.com/mietwagen/Marburg/Stockholm (SE)/",
             "products": [
                 {
                     "description": "Pickup from 11.04. to 14.04. 05PM / Max. 96h rental period\nRefuel Policy: 1st Tank inclusive!\n1,600 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-11",
-                    "endDate": "2024-04-14",
-                    "distanceKm": "1,600"
-                },
-                {
-                    "description": "Pickup from 11.04. to 15.04. 09PM / Max. 96h rental period\nRefuel Policy: 1st Tank inclusive!\n1,600 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-11",
-                    "endDate": "2024-04-15",
+                    "startDate": "2024-04-10",
+                    "endDate": "2024-04-13",
                     "distanceKm": "1,600"
                 },
                 {
                     "description": "Pickup from 11.04. to 11.04. 05PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-11",
-                    "endDate": "2024-04-11",
-                    "distanceKm": "All"
-                },
-                {
-                    "description": "Pickup from 11.04. to 12.04. 09PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-11",
-                    "endDate": "2024-04-12",
+                    "startDate": "2024-04-10",
+                    "endDate": "2024-04-10",
                     "distanceKm": "All"
                 }
             ],
             "route": "1448 km, ca. 14h 28min",
-            "parsedDate": "2024-03-30"
+            "parsedDate": "2024-04-04"
         },
         "Goussainville": {
             "url": "https://movacar.com/mietwagen/Marburg/Goussainville/",
             "products": [
                 {
                     "description": "Pickup from 15.04. to 20.04. 05PM / Max. 48h rental period\nRefuel Policy: 1st Tank inclusive!\n800 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-15",
-                    "endDate": "2024-04-20",
+                    "startDate": "2024-04-14",
+                    "endDate": "2024-04-19",
                     "distanceKm": "800"
                 },
                 {
                     "description": "Pickup from 15.04. to 15.04. 05PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-15",
-                    "endDate": "2024-04-15",
+                    "startDate": "2024-04-14",
+                    "endDate": "2024-04-14",
                     "distanceKm": "All"
                 }
             ],
             "route": "641 km, ca. 6h 24min",
-            "parsedDate": "2024-03-30"
+            "parsedDate": "2024-04-04"
         },
         "Saint Alban": {
             "url": "https://movacar.com/mietwagen/Marburg/Saint Alban/",
             "products": [
                 {
                     "description": "Pickup from 15.04. to 18.04. 05PM / Max. 96h rental period\nRefuel Policy: 1st Tank inclusive!\n1,400 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-15",
-                    "endDate": "2024-04-18",
+                    "startDate": "2024-04-14",
+                    "endDate": "2024-04-17",
                     "distanceKm": "1,400"
                 },
                 {
                     "description": "Pickup from 15.04. to 15.04. 05PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-15",
-                    "endDate": "2024-04-15",
+                    "startDate": "2024-04-14",
+                    "endDate": "2024-04-14",
                     "distanceKm": "All"
                 }
             ],
             "route": "1256 km, ca. 12h 33min",
-            "parsedDate": "2024-03-30"
+            "parsedDate": "2024-04-04"
         },
         "Genf (CH)": {
             "url": "https://movacar.com/mietwagen/Marburg/Genf (CH)/",
             "products": [
                 {
                     "description": "Pickup from 10.04. to 15.04. 05PM / Max. 48h rental period\nRefuel Policy: 1st Tank inclusive!\n900 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-10",
-                    "endDate": "2024-04-15",
+                    "startDate": "2024-04-09",
+                    "endDate": "2024-04-14",
                     "distanceKm": "900"
                 },
                 {
                     "description": "Pickup from 10.04. to 10.04. 05PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-10",
-                    "endDate": "2024-04-10",
+                    "startDate": "2024-04-09",
+                    "endDate": "2024-04-09",
                     "distanceKm": "All"
                 }
             ],
             "route": "712 km, ca. 7h 7min",
-            "parsedDate": "2024-03-30"
+            "parsedDate": "2024-04-04"
         },
         "Wiesing": {
             "url": "https://movacar.com/mietwagen/Marburg/Wiesing/",
             "products": [
                 {
                     "description": "Pickup from 10.04. to 15.04. 05PM / Max. 48h rental period\nRefuel Policy: 1st Tank inclusive!\n700 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-10",
-                    "endDate": "2024-04-15",
-                    "distanceKm": "700"
-                },
-                {
-                    "description": "Pickup from 11.04. to 16.04. 05PM / Max. 48h rental period\nRefuel Policy: 1st Tank inclusive!\n700 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-11",
-                    "endDate": "2024-04-16",
+                    "startDate": "2024-04-09",
+                    "endDate": "2024-04-14",
                     "distanceKm": "700"
                 },
                 {
                     "description": "Pickup from 10.04. to 10.04. 05PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-10",
-                    "endDate": "2024-04-10",
-                    "distanceKm": "All"
-                },
-                {
-                    "description": "Pickup from 11.04. to 11.04. 05PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-11",
-                    "endDate": "2024-04-11",
+                    "startDate": "2024-04-09",
+                    "endDate": "2024-04-09",
                     "distanceKm": "All"
                 }
             ],
             "route": "569 km, ca. 5h 41min",
-            "parsedDate": "2024-03-30"
+            "parsedDate": "2024-04-04"
         },
         "Wien (AT)": {
             "url": "https://movacar.com/mietwagen/Marburg/Wien (AT)/",
             "products": [
                 {
-                    "description": "Pickup from 02.04. to 06.04. 05PM / Max. 72h rental period\nRefuel Policy: 1st Tank inclusive!\n1,000 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-02",
-                    "endDate": "2024-04-06",
+                    "description": "Pickup from 12.04. to 16.04. 05PM / Max. 72h rental period\nRefuel Policy: 1st Tank inclusive!\n1,000 km inclusive / Additional km: €0.50",
+                    "startDate": "2024-04-11",
+                    "endDate": "2024-04-15",
                     "distanceKm": "1,000"
                 },
                 {
-                    "description": "Pickup from 02.04. to 02.04. 05PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-02",
-                    "endDate": "2024-04-02",
+                    "description": "Pickup from 12.04. to 12.04. 05PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
+                    "startDate": "2024-04-11",
+                    "endDate": "2024-04-11",
                     "distanceKm": "All"
                 }
             ],
             "route": "806 km, ca. 8h 3min",
-            "parsedDate": "2024-03-30"
+            "parsedDate": "2024-04-04"
         },
-        "Milan (IT)": {
-            "url": "https://movacar.com/mietwagen/Marburg/Milan (IT)/",
+        "Amsterdam (NL)": {
+            "url": "https://movacar.com/mietwagen/Marburg/Amsterdam (NL)/",
             "products": [
                 {
-                    "description": "Pickup from 12.04. to 17.04. 05PM / Max. 48h rental period\nRefuel Policy: 1st Tank inclusive!\n900 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-12",
-                    "endDate": "2024-04-17",
-                    "distanceKm": "900"
+                    "description": "Pickup from 15.04. to 20.04. 09PM / Max. 48h rental period\nRefuel Policy: 1st Tank inclusive!\n600 km inclusive / Additional km: €0.50",
+                    "startDate": "2024-04-14",
+                    "endDate": "2024-04-19",
+                    "distanceKm": "600"
                 },
                 {
-                    "description": "Pickup from 12.04. to 12.04. 05PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-12",
-                    "endDate": "2024-04-12",
+                    "description": "Pickup from 15.04. to 15.04. 09PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
+                    "startDate": "2024-04-14",
+                    "endDate": "2024-04-14",
                     "distanceKm": "All"
                 }
             ],
-            "route": "773 km, ca. 7h 43min",
-            "parsedDate": "2024-03-30"
-        },
-        "Nantes (FR)": {
-            "url": "https://movacar.com/mietwagen/Marburg/Nantes (FR)/",
-            "products": [
-                {
-                    "description": "Pickup from 05.04. to 09.04. 09PM / Max. 72h rental period\nRefuel Policy: 1st Tank inclusive!\n1,300 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-05",
-                    "endDate": "2024-04-09",
-                    "distanceKm": "1,300"
-                },
-                {
-                    "description": "Pickup from 05.04. to 05.04. 09PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-05",
-                    "endDate": "2024-04-05",
-                    "distanceKm": "All"
-                }
-            ],
-            "route": "1106 km, ca. 11h 3min",
-            "parsedDate": "2024-03-30"
+            "route": "411 km, ca. 4h 6min",
+            "parsedDate": "2024-04-04"
         }
     },
-    "Trier": {
-        "Bordeaux (FR)": {
-            "url": "https://movacar.com/mietwagen/Trier/Bordeaux (FR)/",
+    "Aach, Hegau": {
+        "Seclin": {
+            "url": "https://movacar.com/mietwagen/Aach, Hegau/Seclin/",
             "products": [
                 {
-                    "description": "Pickup from 04.04. to 08.04. 09PM / Max. 72h rental period\nRefuel Policy: 1st Tank inclusive!\n1,200 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-04",
-                    "endDate": "2024-04-08",
-                    "distanceKm": "1,200"
+                    "description": "Pickup from 10.04. to 15.04. 09PM / Max. 48h rental period\nRefuel Policy: 1st Tank inclusive!\n800 km inclusive / Additional km: €0.50",
+                    "startDate": "2024-04-09",
+                    "endDate": "2024-04-14",
+                    "distanceKm": "800"
                 },
                 {
-                    "description": "Pickup from 04.04. to 04.04. 09PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-04",
-                    "endDate": "2024-04-04",
+                    "description": "Pickup from 10.04. to 10.04. 09PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
+                    "startDate": "2024-04-09",
+                    "endDate": "2024-04-09",
                     "distanceKm": "All"
                 }
             ],
-            "route": "1002 km, ca. 10h 1min",
-            "parsedDate": "2024-03-30"
+            "route": "674 km, ca. 6h 44min",
+            "parsedDate": "2024-04-04"
         }
     },
     "Zürich (CH)": {
@@ -1796,71 +1522,25 @@
             "url": "https://movacar.com/mietwagen/Zürich (CH)/Schüpfen/",
             "products": [
                 {
-                    "description": "Pickup from 05.04. to 11.04. 09PM / Max. 24h rental period\nRefuel Policy: 1st Tank inclusive!\n300 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-05",
-                    "endDate": "2024-04-11",
+                    "description": "Pickup from 17.04. to 23.04. 09PM / Max. 24h rental period\nRefuel Policy: 1st Tank inclusive!\n300 km inclusive / Additional km: €0.50",
+                    "startDate": "2024-04-16",
+                    "endDate": "2024-04-22",
                     "distanceKm": "300"
                 },
                 {
-                    "description": "Pickup from 05.04. to 05.04. 09PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-05",
-                    "endDate": "2024-04-05",
+                    "description": "Pickup from 17.04. to 17.04. 09PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
+                    "startDate": "2024-04-16",
+                    "endDate": "2024-04-16",
                     "distanceKm": "All"
                 }
             ],
             "route": "123 km, ca. 1h 13min",
-            "parsedDate": "2024-03-30"
-        }
-    },
-    "Lübeck": {
-        "Berlin": {
-            "url": "https://movacar.com/mietwagen/Lübeck/Berlin/",
-            "products": [
-                {
-                    "description": "Pickup from 02.04. to 03.04. 09PM / Max. 24h rental period\nRefuel Policy: 1st Tank inclusive!\n400 km inclusive / Additional km: €0.21",
-                    "startDate": "2024-04-02",
-                    "endDate": "2024-04-03",
-                    "distanceKm": "400"
-                }
-            ],
-            "route": "305 km, ca. 3h 3min",
-            "parsedDate": "2024-03-30"
+            "parsedDate": "2024-04-04"
         }
     },
     "Neubrandenburg": {
         "Berlin": {
-            "url": "https://movacar.com/mietwagen/Neubrandenburg/Berlin/",
-            "products": [
-                {
-                    "description": "Pickup from 02.04. to 04.04. 09PM / Max. 24h rental period\nRefuel Policy: 1st Tank inclusive!\n300 km inclusive / Additional km: €0.21",
-                    "startDate": "2024-04-02",
-                    "endDate": "2024-04-04",
-                    "distanceKm": "300"
-                }
-            ],
-            "route": "150 km, ca. 1h 30min",
-            "parsedDate": "2024-03-30"
-        }
-    },
-    "Paris (FR)": {
-        "Saint Alban": {
-            "url": "https://movacar.com/mietwagen/Paris (FR)/Saint Alban/",
-            "products": [
-                {
-                    "description": "Pickup from 02.04. to 07.04. 09PM / Max. 48h rental period\nRefuel Policy: 1st Tank inclusive!\n900 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-02",
-                    "endDate": "2024-04-07",
-                    "distanceKm": "900"
-                },
-                {
-                    "description": "Pickup from 02.04. to 02.04. 09PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-02",
-                    "endDate": "2024-04-02",
-                    "distanceKm": "All"
-                }
-            ],
-            "route": "752 km, ca. 7h 31min",
-            "parsedDate": "2024-03-30"
+            "url": "https://movacar.com/mietwagen/Neubrandenburg/Berlin/"
         }
     },
     "Hounslow": {
@@ -1869,25 +1549,552 @@
             "products": [
                 {
                     "description": "Pickup from 05.04. to 11.04. 09PM / Max. 24h rental period\nRefuel Policy: 1st Tank inclusive!\n300 km inclusive / Additional km: €0.50",
-                    "startDate": "2024-04-05",
-                    "endDate": "2024-04-11",
+                    "startDate": "2024-04-04",
+                    "endDate": "2024-04-10",
                     "distanceKm": "300"
                 },
                 {
                     "description": "Pickup from 05.04. to 05.04. 09PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
-                    "startDate": "2024-04-05",
-                    "endDate": "2024-04-05",
+                    "startDate": "2024-04-04",
+                    "endDate": "2024-04-04",
                     "distanceKm": "All"
                 }
             ],
             "route": "200 km, ca. 2h",
-            "parsedDate": "2024-03-30"
+            "parsedDate": "2024-04-04"
+        }
+    },
+    "Rostock": {
+        "Erfurt": {
+            "url": "https://movacar.com/mietwagen/Rostock/Erfurt/",
+            "products": [
+                {
+                    "description": "Pickup from 02.04. to 04.04. 09PM / Max. 24h rental period\nRefuel Policy: 1st Tank inclusive!\n600 km inclusive / Additional km: €0.21",
+                    "startDate": "2024-04-01",
+                    "endDate": "2024-04-03",
+                    "distanceKm": "600"
+                }
+            ],
+            "route": "460 km, ca. 4h 36min",
+            "parsedDate": "2024-04-04"
+        },
+        "Berlin": {
+            "url": "https://movacar.com/mietwagen/Rostock/Berlin/",
+            "products": [
+                {
+                    "description": "Pickup from 02.04. to 04.04. 09PM / Max. 24h rental period\nRefuel Policy: 1st Tank inclusive!\n400 km inclusive / Additional km: €0.21",
+                    "startDate": "2024-04-01",
+                    "endDate": "2024-04-03",
+                    "distanceKm": "400"
+                }
+            ],
+            "route": "251 km, ca. 2h 30min",
+            "parsedDate": "2024-04-04"
+        }
+    },
+    "Stralsund": {
+        "Halle, Saale": {
+            "url": "https://movacar.com/mietwagen/Stralsund/Halle, Saale/",
+            "products": [
+                {
+                    "description": "Pickup from 03.04. to 04.04. 09PM / Max. 24h rental period\nRefuel Policy: 1st Tank inclusive!\n600 km inclusive / Additional km: €0.21",
+                    "startDate": "2024-04-02",
+                    "endDate": "2024-04-03",
+                    "distanceKm": "600"
+                }
+            ],
+            "route": "420 km, ca. 4h 12min",
+            "parsedDate": "2024-04-04"
+        }
+    },
+    "Greven, Westf": {
+        "Düsseldorf Flughafen": {
+            "url": "https://movacar.com/mietwagen/Greven, Westf/Düsseldorf Flughafen/",
+            "products": [
+                {
+                    "description": "Pickup from 02.04. to 04.04. 09PM / Max. 24h rental period\nRefuel Policy: 1st Tank inclusive!\n300 km inclusive / Additional km: €0.21",
+                    "startDate": "2024-04-01",
+                    "endDate": "2024-04-03",
+                    "distanceKm": "300"
+                }
+            ],
+            "route": "140 km, ca. 1h 24min",
+            "parsedDate": "2024-04-04"
+        }
+    },
+    "Osnabrück": {
+        "Düsseldorf Flughafen": {
+            "url": "https://movacar.com/mietwagen/Osnabrück/Düsseldorf Flughafen/",
+            "products": [
+                {
+                    "description": "Pickup from 02.04. to 04.04. 09PM / Max. 24h rental period\nRefuel Policy: 1st Tank inclusive!\n300 km inclusive / Additional km: €0.21",
+                    "startDate": "2024-04-01",
+                    "endDate": "2024-04-03",
+                    "distanceKm": "300"
+                }
+            ],
+            "route": "183 km, ca. 1h 49min",
+            "parsedDate": "2024-04-04"
+        }
+    },
+    "Lingen": {
+        "Düsseldorf Flughafen": {
+            "url": "https://movacar.com/mietwagen/Lingen/Düsseldorf Flughafen/",
+            "products": [
+                {
+                    "description": "Pickup from 02.04. to 04.04. 09PM / Max. 24h rental period\nRefuel Policy: 1st Tank inclusive!\n300 km inclusive / Additional km: €0.21",
+                    "startDate": "2024-04-01",
+                    "endDate": "2024-04-03",
+                    "distanceKm": "300"
+                }
+            ],
+            "route": "186 km, ca. 1h 51min",
+            "parsedDate": "2024-04-04"
+        }
+    },
+    "Elmshorn": {
+        "Hamburg": {
+            "url": "https://movacar.com/mietwagen/Elmshorn/Hamburg/",
+            "products": [
+                {
+                    "description": "Pickup from 02.04. to 04.04. 09PM / Max. 24h rental period\nRefuel Policy: 1st Tank inclusive!\n200 km inclusive / Additional km: €0.21",
+                    "startDate": "2024-04-01",
+                    "endDate": "2024-04-03",
+                    "distanceKm": "200"
+                }
+            ],
+            "route": "40 km, ca. 0h 24min",
+            "parsedDate": "2024-04-04"
+        },
+        "Dollern": {
+            "url": "https://movacar.com/mietwagen/Elmshorn/Dollern/",
+            "products": [
+                {
+                    "description": "Pickup from 07.04. to 09.04. 09PM / Max. 24h rental period\nRefuel Policy: 1st Tank inclusive!\n200 km inclusive / Additional km: €0.21",
+                    "startDate": "2024-04-06",
+                    "endDate": "2024-04-08",
+                    "distanceKm": "200"
+                }
+            ],
+            "route": "32 km, ca. 0h 19min",
+            "parsedDate": "2024-04-04"
+        }
+    },
+    "Lüneburg": {
+        "Hamburg": {
+            "url": "https://movacar.com/mietwagen/Lüneburg/Hamburg/",
+            "products": [
+                {
+                    "description": "Pickup from 02.04. to 04.04. 09PM / Max. 24h rental period\nRefuel Policy: 1st Tank inclusive!\n200 km inclusive / Additional km: €0.21",
+                    "startDate": "2024-04-01",
+                    "endDate": "2024-04-03",
+                    "distanceKm": "200"
+                }
+            ],
+            "route": "57 km, ca. 0h 34min",
+            "parsedDate": "2024-04-04"
+        },
+        "Dollern": {
+            "url": "https://movacar.com/mietwagen/Lüneburg/Dollern/",
+            "products": [
+                {
+                    "description": "Pickup from 07.04. to 09.04. 09PM / Max. 24h rental period\nRefuel Policy: 1st Tank inclusive!\n200 km inclusive / Additional km: €0.21",
+                    "startDate": "2024-04-06",
+                    "endDate": "2024-04-08",
+                    "distanceKm": "200"
+                }
+            ],
+            "route": "85 km, ca. 0h 51min",
+            "parsedDate": "2024-04-04"
+        }
+    },
+    "Walsrode": {
+        "Düsseldorf Flughafen": {
+            "url": "https://movacar.com/mietwagen/Walsrode/Düsseldorf Flughafen/",
+            "products": [
+                {
+                    "description": "Pickup from 08.04. to 10.04. 09PM / Max. 24h rental period\nRefuel Policy: 1st Tank inclusive!\n500 km inclusive / Additional km: €0.21",
+                    "startDate": "2024-04-07",
+                    "endDate": "2024-04-09",
+                    "distanceKm": "500"
+                }
+            ],
+            "route": "339 km, ca. 3h 23min",
+            "parsedDate": "2024-04-04"
+        },
+        "Düsseldorf": {
+            "url": "https://movacar.com/mietwagen/Walsrode/Düsseldorf/",
+            "products": [
+                {
+                    "description": "Pickup from 08.04. to 10.04. 09PM / Max. 24h rental period\nRefuel Policy: 1st Tank inclusive!\n500 km inclusive / Additional km: €0.21",
+                    "startDate": "2024-04-07",
+                    "endDate": "2024-04-09",
+                    "distanceKm": "500"
+                }
+            ],
+            "route": "344 km, ca. 3h 26min",
+            "parsedDate": "2024-04-04"
+        },
+        "Köln": {
+            "url": "https://movacar.com/mietwagen/Walsrode/Köln/"
+        }
+    },
+    "Goslar": {
+        "Düsseldorf Flughafen": {
+            "url": "https://movacar.com/mietwagen/Goslar/Düsseldorf Flughafen/",
+            "products": [
+                {
+                    "description": "Pickup from 08.04. to 10.04. 09PM / Max. 24h rental period\nRefuel Policy: 1st Tank inclusive!\n500 km inclusive / Additional km: €0.21",
+                    "startDate": "2024-04-07",
+                    "endDate": "2024-04-09",
+                    "distanceKm": "500"
+                }
+            ],
+            "route": "340 km, ca. 3h 24min",
+            "parsedDate": "2024-04-04"
+        },
+        "Düsseldorf": {
+            "url": "https://movacar.com/mietwagen/Goslar/Düsseldorf/",
+            "products": [
+                {
+                    "description": "Pickup from 08.04. to 10.04. 09PM / Max. 24h rental period\nRefuel Policy: 1st Tank inclusive!\n500 km inclusive / Additional km: €0.21",
+                    "startDate": "2024-04-07",
+                    "endDate": "2024-04-09",
+                    "distanceKm": "500"
+                }
+            ],
+            "route": "342 km, ca. 3h 25min",
+            "parsedDate": "2024-04-04"
+        },
+        "Köln": {
+            "url": "https://movacar.com/mietwagen/Goslar/Köln/",
+            "products": [
+                {
+                    "description": "Pickup from 08.04. to 10.04. 09PM / Max. 24h rental period\nRefuel Policy: 1st Tank inclusive!\n500 km inclusive / Additional km: €0.21",
+                    "startDate": "2024-04-07",
+                    "endDate": "2024-04-09",
+                    "distanceKm": "500"
+                }
+            ],
+            "route": "342 km, ca. 3h 25min",
+            "parsedDate": "2024-04-04"
+        }
+    },
+    "Celle": {
+        "Düsseldorf Flughafen": {
+            "url": "https://movacar.com/mietwagen/Celle/Düsseldorf Flughafen/",
+            "products": [
+                {
+                    "description": "Pickup from 08.04. to 10.04. 09PM / Max. 24h rental period\nRefuel Policy: 1st Tank inclusive!\n500 km inclusive / Additional km: €0.21",
+                    "startDate": "2024-04-07",
+                    "endDate": "2024-04-09",
+                    "distanceKm": "500"
+                }
+            ],
+            "route": "353 km, ca. 3h 31min",
+            "parsedDate": "2024-04-04"
+        },
+        "Düsseldorf": {
+            "url": "https://movacar.com/mietwagen/Celle/Düsseldorf/",
+            "products": [
+                {
+                    "description": "Pickup from 08.04. to 10.04. 09PM / Max. 24h rental period\nRefuel Policy: 1st Tank inclusive!\n500 km inclusive / Additional km: €0.21",
+                    "startDate": "2024-04-07",
+                    "endDate": "2024-04-09",
+                    "distanceKm": "500"
+                }
+            ],
+            "route": "356 km, ca. 3h 33min",
+            "parsedDate": "2024-04-04"
+        },
+        "Köln": {
+            "url": "https://movacar.com/mietwagen/Celle/Köln/",
+            "products": [
+                {
+                    "description": "Pickup from 08.04. to 10.04. 09PM / Max. 24h rental period\nRefuel Policy: 1st Tank inclusive!\n500 km inclusive / Additional km: €0.21",
+                    "startDate": "2024-04-07",
+                    "endDate": "2024-04-09",
+                    "distanceKm": "500"
+                }
+            ],
+            "route": "369 km, ca. 3h 41min",
+            "parsedDate": "2024-04-04"
+        }
+    },
+    "Uelzen": {
+        "Düsseldorf": {
+            "url": "https://movacar.com/mietwagen/Uelzen/Düsseldorf/",
+            "products": [
+                {
+                    "description": "Pickup from 08.04. to 10.04. 09PM / Max. 24h rental period\nRefuel Policy: 1st Tank inclusive!\n600 km inclusive / Additional km: €0.21",
+                    "startDate": "2024-04-07",
+                    "endDate": "2024-04-09",
+                    "distanceKm": "600"
+                }
+            ],
+            "route": "419 km, ca. 4h 11min",
+            "parsedDate": "2024-04-04"
+        },
+        "Düsseldorf Flughafen": {
+            "url": "https://movacar.com/mietwagen/Uelzen/Düsseldorf Flughafen/",
+            "products": [
+                {
+                    "description": "Pickup from 08.04. to 10.04. 09PM / Max. 24h rental period\nRefuel Policy: 1st Tank inclusive!\n600 km inclusive / Additional km: €0.21",
+                    "startDate": "2024-04-07",
+                    "endDate": "2024-04-09",
+                    "distanceKm": "600"
+                }
+            ],
+            "route": "415 km, ca. 4h 9min",
+            "parsedDate": "2024-04-04"
+        },
+        "Köln": {
+            "url": "https://movacar.com/mietwagen/Uelzen/Köln/",
+            "products": [
+                {
+                    "description": "Pickup from 08.04. to 10.04. 09PM / Max. 24h rental period\nRefuel Policy: 1st Tank inclusive!\n600 km inclusive / Additional km: €0.21",
+                    "startDate": "2024-04-07",
+                    "endDate": "2024-04-09",
+                    "distanceKm": "600"
+                }
+            ],
+            "route": "433 km, ca. 4h 19min",
+            "parsedDate": "2024-04-04"
+        }
+    },
+    "Unterlüß": {
+        "Düsseldorf Flughafen": {
+            "url": "https://movacar.com/mietwagen/Unterlüß/Düsseldorf Flughafen/",
+            "products": [
+                {
+                    "description": "Pickup from 08.04. to 10.04. 09PM / Max. 24h rental period\nRefuel Policy: 1st Tank inclusive!\n500 km inclusive / Additional km: €0.21",
+                    "startDate": "2024-04-07",
+                    "endDate": "2024-04-09",
+                    "distanceKm": "500"
+                }
+            ],
+            "route": "386 km, ca. 3h 51min",
+            "parsedDate": "2024-04-04"
+        },
+        "Düsseldorf": {
+            "url": "https://movacar.com/mietwagen/Unterlüß/Düsseldorf/",
+            "products": [
+                {
+                    "description": "Pickup from 08.04. to 10.04. 09PM / Max. 24h rental period\nRefuel Policy: 1st Tank inclusive!\n500 km inclusive / Additional km: €0.21",
+                    "startDate": "2024-04-07",
+                    "endDate": "2024-04-09",
+                    "distanceKm": "500"
+                }
+            ],
+            "route": "390 km, ca. 3h 54min",
+            "parsedDate": "2024-04-04"
+        },
+        "Köln": {
+            "url": "https://movacar.com/mietwagen/Unterlüß/Köln/",
+            "products": [
+                {
+                    "description": "Pickup from 08.04. to 10.04. 09PM / Max. 24h rental period\nRefuel Policy: 1st Tank inclusive!\n600 km inclusive / Additional km: €0.21",
+                    "startDate": "2024-04-07",
+                    "endDate": "2024-04-09",
+                    "distanceKm": "600"
+                }
+            ],
+            "route": "404 km, ca. 4h 2min",
+            "parsedDate": "2024-04-04"
+        }
+    },
+    "Leer": {
+        "Köln": {
+            "url": "https://movacar.com/mietwagen/Leer/Köln/",
+            "products": [
+                {
+                    "description": "Pickup from 03.04. to 09.04. 09PM / Max. 24h rental period\nRefuel Policy: 1st Tank inclusive!\n500 km inclusive / Additional km: €0.21",
+                    "startDate": "2024-04-02",
+                    "endDate": "2024-04-08",
+                    "distanceKm": "500"
+                }
+            ],
+            "route": "334 km, ca. 3h 20min",
+            "parsedDate": "2024-04-04"
+        }
+    },
+    "Oldenburg, Oldb": {
+        "Köln": {
+            "url": "https://movacar.com/mietwagen/Oldenburg, Oldb/Köln/",
+            "products": [
+                {
+                    "description": "Pickup from 03.04. to 10.04. 09PM / Max. 24h rental period\nRefuel Policy: 1st Tank inclusive!\n500 km inclusive / Additional km: €0.21",
+                    "startDate": "2024-04-02",
+                    "endDate": "2024-04-09",
+                    "distanceKm": "500"
+                }
+            ],
+            "route": "336 km, ca. 3h 21min",
+            "parsedDate": "2024-04-04"
+        }
+    },
+    "Bayreuth": {
+        "München": {
+            "url": "https://movacar.com/mietwagen/Bayreuth/München/",
+            "products": [
+                {
+                    "description": "Pickup from 08.04. to 12.04. 09PM / Max. 24h rental period\nRefuel Policy: 1st Tank inclusive!\n400 km inclusive / Additional km: €0.21",
+                    "startDate": "2024-04-07",
+                    "endDate": "2024-04-11",
+                    "distanceKm": "400"
+                }
+            ],
+            "route": "260 km, ca. 2h 36min",
+            "parsedDate": "2024-04-04"
+        }
+    },
+    "Bielefeld": {
+        "Kiel": {
+            "url": "https://movacar.com/mietwagen/Bielefeld/Kiel/",
+            "products": [
+                {
+                    "description": "Pickup from 03.04. to 04.04. 09PM / Max. 24h rental period\nRefuel Policy: 1st Tank inclusive!\n500 km inclusive / Additional km: €0.21",
+                    "startDate": "2024-04-02",
+                    "endDate": "2024-04-03",
+                    "distanceKm": "500"
+                }
+            ],
+            "route": "360 km, ca. 3h 36min",
+            "parsedDate": "2024-04-04"
+        }
+    },
+    "Gütersloh": {
+        "Kiel": {
+            "url": "https://movacar.com/mietwagen/Gütersloh/Kiel/",
+            "products": [
+                {
+                    "description": "Pickup from 03.04. to 04.04. 09PM / Max. 24h rental period\nRefuel Policy: 1st Tank inclusive!\n500 km inclusive / Additional km: €0.21",
+                    "startDate": "2024-04-02",
+                    "endDate": "2024-04-03",
+                    "distanceKm": "500"
+                }
+            ],
+            "route": "381 km, ca. 3h 48min",
+            "parsedDate": "2024-04-04"
+        }
+    },
+    "Paderborn": {
+        "Kiel": {
+            "url": "https://movacar.com/mietwagen/Paderborn/Kiel/",
+            "products": [
+                {
+                    "description": "Pickup from 03.04. to 04.04. 09PM / Max. 24h rental period\nRefuel Policy: 1st Tank inclusive!\n500 km inclusive / Additional km: €0.21",
+                    "startDate": "2024-04-02",
+                    "endDate": "2024-04-03",
+                    "distanceKm": "500"
+                }
+            ],
+            "route": "395 km, ca. 3h 57min",
+            "parsedDate": "2024-04-04"
+        }
+    },
+    "Braunschweig": {
+        "Kiel": {
+            "url": "https://movacar.com/mietwagen/Braunschweig/Kiel/",
+            "products": [
+                {
+                    "description": "Pickup from 03.04. to 06.04. 09PM / Max. 24h rental period\nRefuel Policy: 1st Tank inclusive!\n400 km inclusive / Additional km: €0.21",
+                    "startDate": "2024-04-02",
+                    "endDate": "2024-04-05",
+                    "distanceKm": "400"
+                }
+            ],
+            "route": "299 km, ca. 2h 59min",
+            "parsedDate": "2024-04-04"
+        }
+    },
+    "Wolfsburg": {
+        "Kiel": {
+            "url": "https://movacar.com/mietwagen/Wolfsburg/Kiel/",
+            "products": [
+                {
+                    "description": "Pickup from 03.04. to 06.04. 09PM / Max. 24h rental period\nRefuel Policy: 1st Tank inclusive!\n400 km inclusive / Additional km: €0.21",
+                    "startDate": "2024-04-02",
+                    "endDate": "2024-04-05",
+                    "distanceKm": "400"
+                }
+            ],
+            "route": "280 km, ca. 2h 48min",
+            "parsedDate": "2024-04-04"
+        }
+    },
+    "Soest": {
+        "Kiel": {
+            "url": "https://movacar.com/mietwagen/Soest/Kiel/"
+        }
+    },
+    "Brilon": {
+        "Kiel": {
+            "url": "https://movacar.com/mietwagen/Brilon/Kiel/",
+            "products": [
+                {
+                    "description": "Pickup from 03.04. to 06.04. 09PM / Max. 24h rental period\nRefuel Policy: 1st Tank inclusive!\n600 km inclusive / Additional km: €0.21",
+                    "startDate": "2024-04-02",
+                    "endDate": "2024-04-05",
+                    "distanceKm": "600"
+                }
+            ],
+            "route": "444 km, ca. 4h 26min",
+            "parsedDate": "2024-04-04"
+        }
+    },
+    "Lippstadt": {
+        "Kiel": {
+            "url": "https://movacar.com/mietwagen/Lippstadt/Kiel/",
+            "products": [
+                {
+                    "description": "Pickup from 03.04. to 06.04. 09PM / Max. 24h rental period\nRefuel Policy: 1st Tank inclusive!\n600 km inclusive / Additional km: €0.21",
+                    "startDate": "2024-04-02",
+                    "endDate": "2024-04-05",
+                    "distanceKm": "600"
+                }
+            ],
+            "route": "412 km, ca. 4h 7min",
+            "parsedDate": "2024-04-04"
+        }
+    },
+    "Beckum": {
+        "Kiel": {
+            "url": "https://movacar.com/mietwagen/Beckum/Kiel/",
+            "products": [
+                {
+                    "description": "Pickup from 03.04. to 06.04. 09PM / Max. 24h rental period\nRefuel Policy: 1st Tank inclusive!\n600 km inclusive / Additional km: €0.21",
+                    "startDate": "2024-04-02",
+                    "endDate": "2024-04-05",
+                    "distanceKm": "600"
+                }
+            ],
+            "route": "413 km, ca. 4h 7min",
+            "parsedDate": "2024-04-04"
+        }
+    },
+    "Mölndal": {
+        "Bremen": {
+            "url": "https://movacar.com/mietwagen/Mölndal/Bremen/",
+            "products": [
+                {
+                    "description": "Pickup from 13.04. to 18.04. 09PM / Max. 48h rental period\nRefuel Policy: 1st Tank inclusive!\n900 km inclusive / Additional km: €0.50",
+                    "startDate": "2024-04-12",
+                    "endDate": "2024-04-17",
+                    "distanceKm": "900"
+                },
+                {
+                    "description": "Pickup from 13.04. to 13.04. 09PM / Max. 168h rental period\nRefuel Policy: Fuel not included\nAll km inclusive!",
+                    "startDate": "2024-04-12",
+                    "endDate": "2024-04-12",
+                    "distanceKm": "All"
+                }
+            ],
+            "route": "712 km, ca. 7h 7min",
+            "parsedDate": "2024-04-04"
         }
     },
     "von": {
-        "Hamburg": {
-            "url": "https://movacar.com/mietwagen/von/Hamburg/"
-        },
         "Bordeaux (FR)": {
             "url": "https://movacar.com/mietwagen/von/Bordeaux (FR)/"
         },
@@ -1897,11 +2104,14 @@
         "Malmö (SE)": {
             "url": "https://movacar.com/mietwagen/von/Malmö (SE)/"
         },
-        "Genf (CH)": {
-            "url": "https://movacar.com/mietwagen/von/Genf (CH)/"
-        },
         "München": {
             "url": "https://movacar.com/mietwagen/von/München/"
+        },
+        "Hamburg": {
+            "url": "https://movacar.com/mietwagen/von/Hamburg/"
+        },
+        "Göteborg (SE)": {
+            "url": "https://movacar.com/mietwagen/von/Göteborg (SE)/"
         },
         "Berlin": {
             "url": "https://movacar.com/mietwagen/von/Berlin/"
@@ -1909,23 +2119,20 @@
         "Dormagen": {
             "url": "https://movacar.com/mietwagen/von/Dormagen/"
         },
+        "Graz (AT)": {
+            "url": "https://movacar.com/mietwagen/von/Graz (AT)/"
+        },
         "Leipzig": {
             "url": "https://movacar.com/mietwagen/von/Leipzig/"
         },
         "Bremen": {
             "url": "https://movacar.com/mietwagen/von/Bremen/"
         },
-        "Florence (IT)": {
-            "url": "https://movacar.com/mietwagen/von/Florence (IT)/"
+        "Lehrte": {
+            "url": "https://movacar.com/mietwagen/von/Lehrte/"
         },
         "Freiburg im Breisgau": {
             "url": "https://movacar.com/mietwagen/von/Freiburg im Breisgau/"
-        },
-        "Göteborg (SE)": {
-            "url": "https://movacar.com/mietwagen/von/Göteborg (SE)/"
-        },
-        "Lehrte": {
-            "url": "https://movacar.com/mietwagen/von/Lehrte/"
         },
         "Nürnberg": {
             "url": "https://movacar.com/mietwagen/von/Nürnberg/"
@@ -1939,29 +2146,95 @@
         "Bonn": {
             "url": "https://movacar.com/mietwagen/von/Bonn/"
         },
-        "Aach, Hegau": {
-            "url": "https://movacar.com/mietwagen/von/Aach, Hegau/"
-        },
         "Marburg": {
             "url": "https://movacar.com/mietwagen/von/Marburg/"
         },
-        "Trier": {
-            "url": "https://movacar.com/mietwagen/von/Trier/"
+        "Aach, Hegau": {
+            "url": "https://movacar.com/mietwagen/von/Aach, Hegau/"
         },
         "Zürich (CH)": {
             "url": "https://movacar.com/mietwagen/von/Zürich (CH)/"
         },
-        "Lübeck": {
-            "url": "https://movacar.com/mietwagen/von/Lübeck/"
-        },
         "Neubrandenburg": {
             "url": "https://movacar.com/mietwagen/von/Neubrandenburg/"
         },
-        "Paris (FR)": {
-            "url": "https://movacar.com/mietwagen/von/Paris (FR)/"
-        },
         "Hounslow": {
             "url": "https://movacar.com/mietwagen/von/Hounslow/"
+        },
+        "Rostock": {
+            "url": "https://movacar.com/mietwagen/von/Rostock/"
+        },
+        "Stralsund": {
+            "url": "https://movacar.com/mietwagen/von/Stralsund/"
+        },
+        "Greven, Westf": {
+            "url": "https://movacar.com/mietwagen/von/Greven, Westf/"
+        },
+        "Osnabrück": {
+            "url": "https://movacar.com/mietwagen/von/Osnabrück/"
+        },
+        "Lingen": {
+            "url": "https://movacar.com/mietwagen/von/Lingen/"
+        },
+        "Elmshorn": {
+            "url": "https://movacar.com/mietwagen/von/Elmshorn/"
+        },
+        "Lüneburg": {
+            "url": "https://movacar.com/mietwagen/von/Lüneburg/"
+        },
+        "Walsrode": {
+            "url": "https://movacar.com/mietwagen/von/Walsrode/"
+        },
+        "Goslar": {
+            "url": "https://movacar.com/mietwagen/von/Goslar/"
+        },
+        "Celle": {
+            "url": "https://movacar.com/mietwagen/von/Celle/"
+        },
+        "Uelzen": {
+            "url": "https://movacar.com/mietwagen/von/Uelzen/"
+        },
+        "Unterlüß": {
+            "url": "https://movacar.com/mietwagen/von/Unterlüß/"
+        },
+        "Leer": {
+            "url": "https://movacar.com/mietwagen/von/Leer/"
+        },
+        "Oldenburg, Oldb": {
+            "url": "https://movacar.com/mietwagen/von/Oldenburg, Oldb/"
+        },
+        "Bayreuth": {
+            "url": "https://movacar.com/mietwagen/von/Bayreuth/"
+        },
+        "Bielefeld": {
+            "url": "https://movacar.com/mietwagen/von/Bielefeld/"
+        },
+        "Gütersloh": {
+            "url": "https://movacar.com/mietwagen/von/Gütersloh/"
+        },
+        "Paderborn": {
+            "url": "https://movacar.com/mietwagen/von/Paderborn/"
+        },
+        "Braunschweig": {
+            "url": "https://movacar.com/mietwagen/von/Braunschweig/"
+        },
+        "Wolfsburg": {
+            "url": "https://movacar.com/mietwagen/von/Wolfsburg/"
+        },
+        "Soest": {
+            "url": "https://movacar.com/mietwagen/von/Soest/"
+        },
+        "Brilon": {
+            "url": "https://movacar.com/mietwagen/von/Brilon/"
+        },
+        "Lippstadt": {
+            "url": "https://movacar.com/mietwagen/von/Lippstadt/"
+        },
+        "Beckum": {
+            "url": "https://movacar.com/mietwagen/von/Beckum/"
+        },
+        "Mölndal": {
+            "url": "https://movacar.com/mietwagen/von/Mölndal/"
         }
     }
 }

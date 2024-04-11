@@ -4,7 +4,10 @@ const xml2js = require('xml2js');
 const fs = require('fs');
 const path = require('path');
 const csvWriter = require('csv-writer').createObjectCsvWriter;
-let destinations = require('./destinations.json');
+
+const destinationsFileName = 'destinations.json';
+
+let destinations = require(`./${destinationsFileName}`);
 
 const currentDirectory = path.dirname(__filename);
 const sitemapURL = 'https://movacar.com/sitemap.xml';
@@ -41,7 +44,7 @@ async function parseMovacarSitemap(page, destinations = {}) {
     const document = await parser.parseStringPromise(sitemapResponse);
     const urls = document.urlset.url;
 
-    for (let i = 0; i < 17; i++) {
+    for (let i = 0; i < urls.length; i++) {
         const loc = urls[i].loc[0];
         const regex = /https:\/\/www\.movacar\.com\/mietwagen\/(?:von|)([^\/]+)\/([^\/]+)\/(?:[^\/]+\/|)/;
         const match = regex.exec(loc);
@@ -68,7 +71,7 @@ async function getPickupLocations(page, destinations) {
             const url = destinations[origin][destination]["url"];
             try {
                 console.log(`Fetching pickup locations for ${url}`);
-                await page.goto(url);
+                await page.goto(url, { timeout: 5000 });
                 const [productElements, routeElement] = await Promise.all([
                     page.waitForSelector('ul.product__benefit-list'),
                     page.waitForSelector('div.header__route-info')
@@ -101,6 +104,8 @@ async function getPickupLocations(page, destinations) {
             } catch (e) {
                 console.log(`Error fetching pickup locations for ${url}: ${e}`);
             }
+
+            writeDestinationsToFile(destinations)
         }
     }
 
@@ -149,14 +154,22 @@ function convertJSONtoCSV(destinationsFilePath, destinations) {
         });
 }
 
+function writeDestinationsToFile(
+    destinations,
+    destinationsFilePath = path.join(currentDirectory, destinationsFileName)) {
+    fs.writeFileSync(destinationsFilePath, JSON.stringify(destinations, null, 4));
+    console.log('JSON file written successfully');
+}
+
+// main function
 async function main() {
     try {
         let page = await getBrowserPage();
         destinations = await parseMovacarSitemap(page, destinations);
+        writeDestinationsToFile(destinations);
         destinations = await getPickupLocations(page, destinations);
         await page.browser().close();
 
-        fs.writeFileSync(path.join(currentDirectory, 'destinations.json'), JSON.stringify(destinations, null, 4))
         convertJSONtoCSV(path.join(currentDirectory, 'destinations.csv'), destinations);
     } catch (error) {
         console.error('An error occurred:', error);
