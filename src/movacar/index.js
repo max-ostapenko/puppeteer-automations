@@ -63,81 +63,44 @@ function writeDestinationsToFile(
     console.log('Trips map file written successfully');
 }
 
-function parseDate(dateString) {
-    const dateParts = dateString.split('.');
-    return new Date(new Date().getFullYear(), dateParts[1] - 1, dateParts[0], 2, 0, 0).toISOString().slice(0, 10);
-}
-
 async function getPickupLocations(page, destinations) {
     for (const tripURL in destinations) {
-        const { origin, destination } = destinations[tripURL];
-        try {
-            console.log(`Fetching pickup locations for ${tripURL}`);
-            await page.goto(tripURL, { timeout: 5000 });
-
-            destinations[tripURL]["route"] = await page.$eval('.header__route-info', element => element.innerText);
-
-            const cars = await page.$$eval('.product-list__item', elements => elements.map((element) => {
-                let car = {}
-
-                try {
-                    car.title = element.querySelector(".product__title").innerText
-                } catch (e) { }
-
-                try {
-                    car.provider = element.querySelector(".product__logo img").alt;
-                } catch (e) { }
-
-                try {
-                    description_items = element.querySelectorAll(".product__description-item");
-                } catch (e) { }
+        console.log(`Fetching cars for ${tripURL}`);
+        await page.goto(tripURL, { timeout: 5000 });
+        destinations[tripURL]["route"] = await page.$eval('.header__route-info', element => element.innerText);
 
 
-                try {
-                    car.deposit = description_items[2].innerText;
-                } catch (e) { }
+        const cars = await page.$$eval('.product-list__item', elements => elements.map((element) => {
+            let car = {};
+            function parseDate(dateString) {
+                const dateParts = dateString.split('.');
+                return new Date(new Date().getFullYear(), dateParts[1] - 1, dateParts[0], 2, 0, 0).toISOString().slice(0, 10);
+            }
 
-                try {
-                    car.seats = description_items[5].innerText;
-                } catch (e) { }
+            car.title = element.querySelector(".product__title").innerText
+            car.provider = element.querySelector(".product__logo img").alt;
 
-                try {
-                    car.doors = description_items[7].innerText;
-                } catch (e) { }
+            description_items = element.querySelectorAll(".product__description-item");
+            car.deposit = description_items[2].innerText;
+            car.seats = description_items[5].innerText;
+            car.doors = description_items[7].innerText;
 
-                try {
-                    benefit_items = element.querySelectorAll(".product__benefit-item");
-                } catch (e) { }
+            benefit_items = element.querySelectorAll(".product__benefit-item");
+            [_, car.startDate, car.endDate, car.period] = /Pickup from (\d{2}\.\d{2})\. to (\d{2}\.\d{2})\. .+ (\d+h) rental period/.exec(benefit_items[0].innerText);
+            car.startDate = parseDate(car.startDate);
+            car.endDate = parseDate(car.endDate);
+            car.refuel = benefit_items[1].innerText;
+            car.distance = /([All,\d]+) km .+/.exec(benefit_items[2].innerText)[1];
 
-                try {
-                    [_, car.startDate, car.endDate, car.period] = /Pickup from (\d{2}\.\d{2})\. to (\d{2}\.\d{2})\. .+ (\d+h) rental period/.exec(benefit_items[0].innerText);
-                    car.startDate = parseDate(car.startDate);
-                    car.endDate = parseDate(car.endDate);
-                } catch (e) { }
-                try {
-                    car.refuel = benefit_items[1].innerText;
-                } catch (e) { }
-                try {
-                    car.distance = /([All,\d]+) km .+/.exec(benefit_items[2].innerText)[1];
-                } catch (e) { }
+            buttonText = element.querySelector(".product__link-item--checkout-button").innerText
+            console.log(buttonText);
+            car.price = /Book for €(\d+)/.exec(buttonText)[1];
 
-                try {
-                    buttonText = element.querySelector(".product__link-item--checkout-button").innerText
-                    console.log(buttonText);
-                    car.price = /'Book for €(\d+)/.exec(buttonText)[1];
-                } catch (e) { }
-
-                return car;
-            }));
-            destinations[tripURL]["cars"] = cars;
-
-        } catch (e) {
-            console.log(`Error fetching pickup locations for ${tripURL}: ${e}`);
-        }
-
+            return car;
+        }));
+        destinations[tripURL]["cars"] = cars;
         writeDestinationsToFile(destinations)
     }
-
     destinations["parsedDate"] = new Date().toISOString().slice(0, 10);
 
     return destinations;
@@ -187,20 +150,15 @@ function convertJSONtoCSV(destinationsFilePath, trips) {
 
 
 async function main() {
-    try {
-        const page = await getBrowserPage();
-        let destinations = {} // require('./destinations.json');
-        destinations = await parseMovacarSitemap(page, destinations);
-        writeDestinationsToFile(destinations);
+    const page = await getBrowserPage();
+    let destinations = {} // require('./destinations.json');
+    destinations = await parseMovacarSitemap(page, destinations);
+    writeDestinationsToFile(destinations);
 
-        destinations = await getPickupLocations(page, destinations);
-        await page.browser().close();
+    destinations = await getPickupLocations(page, destinations);
+    await page.browser().close();
 
-        convertJSONtoCSV(path.join(currentDirectory, 'destinations.csv'), destinations);
-
-    } catch (error) {
-        console.error('An error occurred:', error);
-    }
+    convertJSONtoCSV(path.join(currentDirectory, 'destinations.csv'), destinations);
 }
 
 main();
