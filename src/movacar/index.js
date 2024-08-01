@@ -1,14 +1,9 @@
 const { launchBrowser } = require('../funcs/browser');
-const sleep = require('../funcs/helpers');
 const xml2js = require('xml2js');
 const fs = require('fs');
 const path = require('path');
 const csvWriter = require('csv-writer').createObjectCsvWriter;
-
 const destinationsFileName = 'destinations.json';
-
-let destinations = require(`./${destinationsFileName}`);
-
 const currentDirectory = path.dirname(__filename);
 const sitemapURL = 'https://movacar.com/sitemap.xml';
 
@@ -28,7 +23,8 @@ async function getBrowserPage() {
     return page;
 }
 
-async function parseMovacarSitemap(page, destinations = {}) {
+
+async function parseMovacarSitemap(page, destinations) {
     const sitemapResponsePromise = new Promise((resolve) => {
         page.on('response', async (response) => {
             if (response.url() === sitemapURL && response.status() === 200) {
@@ -44,109 +40,144 @@ async function parseMovacarSitemap(page, destinations = {}) {
     const document = await parser.parseStringPromise(sitemapResponse);
     const urls = document.urlset.url;
 
-    for (let i = 0; i < urls.length; i++) {
-        const loc = urls[i].loc[0];
-        const regex = /https:\/\/www\.movacar\.com\/mietwagen\/(?:von|)([^\/]+)\/([^\/]+)\/(?:[^\/]+\/|)/;
-        const match = regex.exec(loc);
+    for (const url of urls) {
+        const tripURL = url.loc[0]
 
-        if (match) {
-            const origin = decodeURIComponent(match[1]);
-            const destination = decodeURIComponent(match[2]);
-            if (destination !== "") {
-                destinations[origin] = destinations[origin] || {};
-                destinations[origin][destination] = { url: `https://movacar.com/mietwagen/${origin}/${destination}/` };
-            }
+        const regex = /mietwagen\/(.+)\/(.+)\//;
+        const match = regex.exec(url.loc[0]);
+
+        if (match && match[1] != 'von' && match[2]) {
+            destinations[tripURL] = destinations[tripURL] || {};
+            destinations[tripURL]["origin"] = decodeURIComponent(match[1]);
+            destinations[tripURL]["destination"] = decodeURIComponent(match[2]);
         }
     }
 
     return destinations;
+}
+
+function writeDestinationsToFile(
+    destinations,
+    destinationsFilePath = path.join(currentDirectory, destinationsFileName)) {
+    fs.writeFileSync(destinationsFilePath, JSON.stringify(destinations, null, 4));
+    console.log('Trips map file written successfully');
+}
+
+function parseDate(dateString) {
+    const dateParts = dateString.split('.');
+    return new Date(new Date().getFullYear(), dateParts[1] - 1, dateParts[0], 2, 0, 0).toISOString().slice(0, 10);
 }
 
 async function getPickupLocations(page, destinations) {
-    for (const origin in destinations) {
-        if (origin === "von") continue;
-        for (const destination in destinations[origin]) {
-            if (destinations[origin][destination]["parsedDate"] <= "2024-03-30") continue;
+    for (const tripURL in destinations) {
+        const { origin, destination } = destinations[tripURL];
+        try {
+            console.log(`Fetching pickup locations for ${tripURL}`);
+            await page.goto(tripURL, { timeout: 5000 });
 
-            const url = destinations[origin][destination]["url"];
-            try {
-                console.log(`Fetching pickup locations for ${url}`);
-                await page.goto(url, { timeout: 5000 });
-                const [productElements, routeElement] = await Promise.all([
-                    page.waitForSelector('ul.product__benefit-list'),
-                    page.waitForSelector('div.header__route-info')
-                ]);
+            destinations[tripURL]["route"] = await page.$eval('.header__route-info', element => element.innerText);
 
-                const products = await page.$$eval('ul.product__benefit-list', elements => elements.map((element) => {
-                    let product = {}
-                    product.description = element.innerText;
-                    function parseDate(dateString) {
-                        const dateParts = dateString.split('.');
-                        return new Date("2024", dateParts[1] - 1, dateParts[0]).toISOString().slice(0, 10);
-                    }
-                    try {
-                        product.startDate = parseDate(/Pickup from (\d{2}\.\d{2}\.) .+/.exec(product.description.split('\n')[0])[1]);
-                    } catch (e) { }
-                    try {
-                        product.endDate = parseDate(/.+ to (\d{2}\.\d{2}\.) .+/.exec(product.description.split('\n')[0])[1]);
-                    } catch (e) { }
-                    try {
-                        product.distanceKm = /([All,\d]+) km .+/.exec(product.description.split('\n')[2])[1];
-                    } catch (e) { }
-                    return product;
-                }));
-                destinations[origin][destination]["products"] = products;
+            const cars = await page.$$eval('.product-list__item', elements => elements.map((element) => {
+                let car = {}
 
-                const route = await routeElement.evaluate(element => element.innerText);
-                destinations[origin][destination]["route"] = route;
+                try {
+                    car.title = element.querySelector(".product__title").innerText
+                } catch (e) { }
 
-                destinations[origin][destination]["parsedDate"] = new Date().toISOString().slice(0, 10);
-            } catch (e) {
-                console.log(`Error fetching pickup locations for ${url}: ${e}`);
-            }
+                try {
+                    car.provider = element.querySelector(".product__logo img").alt;
+                } catch (e) { }
 
-            writeDestinationsToFile(destinations)
+                try {
+                    description_items = element.querySelectorAll(".product__description-item");
+                } catch (e) { }
+
+
+                try {
+                    car.deposit = description_items[2].innerText;
+                } catch (e) { }
+
+                try {
+                    car.seats = description_items[5].innerText;
+                } catch (e) { }
+
+                try {
+                    car.doors = description_items[7].innerText;
+                } catch (e) { }
+
+                try {
+                    benefit_items = element.querySelectorAll(".product__benefit-item");
+                } catch (e) { }
+
+                try {
+                    [_, car.startDate, car.endDate, car.period] = /Pickup from (\d{2}\.\d{2})\. to (\d{2}\.\d{2})\. .+ (\d+h) rental period/.exec(benefit_items[0].innerText);
+                    car.startDate = parseDate(car.startDate);
+                    car.endDate = parseDate(car.endDate);
+                } catch (e) { }
+                try {
+                    car.refuel = benefit_items[1].innerText;
+                } catch (e) { }
+                try {
+                    car.distance = /([All,\d]+) km .+/.exec(benefit_items[2].innerText)[1];
+                } catch (e) { }
+
+                try {
+                    buttonText = element.querySelector(".product__link-item--checkout-button").innerText
+                    console.log(buttonText);
+                    car.price = /'Book for €(\d+)/.exec(buttonText)[1];
+                } catch (e) { }
+
+                return car;
+            }));
+            destinations[tripURL]["cars"] = cars;
+
+        } catch (e) {
+            console.log(`Error fetching pickup locations for ${tripURL}: ${e}`);
         }
+
+        writeDestinationsToFile(destinations)
     }
+
+    destinations["parsedDate"] = new Date().toISOString().slice(0, 10);
 
     return destinations;
 }
 
-function convertJSONtoCSV(destinationsFilePath, destinations) {
+function convertJSONtoCSV(destinationsFilePath, trips) {
     const csv = csvWriter({
         path: destinationsFilePath,
         header: [
             { id: 'origin', title: 'Origin' },
             { id: 'destination', title: 'Destination' },
-            { id: 'url', title: 'URL' },
             { id: 'route', title: 'Route' },
-            { id: 'product.startDate', title: 'Start Date' },
-            { id: 'product.endDate', title: 'End Date' },
-            { id: 'product.distanceKm', title: 'Distance (km)' },
-
+            { id: 'title', title: 'Title' },
+            { id: 'provider', title: 'Provider' },
+            { id: 'deposit', title: 'Deposit' },
+            { id: 'seats', title: 'Seats' },
+            { id: 'doors', title: 'Doors' },
+            { id: 'startDate', title: 'Start Date' },
+            { id: 'endDate', title: 'End Date' },
+            { id: 'period', title: 'Period' },
+            { id: 'refuel', title: 'Refuel' },
+            { id: 'distance', title: 'Distance (km)' },
+            { id: 'price', title: 'Price (€)' },
+            { id: 'tripURL', title: 'Trip URL' },
         ],
     });
 
     const records = [];
-    for (const origin in destinations) {
-        for (const destination in destinations[origin]) {
-            const { url, products, route } = destinations[origin][destination];
-
-            if (products && products.length > 0) {
-                products.forEach(product => {
-                    records.push({
-                        origin: origin,
-                        destination: destination,
-                        url: url,
-                        route: route,
-                        'product.startDate': product.startDate,
-                        'product.endDate': product.endDate,
-                        'product.distanceKm': product.distanceKm,
-                    });
-                })
-            }
+    for (const tripURL in trips) {
+        if (tripURL === 'parsedDate') continue;
+        for (const car of trips[tripURL].cars) {
+            records.push({
+                ...trips[tripURL],
+                ...car,
+                'tripURL': tripURL
+            });
         }
     }
+
+    //console.log(records);
 
     csv.writeRecords(records)
         .then(() => {
@@ -154,23 +185,19 @@ function convertJSONtoCSV(destinationsFilePath, destinations) {
         });
 }
 
-function writeDestinationsToFile(
-    destinations,
-    destinationsFilePath = path.join(currentDirectory, destinationsFileName)) {
-    fs.writeFileSync(destinationsFilePath, JSON.stringify(destinations, null, 4));
-    console.log('JSON file written successfully');
-}
 
-// main function
 async function main() {
     try {
-        let page = await getBrowserPage();
+        const page = await getBrowserPage();
+        let destinations = {} // require('./destinations.json');
         destinations = await parseMovacarSitemap(page, destinations);
         writeDestinationsToFile(destinations);
+
         destinations = await getPickupLocations(page, destinations);
         await page.browser().close();
 
         convertJSONtoCSV(path.join(currentDirectory, 'destinations.csv'), destinations);
+
     } catch (error) {
         console.error('An error occurred:', error);
     }
