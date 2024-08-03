@@ -14,6 +14,7 @@
     "mb": "node ./src/mercedes_benz_/tag_manager_tests/model_overview",
     "similar": "node ./src/similarweb/top_verticals",
     "flags": "node ./src/chrome_flags/",
-    "movacar": "node ./src/movacar/"
+    "movacar": "node ./src/movacar/",
+    "gcloud-auth": "gcloud auth application-default login --client-id-file='/Users/maxostapenko/clientid.json' --scopes=https://www.googleapis.com/auth/spreadsheets"
   }
 }
