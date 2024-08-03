@@ -2,10 +2,12 @@ const { launchBrowser } = require('../funcs/browser');
 const xml2js = require('xml2js');
 const fs = require('fs');
 const path = require('path');
-const csvWriter = require('csv-writer').createObjectCsvWriter;
-const destinationsFileName = 'destinations.json';
+const { google } = require('googleapis');
+const sheets = google.sheets('v4');
 const currentDirectory = path.dirname(__filename);
 const sitemapURL = 'https://movacar.com/sitemap.xml';
+const spreadsheetId = '1jyyizfItMyLsRrRrga99VUXImp3j4fuqzWOfeN7T2As';
+const destinationsFilePath = path.join(currentDirectory, 'destinations.json')
 
 async function getBrowserPage() {
     const browser = await launchBrowser();
@@ -22,7 +24,6 @@ async function getBrowserPage() {
 
     return page;
 }
-
 
 async function parseMovacarSitemap(page, destinations) {
     const sitemapResponsePromise = new Promise((resolve) => {
@@ -58,7 +59,7 @@ async function parseMovacarSitemap(page, destinations) {
 
 function writeDestinationsToFile(
     destinations,
-    destinationsFilePath = path.join(currentDirectory, destinationsFileName)) {
+    destinationsFilePath) {
     fs.writeFileSync(destinationsFilePath, JSON.stringify(destinations, null, 4));
     console.log('Trips map file written successfully');
 }
@@ -99,66 +100,88 @@ async function getPickupLocations(page, destinations) {
             return car;
         }));
         destinations[tripURL]["cars"] = cars;
-        writeDestinationsToFile(destinations)
+        writeDestinationsToFile(destinations, destinationsFilePath)
     }
     destinations["parsedDate"] = new Date().toISOString().slice(0, 10);
 
     return destinations;
 }
 
-function convertJSONtoCSV(destinationsFilePath, trips) {
-    const csv = csvWriter({
-        path: destinationsFilePath,
-        header: [
-            { id: 'origin', title: 'Origin' },
-            { id: 'destination', title: 'Destination' },
-            { id: 'route', title: 'Route' },
-            { id: 'title', title: 'Title' },
-            { id: 'provider', title: 'Provider' },
-            { id: 'deposit', title: 'Deposit' },
-            { id: 'seats', title: 'Seats' },
-            { id: 'doors', title: 'Doors' },
-            { id: 'startDate', title: 'Start Date' },
-            { id: 'endDate', title: 'End Date' },
-            { id: 'period', title: 'Period' },
-            { id: 'refuel', title: 'Refuel' },
-            { id: 'distance', title: 'Distance (km)' },
-            { id: 'price', title: 'Price (€)' },
-            { id: 'tripURL', title: 'Trip URL' },
-        ],
+async function authorize() {
+    const auth = await google.auth.getClient({
+        scopes: ['https://www.googleapis.com/auth/spreadsheets'],
     });
+    return auth;
+}
 
-    const records = [];
+async function updateGoogleSheet(auth, spreadsheetId, range, values) {
+    const resource = {
+        values,
+    };
+    await sheets.spreadsheets.values.clear({
+        auth,
+        spreadsheetId,
+        range,
+    });
+    await sheets.spreadsheets.values.update({
+        auth,
+        spreadsheetId,
+        range,
+        valueInputOption: 'USER_ENTERED',
+        resource,
+    });
+    console.log('Data updated in Google Sheet');
+}
+
+async function convertJSONtoGoogleSheet(spreadsheetId, trips) {
+    const auth = await authorize();
+
+    const rows = [[
+        'Origin', 'Destination', 'Route', 'Title', 'Provider', 'Deposit',
+        'Seats', 'Doors', 'Start Date', 'End Date', 'Period', 'Refuel',
+        'Distance (km)', 'Price (€)', 'Trip URL'
+    ]];
+
     for (const tripURL in trips) {
         if (tripURL === 'parsedDate') continue;
         for (const car of trips[tripURL].cars) {
-            records.push({
-                ...trips[tripURL],
-                ...car,
-                'tripURL': tripURL
-            });
+            rows.push([
+                trips[tripURL].origin,
+                trips[tripURL].destination,
+                trips[tripURL].route,
+                trips[tripURL].title,
+                trips[tripURL].provider,
+                car.deposit,
+                car.seats,
+                car.doors,
+                trips[tripURL].startDate,
+                trips[tripURL].endDate,
+                trips[tripURL].period,
+                car.refuel,
+                car.distance,
+                car.price,
+                tripURL
+            ]);
         }
     }
 
-    //console.log(records);
-
-    csv.writeRecords(records)
-        .then(() => {
-            console.log('CSV file written successfully');
-        });
+    await updateGoogleSheet(auth, spreadsheetId, 'Sheet1!A:O', rows);
 }
-
 
 async function main() {
     const page = await getBrowserPage();
     let destinations = {} // require('./destinations.json');
     destinations = await parseMovacarSitemap(page, destinations);
-    writeDestinationsToFile(destinations);
+
+    writeDestinationsToFile(destinations, destinationsFilePath);
 
     destinations = await getPickupLocations(page, destinations);
     await page.browser().close();
 
-    convertJSONtoCSV(path.join(currentDirectory, 'destinations.csv'), destinations);
+    convertJSONtoGoogleSheet(spreadsheetId, destinations);
+
+    //remove json file
+    fs.unlinkSync(destinationsFilePath);
 }
 
 main();

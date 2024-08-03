@@ -1,7 +1,7 @@
 {
   "dependencies": {
+    "googleapis": "^140.0.1",
     "prettier": "^3.1.1",
-    "csv-writer": "^1.6.0",
     "puppeteer": "^22.6.1",
     "xml2js": ">=0.4.23"
   },
@@ -9,9 +9,6 @@
   "private": true,
   "version": "0.0.1",
   "description": "Web crawler",
-  "devDependencies": {
-    "dotenv": ">=16.0.3"
-  },
   "scripts": {
     "berlin": "node ./src/berlin_de/index",
     "mb": "node ./src/mercedes_benz_/tag_manager_tests/model_overview",
