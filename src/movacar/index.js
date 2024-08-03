@@ -21,7 +21,7 @@ class MovacarScraper {
 
   async _getBrowserPage() {
     const browser = await launchBrowser();
-    const page = await browser.newPage();
+    const page = (await browser.pages())[0];
     await page.setRequestInterception(true);
     page.on('request', interceptedRequest => {
       const requestType = interceptedRequest.resourceType();
