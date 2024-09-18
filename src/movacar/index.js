@@ -184,6 +184,14 @@ class MovacarScraper {
     await this._updateGoogleSheet(auth, 'Sheet1', rows);
   }
 
+  async _saveJSONtoFile(trips) {
+    this._writeToFile(trips);
+  }
+
+  async _readFromFile() {
+    return JSON.parse(fs.readFileSync(this.tripsJSONfile));
+  }
+
   async run() {
     const page = await this._getBrowserPage();
     const sitemapResponse = await this._fetchSitemap(page);
@@ -193,6 +201,8 @@ class MovacarScraper {
     destinations = await this._fetchPickupLocations(page, destinations);
     await page.browser().close();
 
+    //this._saveJSONtoFile(destinations);
+    //let destinations = await this._readFromFile();
     this._convertJSONtoGoogleSheet(destinations);
   }
 }
