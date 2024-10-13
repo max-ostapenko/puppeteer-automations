@@ -2,441 +2,1397 @@
   <div class="flex">
     <h1 class="section-header-title">Experiments</h1>
   </div>
-  <span id="version" class="flex">131.0.6724.0</span>
+  <span id="version" class="flex">131.0.6772.0</span>
 </div>
 <div class="blurb-container">
   <span class="blurb-warning">Warning: Experimental features ahead!</span>
   <span>By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.</span>
 </div>
 <p id="promos" hidden="">
+  <!-- Those strings are not localized because they only appear in
+          chrome://flags, which is not localized. -->
   <span id="channel-promo-beta" hidden="">
     Interested in cool new Chrome features? Try our
     <a href="https://chrome.com/beta">beta channel</a>
     .
   </span>
-  <span id="channel-promo-dev" hidden="">
+  <span id="channel-promo-dev">
     Interested in cool new Chrome features? Try our
     <a href="https://chrome.com/dev">dev channel</a>
   </span>
 </p>
-<div id="tabs" class="tabs" role="tablist">
-  <a href="#tab-content-available" id="tab-available" class="tab selected" role="tab" aria-selected="true" aria-controls="panel1">Available</a>
 
-  <a href="#tab-content-unavailable" id="tab-unavailable" class="tab" role="tab" aria-selected="false" aria-controls="panel2">Unavailable</a>
-</div>
+<cr-tabs id="tabs" role="tablist"></cr-tabs>
+
 <div id="tabpanels">
-  <div id="tab-content-available" class="tab-content selected" role="tabpanel" aria-labelledby="tab-available" aria-hidden="false">
-    <div id="non-default-experiments"></div>
-
-    <div id="default-experiments">
-      <flags-experiment id="temporary-unexpire-flags-m129"></flags-experiment>
-      <flags-experiment id="temporary-unexpire-flags-m130"></flags-experiment>
-      <flags-experiment id="enable-benchmarking"></flags-experiment>
-      <flags-experiment id="ignore-gpu-blocklist"></flags-experiment>
-      <flags-experiment id="disable-accelerated-2d-canvas"></flags-experiment>
-      <flags-experiment id="overlay-strategies"></flags-experiment>
-      <flags-experiment id="tint-composited-content"></flags-experiment>
-      <flags-experiment id="show-overdraw-feedback"></flags-experiment>
-      <flags-experiment id="ui-disable-partial-swap"></flags-experiment>
-      <flags-experiment id="enable-webrtc-allow-input-volume-adjustment"></flags-experiment>
-      <flags-experiment id="enable-webrtc-apm-downmix-capture-audio-method"></flags-experiment>
-      <flags-experiment id="web-hid-in-web-view"></flags-experiment>
-      <flags-experiment id="extensions-on-chrome-urls"></flags-experiment>
-      <flags-experiment id="omnibox-drop-unrecognized-templateurl-parameters"></flags-experiment>
-      <flags-experiment id="show-autofill-type-predictions"></flags-experiment>
-      <flags-experiment id="backdrop-filter-mirror-edge"></flags-experiment>
-      <flags-experiment id="enable-quic"></flags-experiment>
-      <flags-experiment id="webtransport-developer-mode"></flags-experiment>
-      <flags-experiment id="disable-javascript-harmony-shipping"></flags-experiment>
-      <flags-experiment id="enable-javascript-harmony"></flags-experiment>
-      <flags-experiment id="enable-javascript-experimental-shared-memory"></flags-experiment>
-      <flags-experiment id="enable-enterprise-updated-profile-creation-screen"></flags-experiment>
-      <flags-experiment id="enable-experimental-webassembly-features"></flags-experiment>
-      <flags-experiment id="enable-experimental-webassembly-jspi"></flags-experiment>
-      <flags-experiment id="enable-webassembly-baseline"></flags-experiment>
-      <flags-experiment id="enable-webassembly-lazy-compilation"></flags-experiment>
-      <flags-experiment id="enable-webassembly-tiering"></flags-experiment>
-      <flags-experiment id="enable-webassembly-memory64"></flags-experiment>
-      <flags-experiment id="enable-future-v8-vm-features"></flags-experiment>
-      <flags-experiment id="enable-gpu-rasterization"></flags-experiment>
-      <flags-experiment id="enable-fontations-backend"></flags-experiment>
-      <flags-experiment id="enable-experimental-web-platform-features"></flags-experiment>
-      <flags-experiment id="top-chrome-touch-ui"></flags-experiment>
-      <flags-experiment id="top-chrome-toasts"></flags-experiment>
-      <flags-experiment id="disable-accelerated-video-decode"></flags-experiment>
-      <flags-experiment id="disable-accelerated-video-encode"></flags-experiment>
-      <flags-experiment id="enable-show-autofill-signatures"></flags-experiment>
-      <flags-experiment id="wallet-service-use-sandbox"></flags-experiment>
-      <flags-experiment id="enable-web-bluetooth-new-permissions-backend"></flags-experiment>
-      <flags-experiment id="enable-webusb-device-detection"></flags-experiment>
-      <flags-experiment id="enable-webgl-developer-extensions"></flags-experiment>
-      <flags-experiment id="enable-webgl-draft-extensions"></flags-experiment>
-      <flags-experiment id="enable-zero-copy"></flags-experiment>
-      <flags-experiment id="in-product-help-demo-mode-choice"></flags-experiment>
-      <flags-experiment id="enable-isolated-web-apps"></flags-experiment>
-      <flags-experiment id="enable-isolated-web-app-dev-mode"></flags-experiment>
-      <flags-experiment id="enable-controlled-frame"></flags-experiment>
-      <flags-experiment id="isolate-origins"></flags-experiment>
-      <flags-experiment id="site-isolation-trial-opt-out"></flags-experiment>
-      <flags-experiment id="text-based-audio-descriptions"></flags-experiment>
-      <flags-experiment id="bypass-app-banner-engagement-checks"></flags-experiment>
-      <flags-experiment id="enable-desktop-pwas-tab-strip"></flags-experiment>
-      <flags-experiment id="enable-desktop-pwas-tab-strip-settings"></flags-experiment>
-      <flags-experiment id="enable-desktop-pwas-tab-strip-customizations"></flags-experiment>
-      <flags-experiment id="enable-desktop-pwas-sub-apps"></flags-experiment>
-      <flags-experiment id="enable-desktop-pwas-borderless"></flags-experiment>
-      <flags-experiment id="enable-desktop-pwas-additional-windowing-controls"></flags-experiment>
-      <flags-experiment id="record-web-app-debug-info"></flags-experiment>
-      <flags-experiment id="web-app-universal-install"></flags-experiment>
-      <flags-experiment id="shortcuts-not-apps"></flags-experiment>
-      <flags-experiment id="use-sync-sandbox"></flags-experiment>
-      <flags-experiment id="media-router-cast-allow-all-ips"></flags-experiment>
-      <flags-experiment id="media-remoting-without-fullscreen"></flags-experiment>
-      <flags-experiment id="allow-all-sites-to-initiate-mirroring"></flags-experiment>
-      <flags-experiment id="delay-media-sink-discovery"></flags-experiment>
-      <flags-experiment id="show-cast-permission-rejected-error"></flags-experiment>
-      <flags-experiment id="cast-streaming-hardware-h264"></flags-experiment>
-      <flags-experiment id="cast-streaming-hardware-vp8"></flags-experiment>
-      <flags-experiment id="cast-streaming-hardware-vp9"></flags-experiment>
-      <flags-experiment id="cast-streaming-performance-overlay"></flags-experiment>
-      <flags-experiment id="enable-cast-streaming-av1"></flags-experiment>
-      <flags-experiment id="enable-cast-streaming-mac-hardware-h264"></flags-experiment>
-      <flags-experiment id="use-network-framework-for-local-discovery"></flags-experiment>
-      <flags-experiment id="enable-cast-streaming-vp8"></flags-experiment>
-      <flags-experiment id="enable-cast-streaming-vp9"></flags-experiment>
-      <flags-experiment id="enable-cast-streaming-with-hidpi"></flags-experiment>
-      <flags-experiment id="mac-loopback-audio-for-screen-share"></flags-experiment>
-      <flags-experiment id="use-sc-content-sharing-picker"></flags-experiment>
-      <flags-experiment id="web-share"></flags-experiment>
-      <flags-experiment id="skip-undecryptable-passwords"></flags-experiment>
-      <flags-experiment id="system-keyboard-lock"></flags-experiment>
-      <flags-experiment id="disallow-doc-written-script-loads"></flags-experiment>
-      <flags-experiment id="enable-autofill-credit-card-upload"></flags-experiment>
-      <flags-experiment id="force-ui-direction"></flags-experiment>
-      <flags-experiment id="force-text-direction"></flags-experiment>
-      <flags-experiment id="enable-tls13-early-data"></flags-experiment>
-      <flags-experiment id="enable-tls13-kyber"></flags-experiment>
-      <flags-experiment id="use-ml-kem"></flags-experiment>
-      <flags-experiment id="enable-force-dark"></flags-experiment>
-      <flags-experiment id="enable-immersive-fullscreen-toolbar"></flags-experiment>
-      <flags-experiment id="enable-fullscreen-animate-tabs"></flags-experiment>
-      <flags-experiment id="enable-web-payments-experimental-features"></flags-experiment>
-      <flags-experiment id="enable-debug-for-store-billing"></flags-experiment>
-      <flags-experiment id="enable-debug-for-secure-payment-confirmation"></flags-experiment>
-      <flags-experiment id="enable-network-and-issuer-icons-for-secure-payment-confirmation"></flags-experiment>
-      <flags-experiment id="mutation-events"></flags-experiment>
-      <flags-experiment id="keyboard-focusable-scrollers"></flags-experiment>
-      <flags-experiment id="fill-on-account-select"></flags-experiment>
-      <flags-experiment id="enable-generic-sensor-extra-classes"></flags-experiment>
-      <flags-experiment id="most-visited-tiles-new-scoring"></flags-experiment>
-      <flags-experiment id="omnibox-zero-suggest-prefetch-debouncing"></flags-experiment>
-      <flags-experiment id="omnibox-zero-suggest-prefetching-on-srp"></flags-experiment>
-      <flags-experiment id="omnibox-ml-log-url-scoring-signals"></flags-experiment>
-      <flags-experiment id="omnibox-ml-url-piecewise-mapped-search-blending"></flags-experiment>
-      <flags-experiment id="omnibox-ml-url-score-caching"></flags-experiment>
-      <flags-experiment id="omnibox-ml-url-scoring"></flags-experiment>
-      <flags-experiment id="omnibox-ml-url-search-blending"></flags-experiment>
-      <flags-experiment id="omnibox-ml-url-scoring-model"></flags-experiment>
-      <flags-experiment id="omnibox-drive-suggestions"></flags-experiment>
-      <flags-experiment id="omnibox-drive-suggestions-no-setting"></flags-experiment>
-      <flags-experiment id="omnibox-drive-suggestions-no-sync-requirement"></flags-experiment>
-      <flags-experiment id="omnibox-pref-based-data-collection-consent-helper"></flags-experiment>
-      <flags-experiment id="omnibox-on-device-tail-suggestions"></flags-experiment>
-      <flags-experiment id="force-color-profile"></flags-experiment>
-      <flags-experiment id="forced-colors"></flags-experiment>
-      <flags-experiment id="memlog"></flags-experiment>
-      <flags-experiment id="memlog-sampling-rate"></flags-experiment>
-      <flags-experiment id="memlog-stack-mode"></flags-experiment>
-      <flags-experiment id="omnibox-max-url-matches"></flags-experiment>
-      <flags-experiment id="optimization-guide-debug-logs"></flags-experiment>
-      <flags-experiment id="optimization-guide-on-device-model"></flags-experiment>
-      <flags-experiment id="history-embeddings"></flags-experiment>
-      <flags-experiment id="tab-groups-save-v2"></flags-experiment>
-      <flags-experiment id="tab-group-sync-service-desktop-migration"></flags-experiment>
-      <flags-experiment id="tab-groups-save-ui-update"></flags-experiment>
-      <flags-experiment id="tabstrip-collection-storage"></flags-experiment>
-      <flags-experiment id="toolbar-pinning"></flags-experiment>
-      <flags-experiment id="side-panel-resizing"></flags-experiment>
-      <flags-experiment id="product-specifications"></flags-experiment>
-      <flags-experiment id="price-tracking-subscription-service-locale-key"></flags-experiment>
-      <flags-experiment id="ntp-alpha-background-collections"></flags-experiment>
-      <flags-experiment id="ntp-background-image-error-detection"></flags-experiment>
-      <flags-experiment id="ntp-calendar-module"></flags-experiment>
-      <flags-experiment id="ntp-drive-module-show-six-files"></flags-experiment>
-      <flags-experiment id="ntp-most-relevant-tab-resumption-module"></flags-experiment>
-      <flags-experiment id="ntp-most-relevant-tab-resumption-module-device-icon"></flags-experiment>
-      <flags-experiment id="ntp-outlook-calendar-module"></flags-experiment>
-      <flags-experiment id="ntp-realbox-cr23-theming"></flags-experiment>
-      <flags-experiment id="chrome-wide-echo-cancellation"></flags-experiment>
-      <flags-experiment id="enable-parallel-downloading"></flags-experiment>
-      <flags-experiment id="enable-network-logging-to-file"></flags-experiment>
-      <flags-experiment id="web-authentication-permit-enterprise-attestation"></flags-experiment>
-      <flags-experiment id="zero-copy-tab-capture"></flags-experiment>
-      <flags-experiment id="pdf-cr23"></flags-experiment>
-      <flags-experiment id="pdf-oopif"></flags-experiment>
-      <flags-experiment id="pdf-use-skia-renderer"></flags-experiment>
-      <flags-experiment id="pdf-ink2"></flags-experiment>
-      <flags-experiment id="cups-ipp-printing-backend"></flags-experiment>
-      <flags-experiment id="unsafely-treat-insecure-origin-as-secure"></flags-experiment>
-      <flags-experiment id="disable-process-reuse"></flags-experiment>
-      <flags-experiment id="subframe-process-reuse-thresholds"></flags-experiment>
-      <flags-experiment id="enable-live-caption-multilang"></flags-experiment>
-      <flags-experiment id="read-anything-read-aloud"></flags-experiment>
-      <flags-experiment id="read-anything-read-aloud-automatic-word-highlighting"></flags-experiment>
-      <flags-experiment id="read-anything-read-aloud-auto-voice-switching"></flags-experiment>
-      <flags-experiment id="read-anything-read-aloud-language-pack-downloading"></flags-experiment>
-      <flags-experiment id="read-anything-read-aloud-phrase-highlighting"></flags-experiment>
-      <flags-experiment id="read-anything-images-via-algorithm"></flags-experiment>
-      <flags-experiment id="read-anything-docs-integration"></flags-experiment>
-      <flags-experiment id="read-anything-docs-load-more-button"></flags-experiment>
-      <flags-experiment id="support-tool-screenshot"></flags-experiment>
-      <flags-experiment id="image-descriptions-alternative-routing"></flags-experiment>
-      <flags-experiment id="drop-input-events-before-first-paint"></flags-experiment>
-      <flags-experiment id="boundary-event-dispatch-tracks-node-removal"></flags-experiment>
-      <flags-experiment id="happiness-tracking-surveys-for-desktop-demo"></flags-experiment>
-      <flags-experiment id="use-angle"></flags-experiment>
-      <flags-experiment id="sharing-desktop-screenshots"></flags-experiment>
-      <flags-experiment id="enable-gpu-service-logging"></flags-experiment>
-      <flags-experiment id="hardware-media-key-handling"></flags-experiment>
-      <flags-experiment id="avif-gainmap-hdr-images"></flags-experiment>
-      <flags-experiment id="crabbyavif"></flags-experiment>
-      <flags-experiment id="file-system-observer"></flags-experiment>
-      <flags-experiment id="strict-origin-isolation"></flags-experiment>
-      <flags-experiment id="enable-fenced-frames-developer-mode"></flags-experiment>
-      <flags-experiment id="enable-unsafe-webgpu"></flags-experiment>
-      <flags-experiment id="enable-webgpu-developer-features"></flags-experiment>
-      <flags-experiment id="global-media-controls-updated-ui"></flags-experiment>
-      <flags-experiment id="dawn-si-reps-use-client-provided-internal-usages"></flags-experiment>
-      <flags-experiment id="windows-scrolling-personality"></flags-experiment>
-      <flags-experiment id="element-capture"></flags-experiment>
-      <flags-experiment id="device-posture"></flags-experiment>
-      <flags-experiment id="viewport-segments"></flags-experiment>
-      <flags-experiment id="enable-location-provider-manager"></flags-experiment>
-      <flags-experiment id="automatic-fullscreen-content-setting"></flags-experiment>
-      <flags-experiment id="tracking-protection-3pcd"></flags-experiment>
-      <flags-experiment id="enable-experimental-cookie-features"></flags-experiment>
-      <flags-experiment id="canvas-2d-layers"></flags-experiment>
-      <flags-experiment id="web-machine-learning-neural-network"></flags-experiment>
-      <flags-experiment id="experimental-web-machine-learning-neural-network"></flags-experiment>
-      <flags-experiment id="one-time-permission"></flags-experiment>
-      <flags-experiment id="left-hand-side-activity-indicators"></flags-experiment>
-      <flags-experiment id="pwa-update-dialog-for-icon"></flags-experiment>
-      <flags-experiment id="keyboard-and-pointer-lock-prompt"></flags-experiment>
-      <flags-experiment id="press-and-hold-esc-to-exit-browser-fullscreen"></flags-experiment>
-      <flags-experiment id="enable-oop-print-drivers"></flags-experiment>
-      <flags-experiment id="privacy-sandbox-internals"></flags-experiment>
-      <flags-experiment id="privacy-sandbox-privacy-guide-ad-topics"></flags-experiment>
-      <flags-experiment id="private-state-tokens-dev-ui"></flags-experiment>
-      <flags-experiment id="related-website-sets-dev-ui"></flags-experiment>
-      <flags-experiment id="enable-speculation-rules-prerendering-target-hint"></flags-experiment>
-      <flags-experiment id="prerender-early-document-lifecycle-update"></flags-experiment>
-      <flags-experiment id="warm-up-compositor"></flags-experiment>
-      <flags-experiment id="prerender2-warm-up-compositor"></flags-experiment>
-      <flags-experiment id="chrome-labs"></flags-experiment>
-      <flags-experiment id="pdf-ocr"></flags-experiment>
-      <flags-experiment id="pdf-searchify"></flags-experiment>
-      <flags-experiment id="pdf-xfa-forms"></flags-experiment>
-      <flags-experiment id="ui-debug-tools"></flags-experiment>
-      <flags-experiment id="fedcm-authz"></flags-experiment>
-      <flags-experiment id="fedcm-button-mode"></flags-experiment>
-      <flags-experiment id="fedcm-idp-registration"></flags-experiment>
-      <flags-experiment id="fedcm-metrics-endpoint"></flags-experiment>
-      <flags-experiment id="fedcm-multi-idp"></flags-experiment>
-      <flags-experiment id="fedcm-selective-disclosure"></flags-experiment>
-      <flags-experiment id="fedcm-use-other-account"></flags-experiment>
-      <flags-experiment id="fedcm-with-storage-access-api"></flags-experiment>
-      <flags-experiment id="fedcm-without-well-known-enforcement"></flags-experiment>
-      <flags-experiment id="web-identity-digital-credentials"></flags-experiment>
-      <flags-experiment id="autofill-enable-manual-fallback-iph"></flags-experiment>
-      <flags-experiment id="enable-lens-overlay"></flags-experiment>
-      <flags-experiment id="bind-cookies-to-port"></flags-experiment>
-      <flags-experiment id="bind-cookies-to-scheme"></flags-experiment>
-      <flags-experiment id="cbd-timeframe-required"></flags-experiment>
-      <flags-experiment id="prerender2"></flags-experiment>
-      <flags-experiment id="test-third-party-cookie-phaseout"></flags-experiment>
-      <flags-experiment id="tpc-phase-out-facilitated-testing"></flags-experiment>
-      <flags-experiment id="tpcd-heuristics-grants"></flags-experiment>
-      <flags-experiment id="tpcd-metadata-grants"></flags-experiment>
-      <flags-experiment id="third-party-cookie-deprecation-trial"></flags-experiment>
-      <flags-experiment id="top-level-third-party-cookie-deprecation-trial"></flags-experiment>
-      <flags-experiment id="https-first-balanced-mode"></flags-experiment>
-      <flags-experiment id="https-first-dialog-ui"></flags-experiment>
-      <flags-experiment id="https-first-mode-interstitial-august2024-refresh"></flags-experiment>
-      <flags-experiment id="https-first-mode-incognito-new-settings"></flags-experiment>
-      <flags-experiment id="extensions-menu-access-control"></flags-experiment>
-      <flags-experiment id="iph-extensions-menu-feature"></flags-experiment>
-      <flags-experiment id="iph-extensions-request-access-button-feature"></flags-experiment>
-      <flags-experiment id="extension-manifest-v2-deprecation-warning"></flags-experiment>
-      <flags-experiment id="extension-manifest-v2-deprecation-disabled"></flags-experiment>
-      <flags-experiment id="canvas-oop-rasterization"></flags-experiment>
-      <flags-experiment id="captured-surface-control"></flags-experiment>
-      <flags-experiment id="skia-graphite"></flags-experiment>
-      <flags-experiment id="enable-tab-audio-muting"></flags-experiment>
-      <flags-experiment id="customize-chrome-side-panel-extensions-card"></flags-experiment>
-      <flags-experiment id="enable-render-pass-drawn-rect"></flags-experiment>
-      <flags-experiment id="media-session-enter-picture-in-picture"></flags-experiment>
-      <flags-experiment id="auto-picture-in-picture-video-heuristics"></flags-experiment>
-      <flags-experiment id="auto-picture-in-picture-for-video-playback"></flags-experiment>
-      <flags-experiment id="video-picture-in-picture-controls-update-2024"></flags-experiment>
-      <flags-experiment id="document-picture-in-picture-animate-resize"></flags-experiment>
-      <flags-experiment id="main-node-annotations"></flags-experiment>
-      <flags-experiment id="origin-keyed-processes-by-default"></flags-experiment>
-      <flags-experiment id="enable-isolated-sandboxed-iframes"></flags-experiment>
-      <flags-experiment id="reduce-accept-language"></flags-experiment>
-      <flags-experiment id="omit-cors-client-cert"></flags-experiment>
-      <flags-experiment id="safe-browsing-hash-prefix"></flags-experiment>
-      <flags-experiment id="safe-browsing-local-lists-use-sbv5"></flags-experiment>
-      <flags-experiment id="safety-check-unused-site-permissions"></flags-experiment>
-      <flags-experiment id="safety-hub"></flags-experiment>
-      <flags-experiment id="autofill-parse-vcn-card-on-file-standalone-cvc-fields"></flags-experiment>
-      <flags-experiment id="webui-omnibox-popup"></flags-experiment>
-      <flags-experiment id="sync-autofill-wallet-credential-data"></flags-experiment>
-      <flags-experiment id="sync-autofill-wallet-usage-data"></flags-experiment>
-      <flags-experiment id="enable-preferences-account-storage"></flags-experiment>
-      <flags-experiment id="ios-promo-refreshed-password-bubble"></flags-experiment>
-      <flags-experiment id="ios-promo-address-bubble"></flags-experiment>
-      <flags-experiment id="ios-promo-bookmark-bubble"></flags-experiment>
-      <flags-experiment id="ios-promo-payment-bubble"></flags-experiment>
-      <flags-experiment id="enable-compute-pressure-rate-obfuscation-mitigation"></flags-experiment>
-      <flags-experiment id="enable-compute-pressure-break-calibration-mitigation"></flags-experiment>
-      <flags-experiment id="cast-mirroring-target-playout-delay"></flags-experiment>
-      <flags-experiment id="camera-mic-effects"></flags-experiment>
-      <flags-experiment id="camera-mic-preview"></flags-experiment>
-      <flags-experiment id="get-user-media-deferred-device-settings-selection"></flags-experiment>
-      <flags-experiment id="render-document"></flags-experiment>
-      <flags-experiment id="site-instance-groups-for-data-urls"></flags-experiment>
-      <flags-experiment id="show-featured-enterprise-site-search-iph"></flags-experiment>
-      <flags-experiment id="cws-info-fast-check"></flags-experiment>
-      <flags-experiment id="extension-telemetry-for-enterprise"></flags-experiment>
-      <flags-experiment id="autofill-enable-cvc-storage-and-filling"></flags-experiment>
-      <flags-experiment id="privacy-sandbox-enrollment-overrides"></flags-experiment>
-      <flags-experiment id="enable-direct-sockets-web-api"></flags-experiment>
-      <flags-experiment id="enable-smart-card-web-api"></flags-experiment>
-      <flags-experiment id="third-party-profile-management"></flags-experiment>
-      <flags-experiment id="oidc-auth-profile-management"></flags-experiment>
-      <flags-experiment id="enable-generic-oidc-auth-profile-management"></flags-experiment>
-      <flags-experiment id="enable-user-link-capturing-scope-extensions-pwa"></flags-experiment>
-      <flags-experiment id="enable-user-navigation-capturing-pwa"></flags-experiment>
-      <flags-experiment id="ip-protection-proxy-opt-out"></flags-experiment>
-      <flags-experiment id="protected-audience-debug-token"></flags-experiment>
-      <flags-experiment id="deprecate-unload"></flags-experiment>
-      <flags-experiment id="draw-immediately-when-interactive"></flags-experiment>
-      <flags-experiment id="ack-on-surface-activation-when-interactive"></flags-experiment>
-      <flags-experiment id="enable-mac-pwas-notification-attribution"></flags-experiment>
-      <flags-experiment id="use-adhoc-signing-for-web-app-shims"></flags-experiment>
-      <flags-experiment id="autofill-enable-server-iban"></flags-experiment>
-      <flags-experiment id="autofill-require-valid-local-cards-in-settings"></flags-experiment>
-      <flags-experiment id="observable-api"></flags-experiment>
-      <flags-experiment id="atomic-move"></flags-experiment>
-      <flags-experiment id="enable-web-app-system-media-controls"></flags-experiment>
-      <flags-experiment id="CCO"></flags-experiment>
-      <flags-experiment id="compose-text-selection"></flags-experiment>
-      <flags-experiment id="compose-ui-refinement"></flags-experiment>
-      <flags-experiment id="compose-proactive-nudge"></flags-experiment>
-      <flags-experiment id="compose-nudge-display-at-cursor"></flags-experiment>
-      <flags-experiment id="compose-polite-nudge"></flags-experiment>
-      <flags-experiment id="compose-selection-nudge"></flags-experiment>
-      <flags-experiment id="autofill-caret-extraction"></flags-experiment>
-      <flags-experiment id="related-website-sets-permission-grants"></flags-experiment>
-      <flags-experiment id="autofill-enable-save-card-loading-and-confirmation"></flags-experiment>
-      <flags-experiment id="autofill-enable-vcn-enroll-loading-and-confirmation"></flags-experiment>
-      <flags-experiment id="compact-mode"></flags-experiment>
-      <flags-experiment id="content-settings-partitioning"></flags-experiment>
-      <flags-experiment id="enable-mac-ime-live-conversion-fix"></flags-experiment>
-      <flags-experiment id="tear-off-web-app-tab-opens-web-app-window"></flags-experiment>
-      <flags-experiment id="password-manual-fallback-available"></flags-experiment>
-      <flags-experiment id="enable-unrestricted-usb"></flags-experiment>
-      <flags-experiment id="autofill-enable-vcn-3ds-authentication"></flags-experiment>
-      <flags-experiment id="link-preview"></flags-experiment>
-      <flags-experiment id="send-tab-ios-push-notifications"></flags-experiment>
-      <flags-experiment id="autofill-enable-card-benefits-for-american-express"></flags-experiment>
-      <flags-experiment id="autofill-enable-card-benefits-for-capital-one"></flags-experiment>
-      <flags-experiment id="autofill-enable-card-benefits-sync"></flags-experiment>
-      <flags-experiment id="linked-services-setting"></flags-experiment>
-      <flags-experiment id="reduce-ip-address-change-notification"></flags-experiment>
-      <flags-experiment id="autofill-enable-save-card-local-save-fallback"></flags-experiment>
-      <flags-experiment id="enable-fingerprinting-protection-blocklist"></flags-experiment>
-      <flags-experiment id="clear-undecryptable-passwords"></flags-experiment>
-      <flags-experiment id="autofill-enable-verve-card-support"></flags-experiment>
-      <flags-experiment id="cert-management-v2-ui"></flags-experiment>
-      <flags-experiment id="pwm-show-suggestions-on-autofocus"></flags-experiment>
-      <flags-experiment id="optimization-guide-enable-dogfood-logging"></flags-experiment>
-      <flags-experiment id="web-authentication-enclave-authenticator"></flags-experiment>
-      <flags-experiment id="screenlock-reauth-promo-card"></flags-experiment>
-      <flags-experiment id="ruby-short-heuristics"></flags-experiment>
-      <flags-experiment id="prompt-api-for-gemini-nano"></flags-experiment>
-      <flags-experiment id="summarization-api-for-gemini-nano"></flags-experiment>
-      <flags-experiment id="writer-api-for-gemini-nano"></flags-experiment>
-      <flags-experiment id="rewriter-api-for-gemini-nano"></flags-experiment>
-      <flags-experiment id="text-box-trim"></flags-experiment>
-      <flags-experiment id="storage-access-headers"></flags-experiment>
-      <flags-experiment id="autofill-upstream-updated-ui"></flags-experiment>
-      <flags-experiment id="canvas-2d-hibernation"></flags-experiment>
-      <flags-experiment id="performance-intervention-ui"></flags-experiment>
-      <flags-experiment id="performance-intervention-demo-mode"></flags-experiment>
-      <flags-experiment id="sync-enable-bookmarks-in-transport-mode"></flags-experiment>
-      <flags-experiment id="visited-url-ranking-service-history-visibility-score-filter"></flags-experiment>
-      <flags-experiment id="defer-renderer-tasks-after-input"></flags-experiment>
-      <flags-experiment id="blink-scheduler-discrete-input-matches-responsiveness-metrics"></flags-experiment>
-      <flags-experiment id="autofill-upload-card-request-timeout"></flags-experiment>
-      <flags-experiment id="autofill-vcn-enroll-request-timeout"></flags-experiment>
-      <flags-experiment id="autofill-unmask-card-request-timeout"></flags-experiment>
-      <flags-experiment id="freezing-on-energy-saver"></flags-experiment>
-      <flags-experiment id="freezing-on-energy-saver-testing"></flags-experiment>
-      <flags-experiment id="translate-open-settings"></flags-experiment>
-      <flags-experiment id="classify-url-on-process-response-event"></flags-experiment>
-      <flags-experiment id="tab-organization"></flags-experiment>
-      <flags-experiment id="tab-organization-settings-visibility"></flags-experiment>
-      <flags-experiment id="multi-tab-organization"></flags-experiment>
-      <flags-experiment id="tab-reorganization"></flags-experiment>
-      <flags-experiment id="tab-reorganization-divider"></flags-experiment>
-      <flags-experiment id="autofill-remove-payments-butter-dropdown"></flags-experiment>
-      <flags-experiment id="language-detection-api"></flags-experiment>
-      <flags-experiment id="supervised-profile-hide-guest"></flags-experiment>
-      <flags-experiment id="supervised-profile-safe-search"></flags-experiment>
-      <flags-experiment id="supervised-profile-youtube-reauth"></flags-experiment>
-      <flags-experiment id="supervised-profile-blocked-site-reauth"></flags-experiment>
-      <flags-experiment id="supervised-profile-filtering-fallback"></flags-experiment>
-      <flags-experiment id="use-frame-interval-decider"></flags-experiment>
-      <flags-experiment id="safe-browsing-ripple-effect"></flags-experiment>
-      <flags-experiment id="data-sharing"></flags-experiment>
-      <flags-experiment id="data-sharing-join-only"></flags-experiment>
-      <flags-experiment id="autofill-enable-cvc-storage-and-filling-enhancement"></flags-experiment>
-      <flags-experiment id="improved-signin-ui-on-desktop"></flags-experiment>
-      <flags-experiment id="outline-silhouette-icon"></flags-experiment>
-      <flags-experiment id="discount-on-navigation"></flags-experiment>
-      <flags-experiment id="devtools-privacy-ui"></flags-experiment>
-      <flags-experiment id="permission-predictions-v3"></flags-experiment>
-      <flags-experiment id="enable-task-manager-desktop-refresh"></flags-experiment>
-      <flags-experiment id="cert-verification-network-time"></flags-experiment>
-      <flags-experiment id="enable-lens-overlay-translate-button"></flags-experiment>
-      <flags-experiment id="autofill-enable-log-form-events-to-all-parsed-form-types"></flags-experiment>
-      <flags-experiment id="enable-segmentation-internals-survey"></flags-experiment>
+  <div id="tab-content-available" class="tab-content" role="tabpanel" aria-labelledby="tab-available" aria-hidden="false" selected="">
+    <!-- Non default experiments. -->
+    <div id="non-default-experiments">
+      <!--?lit$104277584$-->
     </div>
-    <div class="no-match hidden" role="alert">No matching experiments</div>
+    <!-- Experiments with default settings. -->
+    <div id="default-experiments">
+      <!--?lit$104277584$-->
+      <!---->
+      <flags-experiment id="temporary-unexpire-flags-m129" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="temporary-unexpire-flags-m130" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-benchmarking" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="ignore-gpu-blocklist" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="disable-accelerated-2d-canvas" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="overlay-strategies" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="tint-composited-content" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="show-overdraw-feedback" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="ui-disable-partial-swap" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-webrtc-allow-input-volume-adjustment" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-webrtc-apm-downmix-capture-audio-method" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="web-hid-in-web-view" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="extensions-on-chrome-urls" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="show-autofill-type-predictions" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="backdrop-filter-mirror-edge" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-quic" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="webtransport-developer-mode" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="disable-javascript-harmony-shipping" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-javascript-harmony" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-enterprise-profile-badging-for-avatar" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-enterprise-profile-badging-for-menu" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-enterprise-updated-profile-creation-screen" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-experimental-webassembly-features" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-experimental-webassembly-jspi" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-webassembly-baseline" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-webassembly-lazy-compilation" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-webassembly-tiering" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-webassembly-memory64" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-future-v8-vm-features" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-gpu-rasterization" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-fontations-backend" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-experimental-web-platform-features" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="top-chrome-touch-ui" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="top-chrome-toasts" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="disable-accelerated-video-decode" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="disable-accelerated-video-encode" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="username-first-flow-with-intermediate-values-predictions" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="username-first-flow-with-intermediate-values-voting" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-show-autofill-signatures" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="wallet-service-use-sandbox" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-web-bluetooth-new-permissions-backend" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-webusb-device-detection" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-webgl-developer-extensions" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-webgl-draft-extensions" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-zero-copy" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="in-product-help-demo-mode-choice" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-isolated-web-apps" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-isolated-web-app-dev-mode" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-controlled-frame" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="isolate-origins" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="site-isolation-trial-opt-out" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="text-based-audio-descriptions" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="bypass-app-banner-engagement-checks" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-desktop-pwas-tab-strip" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-desktop-pwas-tab-strip-settings" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-desktop-pwas-tab-strip-customizations" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-desktop-pwas-sub-apps" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-desktop-pwas-scope-extensions" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-desktop-pwas-borderless" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-desktop-pwas-additional-windowing-controls" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="record-web-app-debug-info" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="web-app-universal-install" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="shortcuts-not-apps" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="use-sync-sandbox" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="media-router-cast-allow-all-ips" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="media-remoting-without-fullscreen" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="allow-all-sites-to-initiate-mirroring" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="delay-media-sink-discovery" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="show-cast-permission-rejected-error" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="cast-streaming-hardware-h264" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="cast-streaming-hardware-vp8" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="cast-streaming-hardware-vp9" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="cast-streaming-performance-overlay" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-cast-streaming-av1" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-cast-streaming-mac-hardware-h264" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="use-network-framework-for-local-discovery" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-cast-streaming-vp8" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-cast-streaming-vp9" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-cast-streaming-with-hidpi" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="mac-loopback-audio-for-screen-share" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="use-sc-content-sharing-picker" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="web-share" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="skip-undecryptable-passwords" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="system-keyboard-lock" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="disallow-doc-written-script-loads" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-autofill-credit-card-upload" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="force-ui-direction" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="force-text-direction" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-tls13-early-data" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-tls13-kyber" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="use-ml-kem" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-force-dark" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-immersive-fullscreen-toolbar" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-fullscreen-animate-tabs" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-fullscreen-always-show-traffic-lights" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-web-payments-experimental-features" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-debug-for-store-billing" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-debug-for-secure-payment-confirmation" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-network-and-issuer-icons-for-secure-payment-confirmation" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="mutation-events" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="keyboard-focusable-scrollers" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="fill-on-account-select" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-generic-sensor-extra-classes" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="most-visited-tiles-new-scoring" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="omnibox-zero-suggest-prefetch-debouncing" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="omnibox-zero-suggest-prefetching-on-srp" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="omnibox-ml-log-url-scoring-signals" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="omnibox-ml-url-piecewise-mapped-search-blending" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="omnibox-ml-url-score-caching" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="omnibox-ml-url-scoring" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="omnibox-ml-url-search-blending" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="omnibox-ml-url-scoring-model" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="omnibox-drive-suggestions" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="omnibox-drive-suggestions-no-setting" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="omnibox-drive-suggestions-no-sync-requirement" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="omnibox-pref-based-data-collection-consent-helper" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="omnibox-on-device-tail-suggestions" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="force-color-profile" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="forced-colors" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="memlog" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="memlog-sampling-rate" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="memlog-stack-mode" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="omnibox-max-url-matches" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="optimization-guide-debug-logs" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="optimization-guide-on-device-model" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="history-embeddings" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="history-embeddings-answers" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="page-image-service-optimization-guide-salient-images" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="block-insecure-private-network-requests" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="private-network-access-respect-preflight-results" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="private-network-access-preflight-short-timeout" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="private-network-access-permission-prompt" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="private-network-access-ignore-worker-errors" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="private-network-access-ignore-navigation-errors" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="tab-groups-save-v2" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="tab-group-sync-service-desktop-migration" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="tab-groups-save-ui-update" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="tabstrip-collection-storage" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="toolbar-pinning" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="side-panel-resizing" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="product-specifications" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="compare-confirmation-toast" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="price-tracking-subscription-service-locale-key" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="price-tracking-subscription-service-product-version" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="ntp-alpha-background-collections" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="ntp-background-image-error-detection" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="ntp-calendar-module" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="ntp-drive-module-show-six-files" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="ntp-mobile-promo" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="ntp-most-relevant-tab-resumption-module" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="ntp-most-relevant-tab-resumption-module-device-icon" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="ntp-outlook-calendar-module" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="ntp-realbox-cr23-theming" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="ntp-sharepoint-module" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="chrome-wide-echo-cancellation" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-parallel-downloading" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-network-logging-to-file" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="web-authentication-permit-enterprise-attestation" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="zero-copy-tab-capture" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="pdf-cr23" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="pdf-oopif" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="pdf-use-skia-renderer" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="pdf-ink2" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="cups-ipp-printing-backend" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="unsafely-treat-insecure-origin-as-secure" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="disable-process-reuse" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="subframe-process-reuse-thresholds" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-live-caption-multilang" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="read-anything-read-aloud" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="read-anything-read-aloud-automatic-word-highlighting" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="read-anything-read-aloud-auto-voice-switching" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="read-anything-read-aloud-language-pack-downloading" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="read-anything-read-aloud-phrase-highlighting" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="read-anything-images-via-algorithm" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="read-anything-docs-integration" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="read-anything-docs-load-more-button" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="support-tool-screenshot" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="image-descriptions-alternative-routing" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="drop-input-events-before-first-paint" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="boundary-event-dispatch-tracks-node-removal" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="happiness-tracking-surveys-for-desktop-demo" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="use-angle" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="sharing-desktop-screenshots" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-gpu-service-logging" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="hardware-media-key-handling" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="avif-gainmap-hdr-images" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="crabbyavif" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="file-system-observer" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="strict-origin-isolation" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-fenced-frames-developer-mode" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-unsafe-webgpu" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-webgpu-developer-features" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="global-media-controls-updated-ui" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-supervised-user-new-profile-sign-in-iph" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="windows-scrolling-personality" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="element-capture" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="device-posture" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="viewport-segments" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-location-provider-manager" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="autofill-granular-filling-available" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="autofill-for-unclassified-fields-available" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="automatic-fullscreen-content-setting" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="tracking-protection-3pcd" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-experimental-cookie-features" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="canvas-2d-layers" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="web-machine-learning-neural-network" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="experimental-web-machine-learning-neural-network" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="one-time-permission" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="left-hand-side-activity-indicators" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="pwa-update-dialog-for-icon" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="keyboard-and-pointer-lock-prompt" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="press-and-hold-esc-to-exit-browser-fullscreen" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-oop-print-drivers" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="privacy-sandbox-internals" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="privacy-sandbox-privacy-guide-ad-topics" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="private-state-tokens-dev-ui" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="related-website-sets-dev-ui" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-speculation-rules-prerendering-target-hint" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="prerender-early-document-lifecycle-update" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="warm-up-compositor" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="prerender2-warm-up-compositor" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="chrome-labs" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="pdf-ocr" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="pdf-searchify" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="pdf-xfa-forms" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="ui-debug-tools" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="fedcm-authz" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="fedcm-button-mode" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="fedcm-idp-registration" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="fedcm-metrics-endpoint" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="fedcm-multi-idp" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="fedcm-selective-disclosure" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="fedcm-use-other-account" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="fedcm-with-storage-access-api" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="fedcm-without-well-known-enforcement" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="web-identity-digital-credentials" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="autofill-enable-manual-fallback-iph" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-lens-overlay" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="bind-cookies-to-port" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="bind-cookies-to-scheme" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="cbd-timeframe-required" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="prerender2" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="test-third-party-cookie-phaseout" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="tpc-phase-out-facilitated-testing" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="tpcd-heuristics-grants" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="tpcd-metadata-grants" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="third-party-cookie-deprecation-trial" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="top-level-third-party-cookie-deprecation-trial" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="https-first-balanced-mode" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="https-first-dialog-ui" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="https-first-mode-interstitial-august2024-refresh" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="https-first-mode-incognito-new-settings" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-extension-ai-data-collection" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="extensions-menu-access-control" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="iph-extensions-menu-feature" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="iph-extensions-request-access-button-feature" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="extension-manifest-v2-deprecation-warning" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="extension-manifest-v2-deprecation-disabled" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="extension-manifest-v2-deprecation-unsupported" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="canvas-oop-rasterization" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="captured-surface-control" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="skia-graphite" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-tab-audio-muting" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="customize-chrome-side-panel-extensions-card" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-render-pass-drawn-rect" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="media-session-enter-picture-in-picture" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="auto-picture-in-picture-video-heuristics" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="auto-picture-in-picture-for-video-playback" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="video-picture-in-picture-controls-update-2024" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="document-picture-in-picture-animate-resize" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="main-node-annotations" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="origin-keyed-processes-by-default" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-isolated-sandboxed-iframes" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="download-warning-improvements" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="reduce-accept-language" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="omit-cors-client-cert" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="safe-browsing-hash-prefix" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="safe-browsing-local-lists-use-sbv5" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="safety-check-unused-site-permissions" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="safety-hub" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="safety-hub-one-off-survey" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="autofill-parse-vcn-card-on-file-standalone-cvc-fields" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="background-resource-fetch" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="webui-omnibox-popup" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="sync-autofill-wallet-credential-data" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="sync-autofill-wallet-usage-data" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-preferences-account-storage" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="ios-promo-refreshed-password-bubble" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="ios-promo-address-bubble" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="ios-promo-payment-bubble" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-compression-dictionary-transport" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-compression-dictionary-transport-backend" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-compression-dictionary-transport-allow-http1" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-compression-dictionary-transport-allow-http2" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-compression-dictionary-transport-require-known-root-cert" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-compute-pressure-rate-obfuscation-mitigation" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-container-type-no-layout-containment" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-compute-pressure-break-calibration-mitigation" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="cast-mirroring-target-playout-delay" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-process-per-site-up-to-main-frame-threshold" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="camera-mic-effects" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="camera-mic-preview" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="get-user-media-deferred-device-settings-selection" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="render-document" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="site-instance-groups-for-data-urls" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="show-featured-enterprise-site-search-iph" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="cws-info-fast-check" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="extension-telemetry-for-enterprise" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="autofill-enable-cvc-storage-and-filling" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="privacy-sandbox-enrollment-overrides" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-smart-card-web-api" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="third-party-profile-management" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="oidc-auth-profile-management" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="explicit-browser-signin-ui-on-desktop" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-generic-oidc-auth-profile-management" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-user-link-capturing-scope-extensions-pwa" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-user-navigation-capturing-pwa" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="ip-protection-proxy-opt-out" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="protected-audience-debug-token" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="deprecate-unload" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="draw-immediately-when-interactive" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="ack-on-surface-activation-when-interactive" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-mac-pwas-notification-attribution" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="use-adhoc-signing-for-web-app-shims" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="autofill-enable-server-iban" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="profiles-reordering" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="batch-upload-desktop" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="autofill-require-valid-local-cards-in-settings" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-bound-session-credentials" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-bound-session-credentials-software-keys-for-manual-testing" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="observable-api" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="atomic-move" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-web-app-system-media-controls" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="CCO" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="compose-text-selection" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="compose-proactive-nudge" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="compose-nudge-display-at-cursor" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="compose-polite-nudge" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="compose-segmentation-promotion" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="compose-selection-nudge" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="compose-upfront-input-modes" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="related-website-sets-permission-grants" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="autofill-enable-save-card-loading-and-confirmation" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="autofill-enable-vcn-enroll-loading-and-confirmation" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="compact-mode" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="content-settings-partitioning" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-mac-ime-live-conversion-fix" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="tear-off-web-app-tab-opens-web-app-window" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="password-manual-fallback-available" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-unrestricted-usb" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="autofill-enable-vcn-3ds-authentication" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="link-preview" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="send-tab-ios-push-notifications" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="autofill-enable-card-benefits-for-american-express" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="autofill-enable-card-benefits-for-capital-one" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="autofill-enable-card-benefits-sync" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="linked-services-setting" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="autofill-enable-vcn-gray-out-for-merchant-opt-out" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="reduce-ip-address-change-notification" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="autofill-enable-save-card-local-save-fallback" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-fingerprinting-protection-blocklist" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="clear-undecryptable-passwords" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="autofill-enable-verve-card-support" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="cert-management-v2-ui" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="password-leak-toggle-move" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="pwm-show-suggestions-on-autofocus" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="optimization-guide-enable-dogfood-logging" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="web-authentication-enclave-authenticator" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="screenlock-reauth-promo-card" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="ruby-short-heuristics" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="prompt-api-for-gemini-nano" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="summarization-api-for-gemini-nano" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="writer-api-for-gemini-nano" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="rewriter-api-for-gemini-nano" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="text-box-trim" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="storage-access-headers" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="autofill-upstream-updated-ui" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="canvas-2d-hibernation" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="performance-intervention-ui" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="performance-intervention-demo-mode" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="sync-enable-bookmarks-in-transport-mode" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="visited-url-ranking-service-history-visibility-score-filter" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="defer-renderer-tasks-after-input" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="blink-scheduler-discrete-input-matches-responsiveness-metrics" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="threaded-scroll-prevent-rendering-starvation" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="autofill-upload-card-request-timeout" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="autofill-vcn-enroll-request-timeout" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="autofill-unmask-card-request-timeout" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="freezing-on-energy-saver" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="freezing-on-energy-saver-testing" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="translate-open-settings" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="classify-url-on-process-response-event" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="tab-organization" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="tab-organization-settings-visibility" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="multi-tab-organization" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="tab-reorganization" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="tab-reorganization-divider" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="tabstrip-declutter" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="autofill-remove-payments-butter-dropdown" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="language-detection-api" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="supervised-profile-hide-guest" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="supervised-profile-safe-search" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="supervised-profile-youtube-reauth" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="supervised-profile-blocked-site-reauth" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="supervised-profile-subframe-reauth" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="supervised-profile-filtering-fallback" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="supervised-profile-custom-strings" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="supervised-profile-sign-in-iph" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="supervised-profile-kite-badging" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="use-frame-interval-decider" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="data-sharing" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="data-sharing-join-only" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="history-sync-alternative-illustration" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="autofill-enable-cvc-storage-and-filling-enhancement" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="improved-signin-ui-on-desktop" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="outline-silhouette-icon" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="discount-on-navigation" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="devtools-privacy-ui" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="permission-predictions-v3" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-task-manager-desktop-refresh" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="cert-verification-network-time" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-lens-overlay-translate-button" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-lens-overlay-contextual-search-box" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-lens-overlay-image-context-menu-actions" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="autofill-enable-log-form-events-to-all-parsed-form-types" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-segmentation-internals-survey" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="autofill-enable-buy-now-pay-later-for-affirm" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="autofill-enable-buy-now-pay-later-for-zip" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="autofill-enable-buy-now-pay-later-syncing" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="password-generation-soft-nudge" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="autofill-enable-cvc-storage-and-filling-standalone-form-enhancement" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-bookmarks-selected-type-on-signin-for-testing" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="separate-local-and-account-themes" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="autofill-enable-card-benefits-iph" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="privacy-sandbox-privacy-policy" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="autofill-enable-card-info-runtime-retrieval" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="translation-api" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="password-form-grouped-affiliations" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="ai-settings-page-refresh" is-default_=""></flags-experiment>
+      <!---->
+    </div>
+    <div class="no-match" role="alert" hidden="">No matching experiments</div>
   </div>
 
   <div id="tab-content-unavailable" class="tab-content" role="tabpanel" aria-labelledby="tab-unavailable" aria-hidden="false">
     <div id="unavailable-experiments">
-      <flags-experiment unsupported="" id="webrtc-hw-decoding"></flags-experiment>
-      <flags-experiment unsupported="" id="webrtc-hw-encoding"></flags-experiment>
-      <flags-experiment unsupported="" id="smooth-scrolling"></flags-experiment>
-      <flags-experiment unsupported="" id="enable-web-bluetooth"></flags-experiment>
-      <flags-experiment unsupported="" id="enable-touch-drag-drop"></flags-experiment>
-      <flags-experiment unsupported="" id="tab-search-position-setting"></flags-experiment>
-      <flags-experiment unsupported="" id="enable-gamepad-multitouch"></flags-experiment>
-      <flags-experiment unsupported="" id="enable-google-play-protect-prompts"></flags-experiment>
-      <flags-experiment unsupported="" id="increment-local-surface-id-for-mainframe-same-doc-navigation"></flags-experiment>
-      <flags-experiment unsupported="" id="enable-perfetto-system-tracing"></flags-experiment>
+      <!--?lit$104277584$-->
+      <!---->
+      <flags-experiment unsupported="" id="webrtc-hw-decoding" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment unsupported="" id="webrtc-hw-encoding" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment unsupported="" id="smooth-scrolling" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment unsupported="" id="enable-web-bluetooth" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment unsupported="" id="enable-touch-drag-drop" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment unsupported="" id="tab-search-position-setting" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment unsupported="" id="enable-gamepad-multitouch" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment unsupported="" id="increment-local-surface-id-for-mainframe-same-doc-navigation" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment unsupported="" id="enable-perfetto-system-tracing" is-default_=""></flags-experiment>
+      <!---->
     </div>
-    <div class="no-match hidden" role="alert">No matching experiments</div>
+    <div class="no-match" role="alert" hidden="">No matching experiments</div>
   </div>
 </div>
 <div id="needs-restart">
   <div class="flex-container">
     <div class="flex restart-notice">Your changes will take effect the next time you relaunch Chrome.</div>
     <div class="flex">
-      <button id="experiment-restart-button" class="primary" disabled="">Relaunch</button>
+      <cr-button id="experiment-restart-button" class="action-button" role="button" tabindex="-1" aria-disabled="true" disabled="">Relaunch</cr-button>
     </div>
   </div>
 </div>
