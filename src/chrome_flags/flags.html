@@ -2,7 +2,7 @@
   <div class="flex">
     <h1 class="section-header-title">Experiments</h1>
   </div>
-  <span id="version" class="flex">131.0.6772.0</span>
+  <span id="version" class="flex">132.0.6787.0</span>
 </div>
 <div class="blurb-container">
   <span class="blurb-warning">Warning: Experimental features ahead!</span>
@@ -28,16 +28,16 @@
   <div id="tab-content-available" class="tab-content" role="tabpanel" aria-labelledby="tab-available" aria-hidden="false" selected="">
     <!-- Non default experiments. -->
     <div id="non-default-experiments">
-      <!--?lit$104277584$-->
+      <!--?lit$96518284824$-->
     </div>
     <!-- Experiments with default settings. -->
     <div id="default-experiments">
-      <!--?lit$104277584$-->
-      <!---->
-      <flags-experiment id="temporary-unexpire-flags-m129" is-default_=""></flags-experiment>
-      <!---->
+      <!--?lit$96518284824$-->
       <!---->
       <flags-experiment id="temporary-unexpire-flags-m130" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="temporary-unexpire-flags-m131" is-default_=""></flags-experiment>
       <!---->
       <!---->
       <flags-experiment id="enable-benchmarking" is-default_=""></flags-experiment>
@@ -220,6 +220,9 @@
       <flags-experiment id="web-app-universal-install" is-default_=""></flags-experiment>
       <!---->
       <!---->
+      <flags-experiment id="enable-desktop-pwas-sync-changes" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
       <flags-experiment id="shortcuts-not-apps" is-default_=""></flags-experiment>
       <!---->
       <!---->
@@ -280,13 +283,13 @@
       <flags-experiment id="web-share" is-default_=""></flags-experiment>
       <!---->
       <!---->
-      <flags-experiment id="skip-undecryptable-passwords" is-default_=""></flags-experiment>
-      <!---->
-      <!---->
       <flags-experiment id="system-keyboard-lock" is-default_=""></flags-experiment>
       <!---->
       <!---->
       <flags-experiment id="disallow-doc-written-script-loads" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="view-transition-layered-capture" is-default_=""></flags-experiment>
       <!---->
       <!---->
       <flags-experiment id="enable-autofill-credit-card-upload" is-default_=""></flags-experiment>
@@ -311,9 +314,6 @@
       <!---->
       <!---->
       <flags-experiment id="enable-immersive-fullscreen-toolbar" is-default_=""></flags-experiment>
-      <!---->
-      <!---->
-      <flags-experiment id="enable-fullscreen-animate-tabs" is-default_=""></flags-experiment>
       <!---->
       <!---->
       <flags-experiment id="enable-fullscreen-always-show-traffic-lights" is-default_=""></flags-experiment>
@@ -481,6 +481,9 @@
       <flags-experiment id="ntp-mobile-promo" is-default_=""></flags-experiment>
       <!---->
       <!---->
+      <flags-experiment id="force-ntp-mobile-promo" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
       <flags-experiment id="ntp-most-relevant-tab-resumption-module" is-default_=""></flags-experiment>
       <!---->
       <!---->
@@ -515,6 +518,9 @@
       <!---->
       <!---->
       <flags-experiment id="pdf-oopif" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="pdf-portfolio" is-default_=""></flags-experiment>
       <!---->
       <!---->
       <flags-experiment id="pdf-use-skia-renderer" is-default_=""></flags-experiment>
@@ -613,7 +619,7 @@
       <flags-experiment id="global-media-controls-updated-ui" is-default_=""></flags-experiment>
       <!---->
       <!---->
-      <flags-experiment id="enable-supervised-user-new-profile-sign-in-iph" is-default_=""></flags-experiment>
+      <flags-experiment id="enable-family-link-extensions-permissions" is-default_=""></flags-experiment>
       <!---->
       <!---->
       <flags-experiment id="windows-scrolling-personality" is-default_=""></flags-experiment>
@@ -695,9 +701,6 @@
       <!---->
       <!---->
       <flags-experiment id="prerender2-warm-up-compositor" is-default_=""></flags-experiment>
-      <!---->
-      <!---->
-      <flags-experiment id="chrome-labs" is-default_=""></flags-experiment>
       <!---->
       <!---->
       <flags-experiment id="pdf-ocr" is-default_=""></flags-experiment>
@@ -872,6 +875,9 @@
       <!---->
       <!---->
       <flags-experiment id="safety-hub" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="plus-address-full-form-fill" is-default_=""></flags-experiment>
       <!---->
       <!---->
       <flags-experiment id="safety-hub-one-off-survey" is-default_=""></flags-experiment>
@@ -1180,12 +1186,6 @@
       <flags-experiment id="visited-url-ranking-service-history-visibility-score-filter" is-default_=""></flags-experiment>
       <!---->
       <!---->
-      <flags-experiment id="defer-renderer-tasks-after-input" is-default_=""></flags-experiment>
-      <!---->
-      <!---->
-      <flags-experiment id="blink-scheduler-discrete-input-matches-responsiveness-metrics" is-default_=""></flags-experiment>
-      <!---->
-      <!---->
       <flags-experiment id="threaded-scroll-prevent-rendering-starvation" is-default_=""></flags-experiment>
       <!---->
       <!---->
@@ -1205,12 +1205,6 @@
       <!---->
       <!---->
       <flags-experiment id="translate-open-settings" is-default_=""></flags-experiment>
-      <!---->
-      <!---->
-      <flags-experiment id="classify-url-on-process-response-event" is-default_=""></flags-experiment>
-      <!---->
-      <!---->
-      <flags-experiment id="tab-organization" is-default_=""></flags-experiment>
       <!---->
       <!---->
       <flags-experiment id="tab-organization-settings-visibility" is-default_=""></flags-experiment>
@@ -1350,13 +1344,16 @@
       <!---->
       <flags-experiment id="ai-settings-page-refresh" is-default_=""></flags-experiment>
       <!---->
+      <!---->
+      <flags-experiment id="password-form-clientside-classifier" is-default_=""></flags-experiment>
+      <!---->
     </div>
     <div class="no-match" role="alert" hidden="">No matching experiments</div>
   </div>
 
   <div id="tab-content-unavailable" class="tab-content" role="tabpanel" aria-labelledby="tab-unavailable" aria-hidden="false">
     <div id="unavailable-experiments">
-      <!--?lit$104277584$-->
+      <!--?lit$96518284824$-->
       <!---->
       <flags-experiment unsupported="" id="webrtc-hw-decoding" is-default_=""></flags-experiment>
       <!---->
