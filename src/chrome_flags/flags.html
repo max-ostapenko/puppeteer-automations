@@ -2,7 +2,7 @@
   <div class="flex">
     <h1 class="section-header-title">Experiments</h1>
   </div>
-  <span id="version" class="flex">132.0.6787.0</span>
+  <span id="version" class="flex">132.0.6834.0</span>
 </div>
 <div class="blurb-container">
   <span class="blurb-warning">Warning: Experimental features ahead!</span>
@@ -28,11 +28,11 @@
   <div id="tab-content-available" class="tab-content" role="tabpanel" aria-labelledby="tab-available" aria-hidden="false" selected="">
     <!-- Non default experiments. -->
     <div id="non-default-experiments">
-      <!--?lit$96518284824$-->
+      <!--?lit$053324937$-->
     </div>
     <!-- Experiments with default settings. -->
     <div id="default-experiments">
-      <!--?lit$96518284824$-->
+      <!--?lit$053324937$-->
       <!---->
       <flags-experiment id="temporary-unexpire-flags-m130" is-default_=""></flags-experiment>
       <!---->
@@ -98,6 +98,9 @@
       <!---->
       <!---->
       <flags-experiment id="enable-enterprise-updated-profile-creation-screen" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-enterprise-profile-required-interstitial" is-default_=""></flags-experiment>
       <!---->
       <!---->
       <flags-experiment id="enable-experimental-webassembly-features" is-default_=""></flags-experiment>
@@ -244,6 +247,9 @@
       <flags-experiment id="show-cast-permission-rejected-error" is-default_=""></flags-experiment>
       <!---->
       <!---->
+      <flags-experiment id="cast-message-logging" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
       <flags-experiment id="cast-streaming-hardware-h264" is-default_=""></flags-experiment>
       <!---->
       <!---->
@@ -292,6 +298,9 @@
       <flags-experiment id="view-transition-layered-capture" is-default_=""></flags-experiment>
       <!---->
       <!---->
+      <flags-experiment id="view-transition-overflow-rect-from-surface" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
       <flags-experiment id="enable-autofill-credit-card-upload" is-default_=""></flags-experiment>
       <!---->
       <!---->
@@ -314,9 +323,6 @@
       <!---->
       <!---->
       <flags-experiment id="enable-immersive-fullscreen-toolbar" is-default_=""></flags-experiment>
-      <!---->
-      <!---->
-      <flags-experiment id="enable-fullscreen-always-show-traffic-lights" is-default_=""></flags-experiment>
       <!---->
       <!---->
       <flags-experiment id="enable-web-payments-experimental-features" is-default_=""></flags-experiment>
@@ -346,6 +352,9 @@
       <flags-experiment id="most-visited-tiles-new-scoring" is-default_=""></flags-experiment>
       <!---->
       <!---->
+      <flags-experiment id="omnibox-local-history-zero-suggest-beyond-ntp" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
       <flags-experiment id="omnibox-zero-suggest-prefetch-debouncing" is-default_=""></flags-experiment>
       <!---->
       <!---->
@@ -371,9 +380,6 @@
       <!---->
       <!---->
       <flags-experiment id="omnibox-drive-suggestions" is-default_=""></flags-experiment>
-      <!---->
-      <!---->
-      <flags-experiment id="omnibox-drive-suggestions-no-setting" is-default_=""></flags-experiment>
       <!---->
       <!---->
       <flags-experiment id="omnibox-drive-suggestions-no-sync-requirement" is-default_=""></flags-experiment>
@@ -409,6 +415,12 @@
       <flags-experiment id="optimization-guide-on-device-model" is-default_=""></flags-experiment>
       <!---->
       <!---->
+      <flags-experiment id="text-safety-classifier" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="organic-repeatable-queries" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
       <flags-experiment id="history-embeddings" is-default_=""></flags-experiment>
       <!---->
       <!---->
@@ -416,6 +428,9 @@
       <!---->
       <!---->
       <flags-experiment id="page-image-service-optimization-guide-salient-images" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="page-content-annotations-remote-page-metadata" is-default_=""></flags-experiment>
       <!---->
       <!---->
       <flags-experiment id="block-insecure-private-network-requests" is-default_=""></flags-experiment>
@@ -445,7 +460,19 @@
       <flags-experiment id="tab-groups-save-ui-update" is-default_=""></flags-experiment>
       <!---->
       <!---->
+      <flags-experiment id="scrollable-tabstrip" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="scrollable-tabstrip-with-dragging" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
       <flags-experiment id="tabstrip-collection-storage" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="tabstrip-combo-button" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="scrollable-tabstrip-overflow" is-default_=""></flags-experiment>
       <!---->
       <!---->
       <flags-experiment id="toolbar-pinning" is-default_=""></flags-experiment>
@@ -497,6 +524,9 @@
       <!---->
       <!---->
       <flags-experiment id="ntp-sharepoint-module" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="ntp-microsoft-authentication-module" is-default_=""></flags-experiment>
       <!---->
       <!---->
       <flags-experiment id="chrome-wide-echo-cancellation" is-default_=""></flags-experiment>
@@ -619,9 +649,6 @@
       <flags-experiment id="global-media-controls-updated-ui" is-default_=""></flags-experiment>
       <!---->
       <!---->
-      <flags-experiment id="enable-family-link-extensions-permissions" is-default_=""></flags-experiment>
-      <!---->
-      <!---->
       <flags-experiment id="windows-scrolling-personality" is-default_=""></flags-experiment>
       <!---->
       <!---->
@@ -691,6 +718,9 @@
       <flags-experiment id="related-website-sets-dev-ui" is-default_=""></flags-experiment>
       <!---->
       <!---->
+      <flags-experiment id="align-surface-layer-impl-to-pixel-grid" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
       <flags-experiment id="enable-speculation-rules-prerendering-target-hint" is-default_=""></flags-experiment>
       <!---->
       <!---->
@@ -701,9 +731,6 @@
       <!---->
       <!---->
       <flags-experiment id="prerender2-warm-up-compositor" is-default_=""></flags-experiment>
-      <!---->
-      <!---->
-      <flags-experiment id="pdf-ocr" is-default_=""></flags-experiment>
       <!---->
       <!---->
       <flags-experiment id="pdf-searchify" is-default_=""></flags-experiment>
@@ -790,7 +817,13 @@
       <flags-experiment id="https-first-mode-interstitial-august2024-refresh" is-default_=""></flags-experiment>
       <!---->
       <!---->
+      <flags-experiment id="https-first-mode-v2-for-engaged-sites" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
       <flags-experiment id="https-first-mode-incognito-new-settings" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="https-first-mode-for-typically-secure-users" is-default_=""></flags-experiment>
       <!---->
       <!---->
       <flags-experiment id="enable-extension-ai-data-collection" is-default_=""></flags-experiment>
@@ -821,6 +854,9 @@
       <!---->
       <!---->
       <flags-experiment id="skia-graphite" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="skia-graphite-precompilation" is-default_=""></flags-experiment>
       <!---->
       <!---->
       <flags-experiment id="enable-tab-audio-muting" is-default_=""></flags-experiment>
@@ -881,6 +917,9 @@
       <!---->
       <!---->
       <flags-experiment id="safety-hub-one-off-survey" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="on-device-notification-content-detection-model" is-default_=""></flags-experiment>
       <!---->
       <!---->
       <flags-experiment id="autofill-parse-vcn-card-on-file-standalone-cvc-fields" is-default_=""></flags-experiment>
@@ -952,10 +991,10 @@
       <flags-experiment id="render-document" is-default_=""></flags-experiment>
       <!---->
       <!---->
+      <flags-experiment id="enable-search-aggregator-policy" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
       <flags-experiment id="site-instance-groups-for-data-urls" is-default_=""></flags-experiment>
-      <!---->
-      <!---->
-      <flags-experiment id="show-featured-enterprise-site-search-iph" is-default_=""></flags-experiment>
       <!---->
       <!---->
       <flags-experiment id="cws-info-fast-check" is-default_=""></flags-experiment>
@@ -1000,6 +1039,9 @@
       <flags-experiment id="deprecate-unload" is-default_=""></flags-experiment>
       <!---->
       <!---->
+      <flags-experiment id="autofill-enable-fpan-risk-based-authentication" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
       <flags-experiment id="draw-immediately-when-interactive" is-default_=""></flags-experiment>
       <!---->
       <!---->
@@ -1013,6 +1055,9 @@
       <!---->
       <!---->
       <flags-experiment id="autofill-enable-server-iban" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-builtin-hls" is-default_=""></flags-experiment>
       <!---->
       <!---->
       <flags-experiment id="profiles-reordering" is-default_=""></flags-experiment>
@@ -1040,9 +1085,6 @@
       <!---->
       <!---->
       <flags-experiment id="CCO" is-default_=""></flags-experiment>
-      <!---->
-      <!---->
-      <flags-experiment id="compose-text-selection" is-default_=""></flags-experiment>
       <!---->
       <!---->
       <flags-experiment id="compose-proactive-nudge" is-default_=""></flags-experiment>
@@ -1132,6 +1174,9 @@
       <flags-experiment id="cert-management-v2-ui" is-default_=""></flags-experiment>
       <!---->
       <!---->
+      <flags-experiment id="cert-management-v2-ui-write" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
       <flags-experiment id="password-leak-toggle-move" is-default_=""></flags-experiment>
       <!---->
       <!---->
@@ -1186,6 +1231,9 @@
       <flags-experiment id="visited-url-ranking-service-history-visibility-score-filter" is-default_=""></flags-experiment>
       <!---->
       <!---->
+      <flags-experiment id="defer-renderer-tasks-after-input" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
       <flags-experiment id="threaded-scroll-prevent-rendering-starvation" is-default_=""></flags-experiment>
       <!---->
       <!---->
@@ -1205,6 +1253,9 @@
       <!---->
       <!---->
       <flags-experiment id="translate-open-settings" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="tab-organization" is-default_=""></flags-experiment>
       <!---->
       <!---->
       <flags-experiment id="tab-organization-settings-visibility" is-default_=""></flags-experiment>
@@ -1297,6 +1348,9 @@
       <flags-experiment id="enable-lens-overlay-contextual-search-box" is-default_=""></flags-experiment>
       <!---->
       <!---->
+      <flags-experiment id="enable-lens-overlay-latency-optimizations" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
       <flags-experiment id="enable-lens-overlay-image-context-menu-actions" is-default_=""></flags-experiment>
       <!---->
       <!---->
@@ -1313,9 +1367,6 @@
       <!---->
       <!---->
       <flags-experiment id="autofill-enable-buy-now-pay-later-syncing" is-default_=""></flags-experiment>
-      <!---->
-      <!---->
-      <flags-experiment id="password-generation-soft-nudge" is-default_=""></flags-experiment>
       <!---->
       <!---->
       <flags-experiment id="autofill-enable-cvc-storage-and-filling-standalone-form-enhancement" is-default_=""></flags-experiment>
@@ -1347,13 +1398,37 @@
       <!---->
       <flags-experiment id="password-form-clientside-classifier" is-default_=""></flags-experiment>
       <!---->
+      <!---->
+      <flags-experiment id="contextual-cueing" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="partitioned-popins" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="separate-local-and-account-search-engines" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="partition-alloc-with-advanced-checks" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="partition-visited-link-database" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="partition-visited-link-database-with-self-links" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="autofill-disable-local-card-migration" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="predictable-reported-quota" is-default_=""></flags-experiment>
+      <!---->
     </div>
     <div class="no-match" role="alert" hidden="">No matching experiments</div>
   </div>
 
   <div id="tab-content-unavailable" class="tab-content" role="tabpanel" aria-labelledby="tab-unavailable" aria-hidden="false">
     <div id="unavailable-experiments">
-      <!--?lit$96518284824$-->
+      <!--?lit$053324937$-->
       <!---->
       <flags-experiment unsupported="" id="webrtc-hw-decoding" is-default_=""></flags-experiment>
       <!---->
