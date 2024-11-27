@@ -2,7 +2,7 @@
   <div class="flex">
     <h1 class="section-header-title">Experiments</h1>
   </div>
-  <span id="version" class="flex">133.0.6835.0</span>
+  <span id="version" class="flex">133.0.6862.0</span>
 </div>
 <div class="blurb-container">
   <span class="blurb-warning">Warning: Experimental features ahead!</span>
@@ -28,11 +28,11 @@
   <div id="tab-content-available" class="tab-content" role="tabpanel" aria-labelledby="tab-available" aria-hidden="false" selected="">
     <!-- Non default experiments. -->
     <div id="non-default-experiments">
-      <!--?lit$897743571$-->
+      <!--?lit$3456783504$-->
     </div>
     <!-- Experiments with default settings. -->
     <div id="default-experiments">
-      <!--?lit$897743571$-->
+      <!--?lit$3456783504$-->
       <!---->
       <flags-experiment id="temporary-unexpire-flags-m131" is-default_=""></flags-experiment>
       <!---->
@@ -244,6 +244,9 @@
       <flags-experiment id="cast-streaming-hardware-vp9" is-default_=""></flags-experiment>
       <!---->
       <!---->
+      <flags-experiment id="cast-streaming-media-video-encoder" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
       <flags-experiment id="cast-streaming-performance-overlay" is-default_=""></flags-experiment>
       <!---->
       <!---->
@@ -364,9 +367,6 @@
       <flags-experiment id="omnibox-ml-url-scoring-model" is-default_=""></flags-experiment>
       <!---->
       <!---->
-      <flags-experiment id="omnibox-pref-based-data-collection-consent-helper" is-default_=""></flags-experiment>
-      <!---->
-      <!---->
       <flags-experiment id="omnibox-on-device-tail-suggestions" is-default_=""></flags-experiment>
       <!---->
       <!---->
@@ -430,6 +430,9 @@
       <flags-experiment id="private-network-access-ignore-navigation-errors" is-default_=""></flags-experiment>
       <!---->
       <!---->
+      <flags-experiment id="tab-groups-defer-remote-navigations" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
       <flags-experiment id="tab-groups-save-v2" is-default_=""></flags-experiment>
       <!---->
       <!---->
@@ -461,6 +464,9 @@
       <!---->
       <!---->
       <flags-experiment id="product-specifications" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="product-specifications-multi-specifics" is-default_=""></flags-experiment>
       <!---->
       <!---->
       <flags-experiment id="compare-confirmation-toast" is-default_=""></flags-experiment>
@@ -553,15 +559,6 @@
       <flags-experiment id="read-anything-read-aloud" is-default_=""></flags-experiment>
       <!---->
       <!---->
-      <flags-experiment id="read-anything-read-aloud-automatic-word-highlighting" is-default_=""></flags-experiment>
-      <!---->
-      <!---->
-      <flags-experiment id="read-anything-read-aloud-auto-voice-switching" is-default_=""></flags-experiment>
-      <!---->
-      <!---->
-      <flags-experiment id="read-anything-read-aloud-language-pack-downloading" is-default_=""></flags-experiment>
-      <!---->
-      <!---->
       <flags-experiment id="read-anything-read-aloud-phrase-highlighting" is-default_=""></flags-experiment>
       <!---->
       <!---->
@@ -601,6 +598,9 @@
       <flags-experiment id="avif-gainmap-hdr-images" is-default_=""></flags-experiment>
       <!---->
       <!---->
+      <flags-experiment id="crabbyavif" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
       <flags-experiment id="file-system-observer" is-default_=""></flags-experiment>
       <!---->
       <!---->
@@ -619,9 +619,6 @@
       <flags-experiment id="global-media-controls-updated-ui" is-default_=""></flags-experiment>
       <!---->
       <!---->
-      <flags-experiment id="windows-scrolling-personality" is-default_=""></flags-experiment>
-      <!---->
-      <!---->
       <flags-experiment id="element-capture" is-default_=""></flags-experiment>
       <!---->
       <!---->
@@ -632,12 +629,6 @@
       <!---->
       <!---->
       <flags-experiment id="enable-location-provider-manager" is-default_=""></flags-experiment>
-      <!---->
-      <!---->
-      <flags-experiment id="autofill-granular-filling-available" is-default_=""></flags-experiment>
-      <!---->
-      <!---->
-      <flags-experiment id="autofill-for-unclassified-fields-available" is-default_=""></flags-experiment>
       <!---->
       <!---->
       <flags-experiment id="automatic-fullscreen-content-setting" is-default_=""></flags-experiment>
@@ -662,6 +653,12 @@
       <!---->
       <!---->
       <flags-experiment id="left-hand-side-activity-indicators" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="merchant-trust" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="privacy-policy-insights" is-default_=""></flags-experiment>
       <!---->
       <!---->
       <flags-experiment id="pwa-update-dialog-for-icon" is-default_=""></flags-experiment>
@@ -742,7 +739,7 @@
       <flags-experiment id="web-identity-digital-credentials" is-default_=""></flags-experiment>
       <!---->
       <!---->
-      <flags-experiment id="autofill-enable-manual-fallback-iph" is-default_=""></flags-experiment>
+      <flags-experiment id="web-identity-digital-credentials-creation" is-default_=""></flags-experiment>
       <!---->
       <!---->
       <flags-experiment id="enable-lens-overlay" is-default_=""></flags-experiment>
@@ -868,13 +865,19 @@
       <flags-experiment id="omit-cors-client-cert" is-default_=""></flags-experiment>
       <!---->
       <!---->
-      <flags-experiment id="safe-browsing-hash-prefix" is-default_=""></flags-experiment>
-      <!---->
-      <!---->
       <flags-experiment id="safe-browsing-local-lists-use-sbv5" is-default_=""></flags-experiment>
       <!---->
       <!---->
+      <flags-experiment id="safety-check-unused-site-permissions" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="safety-hub" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
       <flags-experiment id="plus-address-full-form-fill" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="permission-site-settings-radio-button" is-default_=""></flags-experiment>
       <!---->
       <!---->
       <flags-experiment id="safety-hub-one-off-survey" is-default_=""></flags-experiment>
@@ -970,9 +973,6 @@
       <flags-experiment id="privacy-sandbox-enrollment-overrides" is-default_=""></flags-experiment>
       <!---->
       <!---->
-      <flags-experiment id="enable-smart-card-web-api" is-default_=""></flags-experiment>
-      <!---->
-      <!---->
       <flags-experiment id="third-party-profile-management" is-default_=""></flags-experiment>
       <!---->
       <!---->
@@ -1021,10 +1021,16 @@
       <flags-experiment id="enable-builtin-hls" is-default_=""></flags-experiment>
       <!---->
       <!---->
+      <flags-experiment id="profiles-reordering" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
       <flags-experiment id="batch-upload-desktop" is-default_=""></flags-experiment>
       <!---->
       <!---->
-      <flags-experiment id="autofill-require-valid-local-cards-in-settings" is-default_=""></flags-experiment>
+      <flags-experiment id="enable-bound-session-credentials" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-bound-session-credentials-software-keys-for-manual-testing" is-default_=""></flags-experiment>
       <!---->
       <!---->
       <flags-experiment id="observable-api" is-default_=""></flags-experiment>
@@ -1123,7 +1129,7 @@
       <flags-experiment id="optimization-guide-enable-dogfood-logging" is-default_=""></flags-experiment>
       <!---->
       <!---->
-      <flags-experiment id="screenlock-reauth-promo-card" is-default_=""></flags-experiment>
+      <flags-experiment id="web-authentication-passkey-upgrade" is-default_=""></flags-experiment>
       <!---->
       <!---->
       <flags-experiment id="ruby-short-heuristics" is-default_=""></flags-experiment>
@@ -1252,6 +1258,9 @@
       <flags-experiment id="outline-silhouette-icon" is-default_=""></flags-experiment>
       <!---->
       <!---->
+      <flags-experiment id="discount-on-navigation" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
       <flags-experiment id="devtools-privacy-ui" is-default_=""></flags-experiment>
       <!---->
       <!---->
@@ -1342,7 +1351,25 @@
       <flags-experiment id="predictable-reported-quota" is-default_=""></flags-experiment>
       <!---->
       <!---->
+      <flags-experiment id="enable-mac-a11y-api-migration" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
       <flags-experiment id="allow-legacy-mv2-extensions" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-lens-overlay-translate-languages" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="glic" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="service-worker-auto-preload" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="autofill-enable-save-and-fill" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="autofill-improved-labels" is-default_=""></flags-experiment>
       <!---->
     </div>
     <div class="no-match" role="alert" hidden="">No matching experiments</div>
@@ -1350,7 +1377,7 @@
 
   <div id="tab-content-unavailable" class="tab-content" role="tabpanel" aria-labelledby="tab-unavailable" aria-hidden="false">
     <div id="unavailable-experiments">
-      <!--?lit$897743571$-->
+      <!--?lit$3456783504$-->
       <!---->
       <flags-experiment unsupported="" id="webrtc-hw-decoding" is-default_=""></flags-experiment>
       <!---->
@@ -1367,6 +1394,12 @@
       <flags-experiment unsupported="" id="enable-touch-drag-drop" is-default_=""></flags-experiment>
       <!---->
       <!---->
+      <flags-experiment unsupported="" id="enable-vulkan" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment unsupported="" id="enable-secure-payment-confirmation-browser-bound-key" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
       <flags-experiment unsupported="" id="tab-search-position-setting" is-default_=""></flags-experiment>
       <!---->
       <!---->
@@ -1378,15 +1411,21 @@
       <!---->
       <flags-experiment unsupported="" id="enable-perfetto-system-tracing" is-default_=""></flags-experiment>
       <!---->
+      <!---->
+      <flags-experiment unsupported="" id="enable-standard-device-bound-session-credentials" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment unsupported="" id="enable-standard-device-bound-session-persistence" is-default_=""></flags-experiment>
+      <!---->
     </div>
     <div class="no-match" role="alert" hidden="">No matching experiments</div>
   </div>
 </div>
-<div id="needs-restart">
+<div id="needs-restart" role="none">
   <div class="flex-container">
     <div class="flex restart-notice">Your changes will take effect the next time you relaunch Chrome.</div>
     <div class="flex">
-      <cr-button id="experiment-restart-button" class="action-button" role="button" tabindex="-1" aria-disabled="true" disabled="">Relaunch</cr-button>
+      <cr-button id="experiment-restart-button" class="action-button" disabled="" role="button" tabindex="-1" aria-disabled="true">Relaunch</cr-button>
     </div>
   </div>
 </div>
