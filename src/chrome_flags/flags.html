@@ -2,7 +2,7 @@
   <div class="flex">
     <h1 class="section-header-title">Experiments</h1>
   </div>
-  <span id="version" class="flex">136.0.7093.1</span>
+  <span id="version" class="flex">137.0.7150.0</span>
 </div>
 <div class="blurb-container">
   <span class="blurb-warning">Warning: Experimental features ahead!</span>
@@ -28,22 +28,25 @@
   <div id="tab-content-available" class="tab-content" role="tabpanel" aria-labelledby="tab-available" aria-hidden="false" selected="">
     <!-- Non default experiments. -->
     <div id="non-default-experiments">
-      <!--?lit$593953342$-->
+      <!--?lit$051223822$-->
     </div>
     <!-- Experiments with default settings. -->
     <div id="default-experiments">
-      <!--?lit$593953342$-->
-      <!---->
-      <flags-experiment id="temporary-unexpire-flags-m134" is-default_=""></flags-experiment>
-      <!---->
+      <!--?lit$051223822$-->
       <!---->
       <flags-experiment id="temporary-unexpire-flags-m135" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="temporary-unexpire-flags-m136" is-default_=""></flags-experiment>
       <!---->
       <!---->
       <flags-experiment id="enable-benchmarking" is-default_=""></flags-experiment>
       <!---->
       <!---->
       <flags-experiment id="ignore-gpu-blocklist" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-accessibility-on-screen-mode" is-default_=""></flags-experiment>
       <!---->
       <!---->
       <flags-experiment id="disable-accelerated-2d-canvas" is-default_=""></flags-experiment>
@@ -136,9 +139,6 @@
       <flags-experiment id="enable-gpu-rasterization" is-default_=""></flags-experiment>
       <!---->
       <!---->
-      <flags-experiment id="enable-fontations-backend" is-default_=""></flags-experiment>
-      <!---->
-      <!---->
       <flags-experiment id="enable-experimental-web-platform-features" is-default_=""></flags-experiment>
       <!---->
       <!---->
@@ -187,6 +187,9 @@
       <flags-experiment id="direct-sockets-in-shared-workers" is-default_=""></flags-experiment>
       <!---->
       <!---->
+      <flags-experiment id="enable-isolated-web-app-allowlist" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
       <flags-experiment id="enable-isolated-web-app-dev-mode" is-default_=""></flags-experiment>
       <!---->
       <!---->
@@ -215,6 +218,9 @@
       <!---->
       <!---->
       <flags-experiment id="enable-desktop-pwas-sub-apps" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-desktop-pwas-scope-extensions" is-default_=""></flags-experiment>
       <!---->
       <!---->
       <flags-experiment id="enable-desktop-pwas-borderless" is-default_=""></flags-experiment>
@@ -322,9 +328,6 @@
       <flags-experiment id="enable-debug-for-store-billing" is-default_=""></flags-experiment>
       <!---->
       <!---->
-      <flags-experiment id="enable-debug-for-secure-payment-confirmation" is-default_=""></flags-experiment>
-      <!---->
-      <!---->
       <flags-experiment id="enable-network-and-issuer-icons-for-secure-payment-confirmation" is-default_=""></flags-experiment>
       <!---->
       <!---->
@@ -332,9 +335,6 @@
       <!---->
       <!---->
       <flags-experiment id="fill-on-account-select" is-default_=""></flags-experiment>
-      <!---->
-      <!---->
-      <flags-experiment id="enable-generic-sensor-extra-classes" is-default_=""></flags-experiment>
       <!---->
       <!---->
       <flags-experiment id="most-visited-tiles-new-scoring" is-default_=""></flags-experiment>
@@ -371,6 +371,15 @@
       <!---->
       <!---->
       <flags-experiment id="omnibox-ml-url-scoring-model" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="omnibox-contextual-search-actions-at-top" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="omnibox-contextual-search-on-focus-suggestions" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="omnibox-contextual-suggestions" is-default_=""></flags-experiment>
       <!---->
       <!---->
       <flags-experiment id="omnibox-rich-autocompletion-promising" is-default_=""></flags-experiment>
@@ -475,16 +484,10 @@
       <flags-experiment id="ntp-footer" is-default_=""></flags-experiment>
       <!---->
       <!---->
-      <flags-experiment id="ntp-mobile-promo" is-default_=""></flags-experiment>
-      <!---->
-      <!---->
-      <flags-experiment id="force-ntp-mobile-promo" is-default_=""></flags-experiment>
-      <!---->
-      <!---->
       <flags-experiment id="ntp-most-relevant-tab-resumption-module" is-default_=""></flags-experiment>
       <!---->
       <!---->
-      <flags-experiment id="ntp-most-relevant-tab-resumption-module-device-icon" is-default_=""></flags-experiment>
+      <flags-experiment id="ntp-most-relevant-tab-resumption-module-fallback-to-host" is-default_=""></flags-experiment>
       <!---->
       <!---->
       <flags-experiment id="ntp-ogb-async-bar-parts" is-default_=""></flags-experiment>
@@ -517,9 +520,6 @@
       <flags-experiment id="zero-copy-tab-capture" is-default_=""></flags-experiment>
       <!---->
       <!---->
-      <flags-experiment id="pdf-cr23" is-default_=""></flags-experiment>
-      <!---->
-      <!---->
       <flags-experiment id="pdf-oopif" is-default_=""></flags-experiment>
       <!---->
       <!---->
@@ -547,13 +547,13 @@
       <flags-experiment id="enable-live-caption-multilang" is-default_=""></flags-experiment>
       <!---->
       <!---->
+      <flags-experiment id="enable-headless-live-caption" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
       <flags-experiment id="read-anything-read-aloud" is-default_=""></flags-experiment>
       <!---->
       <!---->
       <flags-experiment id="read-anything-read-aloud-phrase-highlighting" is-default_=""></flags-experiment>
-      <!---->
-      <!---->
-      <flags-experiment id="read-anything-images-via-algorithm" is-default_=""></flags-experiment>
       <!---->
       <!---->
       <flags-experiment id="read-anything-docs-integration" is-default_=""></flags-experiment>
@@ -646,9 +646,6 @@
       <flags-experiment id="webnn-coreml" is-default_=""></flags-experiment>
       <!---->
       <!---->
-      <flags-experiment id="one-time-permission" is-default_=""></flags-experiment>
-      <!---->
-      <!---->
       <flags-experiment id="permission-element" is-default_=""></flags-experiment>
       <!---->
       <!---->
@@ -695,6 +692,9 @@
       <!---->
       <!---->
       <flags-experiment id="fedcm-authz" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="fedcm-autofill" is-default_=""></flags-experiment>
       <!---->
       <!---->
       <flags-experiment id="fedcm-button-mode" is-default_=""></flags-experiment>
@@ -766,6 +766,9 @@
       <flags-experiment id="enable-extension-ai-data-collection" is-default_=""></flags-experiment>
       <!---->
       <!---->
+      <flags-experiment id="extensions-collapse-main-menu" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
       <flags-experiment id="extensions-menu-access-control" is-default_=""></flags-experiment>
       <!---->
       <!---->
@@ -796,9 +799,6 @@
       <flags-experiment id="enable-tab-audio-muting" is-default_=""></flags-experiment>
       <!---->
       <!---->
-      <flags-experiment id="enable-render-pass-drawn-rect" is-default_=""></flags-experiment>
-      <!---->
-      <!---->
       <flags-experiment id="media-session-enter-picture-in-picture" is-default_=""></flags-experiment>
       <!---->
       <!---->
@@ -809,6 +809,9 @@
       <!---->
       <!---->
       <flags-experiment id="document-picture-in-picture-animate-resize" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="browser-initiated-automatic-picture-in-picture" is-default_=""></flags-experiment>
       <!---->
       <!---->
       <flags-experiment id="audio-ducking" is-default_=""></flags-experiment>
@@ -832,22 +835,16 @@
       <flags-experiment id="omit-cors-client-cert" is-default_=""></flags-experiment>
       <!---->
       <!---->
-      <flags-experiment id="safety-check-unused-site-permissions" is-default_=""></flags-experiment>
-      <!---->
-      <!---->
-      <flags-experiment id="safety-hub" is-default_=""></flags-experiment>
-      <!---->
-      <!---->
       <flags-experiment id="permission-site-settings-radio-button" is-default_=""></flags-experiment>
-      <!---->
-      <!---->
-      <flags-experiment id="safety-hub-one-off-survey" is-default_=""></flags-experiment>
       <!---->
       <!---->
       <flags-experiment id="on-device-notification-content-detection-model" is-default_=""></flags-experiment>
       <!---->
       <!---->
       <flags-experiment id="renderer-side-content-decoding" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="device-bound-session-access-observer-shared-remote" is-default_=""></flags-experiment>
       <!---->
       <!---->
       <flags-experiment id="webui-omnibox-popup" is-default_=""></flags-experiment>
@@ -937,10 +934,7 @@
       <flags-experiment id="use-adhoc-signing-for-web-app-shims" is-default_=""></flags-experiment>
       <!---->
       <!---->
-      <flags-experiment id="enable-builtin-hls" is-default_=""></flags-experiment>
-      <!---->
-      <!---->
-      <flags-experiment id="profiles-reordering" is-default_=""></flags-experiment>
+      <flags-experiment id="enable-history-sync-optin-expansion-pill" is-default_=""></flags-experiment>
       <!---->
       <!---->
       <flags-experiment id="enable-extensions-explicit-browser-signin" is-default_=""></flags-experiment>
@@ -950,21 +944,6 @@
       <!---->
       <!---->
       <flags-experiment id="enable-bound-session-credentials-software-keys-for-manual-testing" is-default_=""></flags-experiment>
-      <!---->
-      <!---->
-      <flags-experiment id="CCO" is-default_=""></flags-experiment>
-      <!---->
-      <!---->
-      <flags-experiment id="compose-proactive-nudge" is-default_=""></flags-experiment>
-      <!---->
-      <!---->
-      <flags-experiment id="compose-nudge-display-at-cursor" is-default_=""></flags-experiment>
-      <!---->
-      <!---->
-      <flags-experiment id="compose-segmentation-promotion" is-default_=""></flags-experiment>
-      <!---->
-      <!---->
-      <flags-experiment id="compose-selection-nudge" is-default_=""></flags-experiment>
       <!---->
       <!---->
       <flags-experiment id="compose-upfront-input-modes" is-default_=""></flags-experiment>
@@ -1015,9 +994,6 @@
       <flags-experiment id="enable-standard-device-bound-sesssion-refresh-quota" is-default_=""></flags-experiment>
       <!---->
       <!---->
-      <flags-experiment id="autofill-enable-verve-card-support" is-default_=""></flags-experiment>
-      <!---->
-      <!---->
       <flags-experiment id="cert-management-v2-ui" is-default_=""></flags-experiment>
       <!---->
       <!---->
@@ -1034,9 +1010,6 @@
       <!---->
       <!---->
       <flags-experiment id="hybrid-passkeys-in-context-menu" is-default_=""></flags-experiment>
-      <!---->
-      <!---->
-      <flags-experiment id="web-authentication-passkey-upgrade" is-default_=""></flags-experiment>
       <!---->
       <!---->
       <flags-experiment id="ruby-short-heuristics" is-default_=""></flags-experiment>
@@ -1060,7 +1033,7 @@
       <flags-experiment id="text-box-trim" is-default_=""></flags-experiment>
       <!---->
       <!---->
-      <flags-experiment id="storage-access-headers" is-default_=""></flags-experiment>
+      <flags-experiment id="css-masonry-layout" is-default_=""></flags-experiment>
       <!---->
       <!---->
       <flags-experiment id="storage-access-api-follows-same-origin-policy" is-default_=""></flags-experiment>
@@ -1081,9 +1054,6 @@
       <flags-experiment id="visited-url-ranking-service-history-visibility-score-filter" is-default_=""></flags-experiment>
       <!---->
       <!---->
-      <flags-experiment id="autofill-remove-payments-butter-dropdown" is-default_=""></flags-experiment>
-      <!---->
-      <!---->
       <flags-experiment id="language-detection-api" is-default_=""></flags-experiment>
       <!---->
       <!---->
@@ -1096,6 +1066,15 @@
       <flags-experiment id="data-sharing" is-default_=""></flags-experiment>
       <!---->
       <!---->
+      <flags-experiment id="collaboration-automotive" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="collaboration-entreprise-v2" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="collaboration-shared-tab-group-account-data" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
       <flags-experiment id="data-sharing-join-only" is-default_=""></flags-experiment>
       <!---->
       <!---->
@@ -1103,15 +1082,6 @@
       <!---->
       <!---->
       <flags-experiment id="history-sync-alternative-illustration" is-default_=""></flags-experiment>
-      <!---->
-      <!---->
-      <flags-experiment id="improved-signin-ui-on-desktop" is-default_=""></flags-experiment>
-      <!---->
-      <!---->
-      <flags-experiment id="outline-silhouette-icon" is-default_=""></flags-experiment>
-      <!---->
-      <!---->
-      <flags-experiment id="improved-settings-ui-on-desktop" is-default_=""></flags-experiment>
       <!---->
       <!---->
       <flags-experiment id="discount-on-navigation" is-default_=""></flags-experiment>
@@ -1123,19 +1093,13 @@
       <flags-experiment id="permissions-ai-v1" is-default_=""></flags-experiment>
       <!---->
       <!---->
+      <flags-experiment id="permissions-ai-v3" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
       <flags-experiment id="enable-task-manager-desktop-refresh" is-default_=""></flags-experiment>
       <!---->
       <!---->
       <flags-experiment id="enable-lens-overlay-simplified-selection" is-default_=""></flags-experiment>
-      <!---->
-      <!---->
-      <flags-experiment id="enable-lens-overlay-latency-optimizations" is-default_=""></flags-experiment>
-      <!---->
-      <!---->
-      <flags-experiment id="enable-lens-overlay-image-context-menu-actions" is-default_=""></flags-experiment>
-      <!---->
-      <!---->
-      <flags-experiment id="autofill-enable-log-form-events-to-all-parsed-form-types" is-default_=""></flags-experiment>
       <!---->
       <!---->
       <flags-experiment id="autofill-enable-buy-now-pay-later" is-default_=""></flags-experiment>
@@ -1151,9 +1115,6 @@
       <!---->
       <!---->
       <flags-experiment id="autofill-enable-card-benefits-iph" is-default_=""></flags-experiment>
-      <!---->
-      <!---->
-      <flags-experiment id="privacy-sandbox-privacy-policy" is-default_=""></flags-experiment>
       <!---->
       <!---->
       <flags-experiment id="rusty-png" is-default_=""></flags-experiment>
@@ -1180,6 +1141,9 @@
       <flags-experiment id="contextual-cueing" is-default_=""></flags-experiment>
       <!---->
       <!---->
+      <flags-experiment id="glic-zero-state-suggestions" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
       <flags-experiment id="partitioned-popins" is-default_=""></flags-experiment>
       <!---->
       <!---->
@@ -1204,16 +1168,13 @@
       <flags-experiment id="allow-legacy-mv2-extensions" is-default_=""></flags-experiment>
       <!---->
       <!---->
-      <flags-experiment id="enable-lens-overlay-translate-languages" is-default_=""></flags-experiment>
-      <!---->
-      <!---->
       <flags-experiment id="glic" is-default_=""></flags-experiment>
       <!---->
       <!---->
-      <flags-experiment id="glic-detached" is-default_=""></flags-experiment>
-      <!---->
-      <!---->
       <flags-experiment id="glic-user-resize" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="glic-z-order-changes" is-default_=""></flags-experiment>
       <!---->
       <!---->
       <flags-experiment id="service-worker-auto-preload" is-default_=""></flags-experiment>
@@ -1258,19 +1219,10 @@
       <flags-experiment id="autofill-enable-card-benefits-for-bmo" is-default_=""></flags-experiment>
       <!---->
       <!---->
-      <flags-experiment id="privacy-sandbox-equalized-prompt-buttons" is-default_=""></flags-experiment>
-      <!---->
-      <!---->
-      <flags-experiment id="move-theme-prefs-to-specifics" is-default_=""></flags-experiment>
-      <!---->
-      <!---->
       <flags-experiment id="bookmarks-tree-view" is-default_=""></flags-experiment>
       <!---->
       <!---->
-      <flags-experiment id="is-secure-payment-confirmation-available-api" is-default_=""></flags-experiment>
-      <!---->
-      <!---->
-      <flags-experiment id="copy-image-filename-to-clipboard" is-default_=""></flags-experiment>
+      <flags-experiment id="enable-secure-payment-confirmation-availability-api" is-default_=""></flags-experiment>
       <!---->
       <!---->
       <flags-experiment id="autofill-enable-allowlist-for-bmo-card-category-benefits" is-default_=""></flags-experiment>
@@ -1348,9 +1300,6 @@
       <flags-experiment id="autofill-enable-amount-extraction-desktop-logging" is-default_=""></flags-experiment>
       <!---->
       <!---->
-      <flags-experiment id="adjust-can-create-canvas2d-resource-provider" is-default_=""></flags-experiment>
-      <!---->
-      <!---->
       <flags-experiment id="is-paintable-checks-resource-provider" is-default_=""></flags-experiment>
       <!---->
       <!---->
@@ -1359,13 +1308,49 @@
       <!---->
       <flags-experiment id="local-network-access-check" is-default_=""></flags-experiment>
       <!---->
+      <!---->
+      <flags-experiment id="enable-canvas-noise" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="tab-capture-infobar-links" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="zero-copy-rbp-partial-raster-with-gpu-compositor" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="enable-lens-search-side-panel-new-feedback" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="autofill-vcn-enroll-strike-expiry-time" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="autofill-enable-flat-rate-card-benefits-from-curinos" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="tab-group-shortcuts" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="bundled-security-settings" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="invalidate-search-engine-choice-on-device-restore-detection" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="block-cross-partition-blob-url-fetching" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="web-authentication-immediate-get" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment id="media-playback-while-not-visible-permission-policy" is-default_=""></flags-experiment>
+      <!---->
     </div>
     <div class="no-match" role="alert" hidden="">No matching experiments</div>
   </div>
 
   <div id="tab-content-unavailable" class="tab-content" role="tabpanel" aria-labelledby="tab-unavailable" aria-hidden="false">
     <div id="unavailable-experiments">
-      <!--?lit$593953342$-->
+      <!--?lit$051223822$-->
       <!---->
       <flags-experiment unsupported="" id="webrtc-hw-decoding" is-default_=""></flags-experiment>
       <!---->
@@ -1415,10 +1400,10 @@
       <flags-experiment unsupported="" id="omnibox-num-srp-zps-related-searches" is-default_=""></flags-experiment>
       <!---->
       <!---->
-      <flags-experiment unsupported="" id="dcheck-is-fatal" is-default_=""></flags-experiment>
-      <!---->
-      <!---->
       <flags-experiment unsupported="" id="tab-search-position-setting" is-default_=""></flags-experiment>
+      <!---->
+      <!---->
+      <flags-experiment unsupported="" id="report-notification-content-detection-data" is-default_=""></flags-experiment>
       <!---->
       <!---->
       <flags-experiment unsupported="" id="show-warnings-for-suspicious-notifications" is-default_=""></flags-experiment>

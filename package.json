@@ -15,6 +15,6 @@
     "similar": "node ./src/similarweb/top_verticals",
     "flags": "node ./src/chrome_flags/",
     "movacar": "node ./src/movacar/",
-    "gcloud-auth": "gcloud auth application-default login --client-id-file='/Users/maxostapenko/clientid.json' --scopes=https://www.googleapis.com/auth/spreadsheets"
+    "gcloud-auth": "gcloud auth application-default login --client-id-file='clientid.json' --scopes=https://www.googleapis.com/auth/spreadsheets"
   }
 }
