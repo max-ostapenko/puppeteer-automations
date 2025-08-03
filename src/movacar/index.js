@@ -100,7 +100,10 @@ class MovacarScraper {
           car.endDate = endDate;
           car.period = period;
           car.refuel = benefitItems[1].innerText;
-          car.distance = /([All,\d]+) km .+/.exec(benefitItems[2].innerText)[1];
+
+          // Handle distance parsing with support for various formats
+          const distanceMatch = benefitItems[3].innerText.match(/(All|\d+(?:,\d+)*) km/);
+          car.distance = distanceMatch ? distanceMatch[1] : '';
 
           const buttonText = element.querySelector(".product__link-item--checkout-button").innerText;
           car.price = /Book for €(\d+)/.exec(buttonText)[1];

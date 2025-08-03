@@ -1,9 +1,9 @@
 {
   "dependencies": {
-    "googleapis": "^140.0.1",
-    "prettier": "^3.3.3",
-    "puppeteer": "^22.15.0",
-    "xml2js": ">=0.6.2"
+    "googleapis": "140.0.1",
+    "prettier": "3.3.3",
+    "puppeteer": "22.15.0",
+    "xml2js": "0.6.2"
   },
   "name": "crawler",
   "private": true,
@@ -15,6 +15,6 @@
     "similar": "node ./src/similarweb/top_verticals",
     "flags": "node ./src/chrome_flags/",
     "movacar": "node ./src/movacar/",
-    "gcloud-auth": "gcloud auth application-default login --client-id-file='clientid.json' --scopes=https://www.googleapis.com/auth/spreadsheets"
+    "gcloud-auth": "gcloud auth application-default login --scopes https://www.googleapis.com/auth/cloud-platform,https://www.googleapis.com/auth/spreadsheets"
   }
 }
