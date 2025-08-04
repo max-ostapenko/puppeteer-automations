@@ -151,7 +151,7 @@ class MovacarScraper {
       resource,
     });
 
-    console.log('Data updated in Google Sheet');
+    console.log(`Data updated in Google Sheet: https://docs.google.com/spreadsheets/d/${this.spreadsheetId}/edit`);
   }
 
   async _convertJSONtoGoogleSheet(trips) {
