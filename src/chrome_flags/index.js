@@ -1,14 +1,10 @@
-const puppeteer = require("puppeteer");
+const { launchBrowser } = require('../funcs/browser');
 const fs = require("fs");
 const prettier = require("prettier");
 
 async function main() {
   // Launch Chrome.
-  const browser = await puppeteer.launch({
-    executablePath:
-      "/Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary",
-    headless: "new",
-  });
+  const browser = await launchBrowser();
 
   // Open the 'chrome://flags' page.
   const page = await browser.newPage();
@@ -28,7 +24,7 @@ async function main() {
     htmlWhitespaceSensitivity: "ignore",
     printWidth: 250,
   });
-  
+
   console.log(formattedFlags);
 
   fs.writeFileSync(__dirname + "/flags.html", formattedFlags);
