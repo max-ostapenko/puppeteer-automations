@@ -1,20 +1,16 @@
 {
   "dependencies": {
-    "googleapis": "140.0.1",
-    "prettier": "3.3.3",
-    "puppeteer": "22.15.0",
+    "googleapis": "171.4.0",
+    "prettier": "3.8.1",
+    "puppeteer": "24.37.3",
     "xml2js": "0.6.2"
   },
   "name": "crawler",
   "private": true,
-  "version": "0.0.1",
   "description": "Web crawler",
   "scripts": {
     "berlin": "node ./src/berlin_de/index",
-    "mb": "node ./src/mercedes_benz_/tag_manager_tests/model_overview",
-    "similar": "node ./src/similarweb/top_verticals",
     "flags": "node ./src/chrome_flags/",
-    "movacar": "node ./src/movacar/",
-    "gcloud-auth": "gcloud auth application-default login --scopes https://www.googleapis.com/auth/cloud-platform,https://www.googleapis.com/auth/spreadsheets"
+    "movacar": "node ./src/movacar/"
   }
 }
