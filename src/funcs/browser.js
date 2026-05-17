@@ -1,10 +1,11 @@
-const launchBrowser = async () => {
-  const puppeteer = require('puppeteer');
+const puppeteer = require('puppeteer');
 
+const launchBrowser = async (headless = false) => {
   let browser;
   try {
     browser = await puppeteer.launch({
-      headless: false,
+      executablePath: "/Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary",
+      headless,
     });
     return browser;
   } catch (e) {
