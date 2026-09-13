@@ -9,6 +9,7 @@
   "description": "Web crawler",
   "scripts": {
     "chrome:flags_scan": "node ./src/chrome_flags/",
+    "chrome:enable_flags": "node ./src/chrome_flags/enable_flags.js",
     "movacar:routes_scan": "node ./src/movacar/",
     "movacar:dashboard": "open ./src/movacar/index.html"
   }

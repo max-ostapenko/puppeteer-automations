@@ -21,14 +21,46 @@ This tool extracts Chrome's full experimental flag catalog via Puppeteer into st
 
 ## Usage
 
+A channel flag is **required** (`--channel=<name>` or shorthand `--canary`, `--chrome`, `--beta`, `--dev`). There are no implicit defaults.
+
 ### Run Scan
 
+Scan Chrome experiment flags for an explicitly specified channel:
+
 ```bash
-npm run chrome:flags_scan
+# Scan Google Chrome Canary -> flags.json
+npm run chrome:flags_scan -- --canary
+# Or: npm run chrome:flags_scan -- --channel=canary
+
+# Scan Standard Google Chrome -> flags.chrome.json
+npm run chrome:flags_scan -- --chrome
+# Or: npm run chrome:flags_scan -- --channel=chrome
+
+# Scan Beta or Dev channels
+npm run chrome:flags_scan -- --beta
+npm run chrome:flags_scan -- --dev
 ```
 
 ### Inspect Changes
 
 ```bash
+# Check Canary diffs
 git diff src/chrome_flags/flags.json
+
+# Check Standard Chrome diffs
+git diff src/chrome_flags/flags.chrome.json
+```
+
+### Enable Curated Power Flags
+
+To enable cutting-edge features (On-device AI, DevTools, Autofill, Google Wallet, Speed, and Hardware Security) directly into your local Chrome profile:
+
+```bash
+# Apply to Google Chrome Canary
+npm run chrome:enable_flags -- --canary
+npm run chrome:enable_flags -- --canary --restart
+
+# Apply to Standard Google Chrome
+npm run chrome:enable_flags -- --chrome
+npm run chrome:enable_flags -- --chrome --restart
 ```

@@ -1,11 +1,12 @@
 const path = require('path');
 const fs = require('fs');
-const { launchBrowser } = require('../funcs/browser');
+const { launchBrowser, resolveChannel } = require('../funcs/browser');
 
 async function main() {
+  const channel = resolveChannel();
   const browser = await launchBrowser();
   if (!browser) {
-    throw new Error('Failed to launch browser instance.');
+    throw new Error(`Failed to launch ${channel.name} instance.`);
   }
 
   try {
@@ -15,7 +16,12 @@ async function main() {
     // Wait until the flags-app WebUI element and its dataset are available
     await page.waitForFunction(() => {
       const app = document.querySelector('body > flags-app');
-      return Boolean(app && app.data && Array.isArray(app.data.supportedFeatures) && app.data.supportedFeatures.length > 0);
+      return Boolean(
+        app &&
+          app.data &&
+          Array.isArray(app.data.supportedFeatures) &&
+          app.data.supportedFeatures.length > 0
+      );
     });
 
     const browserVersion = await browser.version();
@@ -44,6 +50,7 @@ async function main() {
     });
 
     const payload = {
+      channel: channel.id,
       version: browserVersion,
       counts: {
         supported: flags.supported.length,
@@ -54,10 +61,13 @@ async function main() {
       unsupported: flags.unsupported,
     };
 
-    const outputPath = path.join(__dirname, 'flags.json');
+    // Output file: flags.json for Canary, flags.<channel>.json for other channels
+    const filename = channel.id === 'canary' ? 'flags.json' : `flags.${channel.id}.json`;
+    const outputPath = path.join(__dirname, filename);
     fs.writeFileSync(outputPath, JSON.stringify(payload, null, 2) + '\n');
 
-    console.log(`Successfully parsed ${browserVersion}:`);
+    console.log(`Successfully parsed ${channel.name} (${browserVersion}):`);
+    console.log(`- Channel:                 ${channel.id}`);
     console.log(`- Supported experiments:   ${flags.supported.length}`);
     console.log(`- Unsupported experiments: ${flags.unsupported.length}`);
     console.log(`- Total experiments:       ${payload.counts.total}`);
