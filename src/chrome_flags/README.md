@@ -1,23 +1,34 @@
-# Highlight the updates in the Chrome flag experiments
+# Chrome Flag Experiments Tracker
 
 ## Description
 
-Google Chrome has a lot of running experiments. It's hard to identify the changes when something new is released or being turned ON by default. This script highlights the updates in the experiments after the recent update.
+Google Chrome runs hundreds of experimental feature flags across releases. Identifying what changed, what was added or deprecated, or which flags were enabled by default across releases can be difficult.
 
-## How it works
+This tool extracts Chrome's full experimental flag catalog via Puppeteer into structured JSON (`flags.json`), allowing you to track changes over time using version control diffs.
 
-The script compares the current state of the experiments with the previous one. The state is stored in the `flags.json` file and the differences can be stored in a repository. You can also highlight the updates in the experiments.
+## How It Works
 
-Before the first run, [adjust the location](https://github.com/max-ostapenko/chrome_flags_diff/blob/3457aabde304e5ae88ad59326f3377001aac78c7/script.js#L9) to your instance of Google Chrome.
+1. Launches Google Chrome Canary via `src/funcs/browser.js`.
+2. Navigates to `chrome://flags` and accesses the internal WebUI data model (`flags-app.data`).
+3. Extracts full metadata for each experiment:
+   - `id`: Internal feature flag key (e.g., `actor-observe-page-content-default`)
+   - `name`: Human-readable experiment title
+   - `description`: Complete description text
+   - `isDefault`: Whether the flag is currently set to default
+   - `platforms`: Supported operating systems (`Mac`, `Windows`, `Linux`, `ChromeOS`, `Android`, etc.)
+   - `options`: Available selection values (`Default`, `Enabled`, `Disabled`, parameters)
+4. Saves deterministic, sorted records to `flags.json` categorized by `supported` and `unsupported` features.
 
-## Install
+## Usage
 
-```js
-npm install
+### Run Scan
+
+```bash
+npm run chrome:flags_scan
 ```
 
-## Run
+### Inspect Changes
 
-```js
-npm start && git diff
+```bash
+git diff src/chrome_flags/flags.json
 ```

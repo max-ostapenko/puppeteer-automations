@@ -1,36 +1,70 @@
+const path = require('path');
+const fs = require('fs');
 const { launchBrowser } = require('../funcs/browser');
-const fs = require("fs");
-const prettier = require("prettier");
 
 async function main() {
-  // Launch Chrome.
   const browser = await launchBrowser();
+  if (!browser) {
+    throw new Error('Failed to launch browser instance.');
+  }
 
-  // Open the 'chrome://flags' page.
-  const page = await browser.newPage();
-  await page.goto("chrome://flags");
+  try {
+    const page = await browser.newPage();
+    await page.goto('chrome://flags');
 
-  // Select the element using document.querySelector("body > flags-app").shadowRoot.querySelector("#flagsTemplate")
-  const flagsTemplate = await page.evaluate(() => {
-    const flagsApp = document.querySelector("body > flags-app");
-    const flagsTemplate = flagsApp.shadowRoot.querySelector("#flagsTemplate");
+    // Wait until the flags-app WebUI element and its dataset are available
+    await page.waitForFunction(() => {
+      const app = document.querySelector('body > flags-app');
+      return Boolean(app && app.data && Array.isArray(app.data.supportedFeatures) && app.data.supportedFeatures.length > 0);
+    });
 
-    return flagsTemplate.innerHTML;
-  });
+    const browserVersion = await browser.version();
 
-  // Format the HTML using Prettier and save it to a file.
-  const formattedFlags = await prettier.format(flagsTemplate, {
-    parser: "html",
-    htmlWhitespaceSensitivity: "ignore",
-    printWidth: 250,
-  });
+    const flags = await page.evaluate(() => {
+      const app = document.querySelector('body > flags-app');
 
-  console.log(formattedFlags);
+      const cleanFlag = (f) => ({
+        id: f.internal_name,
+        name: f.name,
+        description: f.description,
+        isDefault: f.is_default,
+        platforms: f.supported_platforms || [],
+        options: (f.options || []).map((opt) => ({
+          name: opt.description,
+          selected: opt.selected,
+        })),
+      });
 
-  fs.writeFileSync(__dirname + "/flags.html", formattedFlags);
+      const sortById = (a, b) => a.id.localeCompare(b.id);
 
-  // Close the browser.
-  await browser.close();
+      return {
+        supported: (app.data.supportedFeatures || []).map(cleanFlag).sort(sortById),
+        unsupported: (app.data.unsupportedFeatures || []).map(cleanFlag).sort(sortById),
+      };
+    });
+
+    const payload = {
+      version: browserVersion,
+      counts: {
+        supported: flags.supported.length,
+        unsupported: flags.unsupported.length,
+        total: flags.supported.length + flags.unsupported.length,
+      },
+      supported: flags.supported,
+      unsupported: flags.unsupported,
+    };
+
+    const outputPath = path.join(__dirname, 'flags.json');
+    fs.writeFileSync(outputPath, JSON.stringify(payload, null, 2) + '\n');
+
+    console.log(`Successfully parsed ${browserVersion}:`);
+    console.log(`- Supported experiments:   ${flags.supported.length}`);
+    console.log(`- Unsupported experiments: ${flags.unsupported.length}`);
+    console.log(`- Total experiments:       ${payload.counts.total}`);
+    console.log(`- Output written to:       ${outputPath}`);
+  } finally {
+    await browser.close();
+  }
 }
 
 main().catch((err) => {
