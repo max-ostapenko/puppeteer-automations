@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "googleapis": "171.4.0",
     "prettier": "3.8.1",
     "puppeteer": "24.37.3",
     "xml2js": "0.6.2"
@@ -9,8 +8,8 @@
   "private": true,
   "description": "Web crawler",
   "scripts": {
-    "berlin": "node ./src/berlin_de/index",
-    "flags": "node ./src/chrome_flags/",
-    "movacar": "node ./src/movacar/"
+    "chrome:flags_scan": "node ./src/chrome_flags/",
+    "movacar:routes_scan": "node ./src/movacar/",
+    "movacar:dashboard": "open ./src/movacar/index.html"
   }
 }

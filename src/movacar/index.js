@@ -1,214 +1,688 @@
-const { launchBrowser } = require('../funcs/browser');
-const xml2js = require('xml2js');
+const { notifyOffers } = require('./notifier');
 const fs = require('fs');
 const path = require('path');
-const { google } = require('googleapis');
-const sheets = google.sheets('v4');
-const sitemapURL = 'https://movacar.com/sitemap.xml';
-const spreadsheetId = '1jyyizfItMyLsRrRrga99VUXImp3j4fuqzWOfeN7T2As';
+
+const LOCATIONS_API =
+  'https://crowd-api-production-615013621295.europe-west1.run.app/v1/locations/offers?locale=en';
+const OFFERS_API =
+  'https://crowd-api-production-615013621295.europe-west1.run.app/v1/offers?locale=en';
 
 class MovacarScraper {
-  constructor(sitemapURL, spreadsheetId) {
-    this.sitemapURL = sitemapURL;
-    this.spreadsheetId = spreadsheetId;
-    this.tripsJSONfile = this._destinationsFilePath('destinations.json');
+  constructor(options = {}) {
+    this.currentDirectory = path.dirname(__filename);
+    this.tripsJSONfile = path.join(this.currentDirectory, 'destinations.json');
+    this.seenOffersFile = path.join(this.currentDirectory, 'seen_offers.json');
+    this.configFile = path.join(this.currentDirectory, 'config.json');
+    this.htmlFile = path.join(this.currentDirectory, 'index.html');
+
+    this.locationsApi = options.locationsApi || LOCATIONS_API;
+    this.offersApi = options.offersApi || OFFERS_API;
+    this.config = this._loadConfig();
   }
 
-  _destinationsFilePath(filename) {
-    const currentDirectory = path.dirname(__filename);
-    return path.join(currentDirectory, filename);
+  _loadConfig() {
+    if (fs.existsSync(this.configFile)) {
+      try {
+        const raw = fs.readFileSync(this.configFile, 'utf8');
+        return JSON.parse(raw);
+      } catch (err) {
+        console.warn('Could not parse config.json, falling back to empty defaults:', err.message);
+      }
+    }
+
+    return {
+      rules: [],
+      checkIntervalHours: 12,
+      notifyOnAllMatches: false,
+    };
   }
 
-  async _getBrowserPage() {
-    const browser = await launchBrowser();
-    const page = (await browser.pages())[0];
-    await page.setRequestInterception(true);
-    page.on('request', interceptedRequest => {
-      const requestType = interceptedRequest.resourceType();
-      requestType !== 'document' ? interceptedRequest.abort() : interceptedRequest.continue();
+  _loadSeenOffers() {
+    if (fs.existsSync(this.seenOffersFile)) {
+      try {
+        const raw = fs.readFileSync(this.seenOffersFile, 'utf8');
+        const data = JSON.parse(raw);
+        return new Set(Array.isArray(data) ? data : Object.keys(data));
+      } catch (err) {
+        console.warn('Could not parse seen_offers.json, starting fresh:', err.message);
+      }
+    }
+    return new Set();
+  }
+
+  _saveSeenOffers(seenSet) {
+    try {
+      const arr = Array.from(seenSet);
+      // Keep last 500 seen IDs to avoid indefinite file growth
+      const trimmed = arr.slice(-500);
+      fs.writeFileSync(this.seenOffersFile, JSON.stringify(trimmed, null, 2));
+    } catch (err) {
+      console.error('Failed to save seen_offers.json:', err.message);
+    }
+  }
+
+  /**
+   * Discover active origins and build city lookup table directly from Movacar backend.
+   * Completely eliminates sitemap downloads, Cloudflare blocks, and headless browser dependencies.
+   */
+  async _discoverLocations() {
+    console.log(`Discovering active location hubs from ${this.locationsApi}...`);
+    const res = await fetch(this.locationsApi, {
+      headers: {
+        Accept: 'application/json',
+      },
     });
 
-    return page;
-  }
+    if (!res.ok) {
+      throw new Error(`Locations discovery failed with HTTP status ${res.status}`);
+    }
 
-  async _fetchSitemap(page) {
-    const sitemapResponsePromise = new Promise((resolve) => {
-      page.on('response', async (response) => {
-        if (response.url() === this.sitemapURL && response.status() === 200) {
-          const sitemapResponse = await response.text();
-          resolve(sitemapResponse);
-        }
-      });
-    });
-    await page.goto(this.sitemapURL);
-    return await sitemapResponsePromise;
-  }
+    const json = await res.json();
+    const items = json.included || [];
 
-  async _parseSitemap(sitemapResponse) {
-    const parser = new xml2js.Parser();
-    const document = await parser.parseStringPromise(sitemapResponse);
-    return document.urlset.url;
-  }
+    const cityMap = new Map();
+    const originMap = new Map();
 
-  _extractDestinations(urls) {
-    let destinations = {
-      "parsedDate": new Date().toISOString().slice(0, 10),
-      "trips": {},
+    const aliases = {
+      rome: 'roma',
+      venice: 'venezia',
+      gothenburg: 'göteborg',
+      antwerp: 'antwerpen',
+      staffanstorp: 'staffanstorps kommun',
     };
 
-    urls.forEach(url => {
-      const tripURL = url.loc[0];
-      const regex = /mietwagen\/(.+)\/(.+)\//;
-      const match = regex.exec(url.loc[0]);
+    for (const item of items) {
+      const attr = item.attributes;
+      if (!attr || !attr.name || !attr.reference) continue;
 
-      if (match && match[1] !== 'von' && match[2]) {
-        if (!destinations["trips"][tripURL]) destinations["trips"][tripURL] = {};
-        destinations["trips"][tripURL]["origin"] = decodeURIComponent(match[1]);
-        destinations["trips"][tripURL]["destination"] = decodeURIComponent(match[2]);
+      const name = attr.name;
+      const ref = attr.reference;
+      const lower = name.toLowerCase().trim();
+
+      cityMap.set(lower, ref);
+
+      // Clean out parenthetical descriptors: e.g. "Viladecans (near Barcelona)" -> "Viladecans"
+      const stripped = lower.replace(/\s*\((?:near|bei)\s+[^)]+\)/i, '').trim();
+      if (stripped && !cityMap.has(stripped)) {
+        cityMap.set(stripped, ref);
       }
-    });
 
-    return destinations;
-  }
+      // Index parenthetical hub name: e.g. "near Oslo Airport" -> "Oslo"
+      const parenthetical = lower.match(/\((?:near|bei)\s+([^)]+)\)/i);
+      if (parenthetical) {
+        const hub = parenthetical[1].replace(/airport/i, '').trim();
+        if (hub && !cityMap.has(hub)) {
+          cityMap.set(hub, ref);
+        }
+      }
 
-  _writeToFile(destinations) {
-    fs.writeFileSync(this.tripsJSONfile, JSON.stringify(destinations, null, 2));
-    console.log('Trips map file written successfully');
-  }
+      // Filter and register active origins with available inventory
+      if (attr.location_type === 'origin' && attr.offer_count > 0) {
+        if (
+          this.config.preferredOrigins &&
+          this.config.preferredOrigins.length > 0 &&
+          !this.config.preferredOrigins.some((pref) => pref.toLowerCase() === name.toLowerCase())
+        ) {
+          continue;
+        }
 
-  async _fetchPickupLocations(page, destinations) {
-    for (const tripURL in destinations["trips"]) {
-      console.log(`Fetching cars for ${tripURL}`);
-      await page.goto(tripURL, { timeout: 5000 });
-
-      const route = await page.$eval('.header__route-info', element => element.innerText);
-
-      const cars = await page.$$eval('.product-list__item', elements => {
-        return elements.map(element => {
-          let car = {};
-          car.title = element.querySelector(".product__title").innerText;
-          car.provider = element.querySelector(".product__logo img").alt;
-
-          const descriptionItems = element.querySelectorAll(".product__description-item");
-          car.deposit = descriptionItems[2].innerText;
-          car.seats = descriptionItems[5].innerText;
-          car.doors = descriptionItems[7].innerText;
-
-          const benefitItems = element.querySelectorAll(".product__benefit-item");
-          const [_, startDate, endDate, period] = /Pickup from (\d{2}\.\d{2})\. to (\d{2}\.\d{2})\. .+ (\d+h) rental period/.exec(benefitItems[0].innerText);
-          car.startDate = startDate;
-          car.endDate = endDate;
-          car.period = period;
-          car.refuel = benefitItems[1].innerText;
-
-          // Handle distance parsing with support for various formats
-          const distanceMatch = benefitItems[3].innerText.match(/(All|\d+(?:,\d+)*) km/);
-          car.distance = distanceMatch ? distanceMatch[1] : '';
-
-          const buttonText = element.querySelector(".product__link-item--checkout-button").innerText;
-          car.price = /Book for €(\d+)/.exec(buttonText)[1];
-
-          return car;
+        originMap.set(name, {
+          origin: name,
+          oid: ref,
+          offerCount: attr.offer_count,
         });
-      });
-
-      destinations["trips"][tripURL]["route"] = route;
-      destinations["trips"][tripURL]["cars"] = cars.map(car => ({
-        ...car,
-        startDate: this._parseDate(car.startDate),
-        endDate: this._parseDate(car.endDate)
-      }));
-    }
-    return destinations;
-  }
-
-
-  _parseDate(dateString) {
-    const [day, month] = dateString.split('.');
-    return new Date(new Date().getFullYear(), month - 1, day, 2, 0, 0).toISOString().slice(0, 10);
-  }
-
-  async _authorize() {
-    return google.auth.getClient({
-      scopes: ['https://www.googleapis.com/auth/spreadsheets'],
-    });
-  }
-
-  async _updateGoogleSheet(auth, range, values) {
-    const resource = { values };
-
-    await sheets.spreadsheets.values.clear({
-      auth,
-      spreadsheetId: this.spreadsheetId,
-      range,
-    });
-
-    await sheets.spreadsheets.values.update({
-      auth,
-      spreadsheetId: this.spreadsheetId,
-      range,
-      valueInputOption: 'USER_ENTERED',
-      resource,
-    });
-
-    console.log(`Data updated in Google Sheet: https://docs.google.com/spreadsheets/d/${this.spreadsheetId}/edit`);
-  }
-
-  async _convertJSONtoGoogleSheet(trips) {
-    const auth = await this._authorize();
-
-    const rows = [[
-      'Origin', 'Destination', 'Route', 'Title', 'Provider', 'Start Date', 'End Date', 'Period',
-      'Deposit', 'Seats', 'Doors', 'Refuel', 'Distance (km)', 'Price (€)', 'Trip URL'
-    ]];
-
-    for (const tripURL in trips["trips"]) {
-      trips["trips"][tripURL].cars.forEach(car => {
-        rows.push([
-          trips["trips"][tripURL].origin,
-          trips["trips"][tripURL].destination,
-          trips["trips"][tripURL].route,
-          car.title,
-          car.provider,
-          car.startDate,
-          car.endDate,
-          car.period,
-          car.deposit,
-          car.seats,
-          car.doors,
-          car.refuel,
-          car.distance,
-          car.price,
-          tripURL
-        ]);
-      });
+      }
     }
 
-    await this._updateGoogleSheet(auth, 'Sheet1', rows);
+    const cityResolver = {
+      lookup: (name) => {
+        if (!name) return null;
+        const lower = name.toLowerCase().trim();
+        if (cityMap.has(lower)) return { id: cityMap.get(lower), queryName: name };
+
+        const stripped = lower.replace(/\s*\((?:near|bei)\s+[^)]+\)/i, '').trim();
+        if (cityMap.has(stripped)) {
+          return {
+            id: cityMap.get(stripped),
+            queryName: name.replace(/\s*\((?:near|bei)\s+[^)]+\)/i, '').trim(),
+          };
+        }
+
+        const parenthetical = lower.match(/\((?:near|bei)\s+([^)]+)\)/i);
+        if (parenthetical) {
+          const hub = parenthetical[1].replace(/airport/i, '').trim();
+          if (cityMap.has(hub)) return { id: cityMap.get(hub), queryName: hub };
+        }
+
+        if (aliases[lower] && cityMap.has(aliases[lower])) {
+          return { id: cityMap.get(aliases[lower]), queryName: aliases[lower] };
+        }
+
+        return null;
+      },
+    };
+
+    console.log(
+      `Discovered ${originMap.size} active origin(s) with offers: ${Array.from(originMap.keys()).join(', ')}`
+    );
+    return { originMap, cityResolver };
   }
 
-  async _saveJSONtoFile(trips) {
-    this._writeToFile(trips);
+  /**
+   * Fetch structured offer data for a single origin directly from Movacar backend API.
+   * Generates exact numeric offer IDs and station IDs for direct checkout deep-linking:
+   *   https://www.movacar.com/checkout/{offer_id}?origin={origStationId}&destination={destStationId}
+   */
+  async _fetchOffersForOrigin(originName, oid, cityResolver) {
+    const url = `${this.offersApi}&origin=${oid}`;
+    try {
+      const resp = await fetch(url, {
+        headers: { Accept: 'application/json' },
+      });
+
+      if (!resp.ok) {
+        console.warn(`Failed to fetch offers for ${originName}: HTTP ${resp.status}`);
+        return [];
+      }
+
+      const json = await resp.json();
+      if (!json.data || !Array.isArray(json.data)) return [];
+
+      const stations = new Map();
+      if (json.included) {
+        json.included.forEach((inc) => {
+          if (inc.type === 'station') {
+            stations.set(inc.id, inc.attributes);
+          }
+        });
+      }
+
+      return json.data.map((item) => {
+        const origStationId = item.relationships?.origin?.data?.id;
+        const destStationId = item.relationships?.destination?.data?.id;
+        const origStation = stations.get(origStationId);
+        const destStation = stations.get(destStationId);
+        const offerId = item.attributes?.offer_id;
+
+        const origin = origStation?.city || origStation?.name || originName;
+        const destination = destStation?.city || destStation?.name || 'Unknown';
+
+        // Brand & provider extraction
+        const brandImg = item.attributes?.brand_image_url || '';
+        const filename = brandImg.split('/').pop().replace(/\.[^.]+$/, '');
+        const provider =
+          filename.replace(/Logo|_logo|-logo/i, '') || item.attributes?.brand_name || 'Movacar';
+
+        // Vehicle specifications
+        const modelStr = `${item.attributes?.make || ''} ${item.attributes?.model || ''}`.trim();
+        const title =
+          item.attributes?.vehicle_category_name ||
+          (modelStr ? modelStr : 'Rental Vehicle');
+
+        // Dates formatting (DD/MM/YY)
+        const startDate = item.attributes?.start_date ? new Date(item.attributes.start_date) : null;
+        const endDate = item.attributes?.end_date ? new Date(item.attributes.end_date) : null;
+        const formatDate = (d) => {
+          if (!d || isNaN(d.getTime())) return '';
+          const day = String(d.getUTCDate()).padStart(2, '0');
+          const month = String(d.getUTCMonth() + 1).padStart(2, '0');
+          const year = String(d.getUTCFullYear()).slice(-2);
+          return `${day}/${month}/${year}`;
+        };
+        const earliestPickup = formatDate(startDate);
+        const latestDelivery = formatDate(endDate);
+
+        // Durations
+        const periodHours = item.attributes?.period || 24;
+        const extraPeriodHours = item.attributes?.extra_period || 0;
+        const includedDaysNum = Math.max(1, Math.round(periodHours / 24));
+        const extraDaysNum = Math.round(extraPeriodHours / 24);
+        const totalDays = includedDaysNum + extraDaysNum;
+        const includedDays = `${includedDaysNum} day${includedDaysNum > 1 ? 's' : ''} incl.`;
+        const extraDays =
+          extraDaysNum > 0 ? `+ ${extraDaysNum} day${extraDaysNum > 1 ? 's' : ''} extra` : '';
+
+        // Distance & Pace
+        const distMeters = item.attributes?.distance || 0;
+        const freeKm = item.attributes?.free_km || Math.round(distMeters / 1000);
+        const distanceKm = freeKm;
+        const distance = `${distanceKm}km`;
+        const dailyKmIncluded =
+          distanceKm && includedDaysNum ? Math.round(distanceKm / includedDaysNum) : 0;
+
+        // Pricing
+        let priceEur = 1.0;
+        const priceId = item.relationships?.base_price?.data?.id || '';
+        const priceMatch = priceId.match(/(\d+)-EUR/);
+        if (priceMatch) {
+          priceEur = parseFloat(priceMatch[1]) / 100;
+        }
+        const price = `€${priceEur}`;
+
+        // Feature chips
+        const chips = [];
+        if (item.attributes?.min_drivers_age) {
+          chips.push(`Age ${item.attributes.min_drivers_age}+`);
+        }
+        if (item.attributes?.min_licence_age) {
+          const years = Math.max(1, Math.round(item.attributes.min_licence_age / 12));
+          chips.push(`Driving licence min. ${years} year${years > 1 ? 's' : ''}`);
+        }
+        if (item.attributes?.gear_type === 'crowd_vehicle_gear_type_2') {
+          chips.push('Automatic');
+        } else if (item.attributes?.gear_type === 'crowd_vehicle_gear_type_0') {
+          chips.push('Manual');
+        }
+
+        // Exact offer checkout URL (opens offer directly)
+        const checkoutUrl =
+          offerId && origStationId && destStationId
+            ? `https://www.movacar.com/checkout/${offerId}?origin=${origStationId}&destination=${destStationId}`
+            : null;
+
+        // Google Maps driving route template
+        const mapsUrl = `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(
+          origin
+        )}&destination=${encodeURIComponent(destination)}&travelmode=driving`;
+
+        // Direct origin & destination route overview link
+        const origLookup = cityResolver ? cityResolver.lookup(origin) : null;
+        const destLookup = cityResolver ? cityResolver.lookup(destination) : null;
+        let routeUrl = `https://www.movacar.com/offers?origin=${encodeURIComponent(origin)}`;
+        if (origLookup && destLookup) {
+          routeUrl = `https://www.movacar.com/en-US/offers?origin=${encodeURIComponent(
+            origLookup.queryName
+          )}&oid=${origLookup.id}&destination=${encodeURIComponent(
+            destLookup.queryName
+          )}&did=${destLookup.id}`;
+        }
+
+        const id = `${origin}_${destination}_${title}_${earliestPickup}_${latestDelivery}_${priceEur}_${totalDays}`.replace(
+          /\s+/g,
+          '_'
+        );
+
+        return {
+          id,
+          offerId,
+          origin,
+          destination,
+          originStationId: origStationId,
+          destStationId: destStationId,
+          title,
+          provider,
+          earliestPickup,
+          latestDelivery,
+          includedDays,
+          extraDays,
+          includedDaysNum,
+          extraDaysNum,
+          totalDays,
+          distance,
+          distanceKm,
+          dailyKmIncluded,
+          fuel: item.attributes?.fuel_type || '',
+          chips,
+          price,
+          priceEur,
+          checkoutUrl,
+          url: checkoutUrl || routeUrl,
+          routeUrl,
+          mapsUrl,
+        };
+      });
+    } catch (err) {
+      console.error(`Error fetching offers for ${originName}:`, err.message);
+      return [];
+    }
   }
 
-  async _readFromFile() {
-    return JSON.parse(fs.readFileSync(this.tripsJSONfile));
+  async _fetchAllOffers(originMap, cityResolver) {
+    const queue = Array.from(originMap.values());
+    const results = [];
+    const concurrency = 8;
+
+    console.log(`Extracting offers for ${queue.length} origin(s) with concurrency ${concurrency}...`);
+
+    const worker = async () => {
+      while (queue.length > 0) {
+        const item = queue.shift();
+        if (!item) break;
+        const { origin, oid } = item;
+        const offers = await this._fetchOffersForOrigin(origin, oid, cityResolver);
+        if (offers.length > 0) {
+          console.log(`  → Found ${offers.length} offer(s) departing from ${origin}`);
+          results.push(...offers);
+        }
+      }
+    };
+
+    await Promise.all(Array.from({ length: concurrency }, () => worker()));
+    return results;
+  }
+
+  _matchRule(offer, rule, allRules = [], visited = new Set()) {
+    // 0. Exclude rules check (e.g. for "everything excluding the current two")
+    if (rule.excludeRuleIds && rule.excludeRuleIds.length > 0) {
+      if (visited.has(rule.id)) return false;
+      visited.add(rule.id);
+
+      const isExcludedByRule = rule.excludeRuleIds.some((excludedId) => {
+        const targetRule = allRules.find((r) => r.id === excludedId);
+        return targetRule && this._matchRule(offer, targetRule, allRules, new Set(visited));
+      });
+      if (isExcludedByRule) return false;
+    }
+
+    // Exclude specific locations check
+    if (rule.excludeFromOrTo && rule.excludeFromOrTo.length > 0) {
+      const matchExcludedLoc = rule.excludeFromOrTo.some(
+        (loc) =>
+          offer.origin.toLowerCase().includes(loc.toLowerCase()) ||
+          offer.destination.toLowerCase().includes(loc.toLowerCase())
+      );
+      if (matchExcludedLoc) return false;
+    }
+
+    // 1. Max price filter
+    if (rule.maxPrice !== null && rule.maxPrice !== undefined) {
+      if (offer.priceEur > rule.maxPrice) {
+        return false;
+      }
+    }
+
+    // 2. Minimum duration filters
+    if (rule.minIncludedDays !== null && rule.minIncludedDays !== undefined) {
+      const inc =
+        offer.includedDaysNum !== undefined
+          ? offer.includedDaysNum
+          : offer.includedDays
+          ? parseInt(offer.includedDays, 10) || 0
+          : 0;
+      if (inc < rule.minIncludedDays) {
+        return false;
+      }
+    }
+
+    if (rule.minTotalDays !== null && rule.minTotalDays !== undefined) {
+      const tot =
+        offer.totalDays !== undefined
+          ? offer.totalDays
+          : (offer.includedDaysNum || 0) + (offer.extraDaysNum || 0);
+      if (tot < rule.minTotalDays) {
+        return false;
+      }
+    }
+
+    // 3. fromOrTo check (matches either origin OR destination)
+    if (rule.fromOrTo && rule.fromOrTo.length > 0) {
+      const matchFromOrTo = rule.fromOrTo.some(
+        (loc) =>
+          offer.origin.toLowerCase().includes(loc.toLowerCase()) ||
+          offer.destination.toLowerCase().includes(loc.toLowerCase())
+      );
+      if (!matchFromOrTo) return false;
+    }
+
+    // 4. Distance filter (e.g. minimum km)
+    if (rule.minDistanceKm !== null && rule.minDistanceKm !== undefined) {
+      const km =
+        offer.distanceKm !== undefined
+          ? offer.distanceKm
+          : (offer.distance || '').replace(/,/g, '').match(/(\d+)/)
+          ? parseInt((offer.distance || '').replace(/,/g, '').match(/(\d+)/)[1], 10)
+          : 0;
+      if (km < rule.minDistanceKm) {
+        return false;
+      }
+    }
+
+    // 5. between check (Origin in groupA and Destination in groupB, or vice-versa)
+    if (rule.between) {
+      const { groupA, groupB } = rule.between;
+      if (groupA && groupB && groupA.length > 0 && groupB.length > 0) {
+        const originInA = groupA.some((loc) =>
+          offer.origin.toLowerCase().includes(loc.toLowerCase())
+        );
+        const destInB = groupB.some((loc) =>
+          offer.destination.toLowerCase().includes(loc.toLowerCase())
+        );
+        const originInB = groupB.some((loc) =>
+          offer.origin.toLowerCase().includes(loc.toLowerCase())
+        );
+        const destInA = groupA.some((loc) =>
+          offer.destination.toLowerCase().includes(loc.toLowerCase())
+        );
+
+        const aToB = originInA && destInB;
+        const bToA = originInB && destInA;
+
+        if (!aToB && !bToA) {
+          return false;
+        }
+      }
+    }
+
+    // 6. Blacklisted vehicles filter
+    if (rule.blacklistedVehicles && rule.blacklistedVehicles.length > 0) {
+      const vehicleText = `${offer.title} ${offer.provider}`.toLowerCase();
+      const isBlacklisted = rule.blacklistedVehicles.some((b) =>
+        vehicleText.includes(b.toLowerCase())
+      );
+      if (isBlacklisted) {
+        return false;
+      }
+    }
+
+    return true;
+  }
+
+  _matchesFilter(offer) {
+    if (this.config.rules && this.config.rules.length > 0) {
+      return this.config.rules.some((rule) =>
+        this._matchRule(offer, rule, this.config.rules)
+      );
+    }
+
+    // Fallback if no rules defined
+    if (this.config.maxPrice !== null && this.config.maxPrice !== undefined) {
+      if (offer.priceEur > this.config.maxPrice) {
+        return false;
+      }
+    }
+
+    if (this.config.minIncludedDays !== null && this.config.minIncludedDays !== undefined) {
+      const inc =
+        offer.includedDaysNum !== undefined
+          ? offer.includedDaysNum
+          : offer.includedDays
+          ? parseInt(offer.includedDays, 10) || 0
+          : 0;
+      if (inc < this.config.minIncludedDays) {
+        return false;
+      }
+    }
+
+    if (this.config.minTotalDays !== null && this.config.minTotalDays !== undefined) {
+      const tot =
+        offer.totalDays !== undefined
+          ? offer.totalDays
+          : (offer.includedDaysNum || 0) + (offer.extraDaysNum || 0);
+      if (tot < this.config.minTotalDays) {
+        return false;
+      }
+    }
+
+    return true;
+  }
+
+  _sortOffers(offers) {
+    return offers.sort((a, b) => {
+      const incA =
+        a.includedDaysNum !== undefined
+          ? a.includedDaysNum
+          : a.includedDays
+          ? parseInt(a.includedDays, 10) || 0
+          : 0;
+      const incB =
+        b.includedDaysNum !== undefined
+          ? b.includedDaysNum
+          : b.includedDays
+          ? parseInt(b.includedDays, 10) || 0
+          : 0;
+      if (incB !== incA) {
+        return incB - incA; // 1. Highest included days first
+      }
+
+      const totA =
+        a.totalDays !== undefined ? a.totalDays : incA + (a.extraDaysNum || 0);
+      const totB =
+        b.totalDays !== undefined ? b.totalDays : incB + (b.extraDaysNum || 0);
+      if (totB !== totA) {
+        return totB - totA; // 2. Total days next
+      }
+
+      const priceA = a.priceEur !== undefined ? a.priceEur : 9999;
+      const priceB = b.priceEur !== undefined ? b.priceEur : 9999;
+      return priceA - priceB; // 3. Lowest price
+    });
+  }
+
+  /**
+   * Save structured JSON output, deduplicate legacy files, and synchronize data into index.html
+   * so that opening index.html directly via file:/// works seamlessly with zero CORS issues.
+   */
+  _writeToFile(destinations) {
+    // 1. Write the canonical destinations.json file
+    fs.writeFileSync(this.tripsJSONfile, JSON.stringify(destinations, null, 2));
+    console.log(`Saved trips data to ${this.tripsJSONfile}`);
+
+    // 2. Remove legacy destinations.js if it exists (deduplication)
+    const legacyJsFile = path.join(this.currentDirectory, 'destinations.js');
+    if (fs.existsSync(legacyJsFile)) {
+      try {
+        fs.unlinkSync(legacyJsFile);
+        console.log(`Removed duplicate file: ${legacyJsFile}`);
+      } catch (e) {}
+    }
+
+    // 3. Inject embedded data tag into index.html for instant, CORS-free local viewing
+    if (fs.existsSync(this.htmlFile)) {
+      try {
+        let html = fs.readFileSync(this.htmlFile, 'utf8');
+        const jsonStr = JSON.stringify(destinations);
+        const tagRegex = /<script id="movacar-data" type="application\/json">[\s\S]*?<\/script>/;
+
+        if (tagRegex.test(html)) {
+          html = html.replace(
+            tagRegex,
+            `<script id="movacar-data" type="application/json">${jsonStr}</script>`
+          );
+        } else {
+          html = html.replace(
+            '</head>',
+            `  <script id="movacar-data" type="application/json">${jsonStr}</script>\n</head>`
+          );
+        }
+
+        // Clean out legacy script reference if still present
+        html = html.replace(/<script src="destinations\.js"><\/script>\s*/g, '');
+
+        fs.writeFileSync(this.htmlFile, html);
+        console.log(`Synchronized data into ${this.htmlFile}`);
+      } catch (err) {
+        console.warn('Could not synchronize data into index.html:', err.message);
+      }
+    }
   }
 
   async run() {
-    const page = await this._getBrowserPage();
-    const sitemapResponse = await this._fetchSitemap(page);
-    const urls = await this._parseSitemap(sitemapResponse);
-    let destinations = this._extractDestinations(urls);
+    const startTime = Date.now();
+    console.log(`\n=== Starting Movacar Direct Backend Scraper at ${new Date().toISOString()} ===`);
+    console.log('Active matching rules:', (this.config.rules || []).map((r) => r.label || r.id).join(', '));
 
-    destinations = await this._fetchPickupLocations(page, destinations);
-    await page.browser().close();
+    const allOffers = [];
+    const seenOffers = this._loadSeenOffers();
+    const newMatchingOffers = [];
 
-    //this._saveJSONtoFile(destinations);
-    //let destinations = await this._readFromFile();
-    this._convertJSONtoGoogleSheet(destinations);
+    try {
+      // 1. Instant discovery of active location hubs & city resolver table
+      const { originMap, cityResolver } = await this._discoverLocations();
+
+      // 2. High-speed concurrent offer extraction directly from Cloud Run API
+      const scrapedOffers = await this._fetchAllOffers(originMap, cityResolver);
+
+      for (const offer of scrapedOffers) {
+        // Evaluate rules matching
+        const matchedRuleLabels = [];
+        for (const rule of this.config.rules || []) {
+          if (this._matchRule(offer, rule, this.config.rules)) {
+            matchedRuleLabels.push(rule.label || rule.id);
+          }
+        }
+        offer.matchedRules = matchedRuleLabels;
+
+        allOffers.push(offer);
+
+        const matches = this._matchesFilter(offer);
+        const isNew = !seenOffers.has(offer.id);
+
+        if (matches) {
+          if (isNew || this.config.notifyOnAllMatches) {
+            newMatchingOffers.push(offer);
+          }
+        }
+
+        seenOffers.add(offer.id);
+      }
+
+      console.log(`\nScraped a total of ${allOffers.length} available offer(s).`);
+
+      // Sort offers by priority
+      this._sortOffers(allOffers);
+      this._sortOffers(newMatchingOffers);
+
+      // Group offers by rule profile
+      const matchesByRule = {};
+      for (const rule of this.config.rules || []) {
+        const label = rule.label || rule.id;
+        const matched = allOffers.filter((o) =>
+          this._matchRule(o, rule, this.config.rules)
+        );
+        this._sortOffers(matched);
+        matchesByRule[label] = matched;
+      }
+
+      // 3. Save single canonical JSON file and update index.html
+      const destinations = {
+        parsedDate: new Date().toISOString(),
+        totalScraped: allOffers.length,
+        matchesByRule,
+        offers: allOffers,
+      };
+      this._writeToFile(destinations);
+
+      // 4. Save seen offers
+      this._saveSeenOffers(seenOffers);
+
+      // 5. Dispatch notifications for new matching offers
+      if (newMatchingOffers.length > 0) {
+        await notifyOffers(newMatchingOffers);
+      } else {
+        console.log('No new matching deals to alert at this time.');
+      }
+
+      const elapsed = ((Date.now() - startTime) / 1000).toFixed(2);
+      console.log(`=== Movacar Run Completed Successfully in ${elapsed}s ===\n`);
+    } catch (err) {
+      console.error('Fatal error during Movacar scraping run:', err);
+    }
   }
 }
 
-const scraper = new MovacarScraper(sitemapURL, spreadsheetId);
-scraper.run();
+if (require.main === module) {
+  const scraper = new MovacarScraper();
+  scraper.run();
+}
+
+module.exports = { MovacarScraper };
