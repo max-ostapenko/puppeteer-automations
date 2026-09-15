@@ -1,3 +1,7 @@
 node_modules/
 *.log
 src/movacar/seen_offers.json
+.DS_Store
+src/movacar/index.html
+src/movacar/destinations.json
+src/movacar/destinations.js

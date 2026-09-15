@@ -1,6 +1,27 @@
 const { execFile } = require('child_process');
 const https = require('https');
 const http = require('http');
+const path = require('path');
+
+const REPORT_FILE_PATH = path.resolve(__dirname, 'index.html');
+const REPORT_FILE_URL = `file://${REPORT_FILE_PATH}`;
+
+/**
+ * Open the HTML report in Google Chrome.
+ */
+function openReportInChrome(reportUrl = REPORT_FILE_URL) {
+  return new Promise((resolve) => {
+    execFile('open', [reportUrl], (error) => {
+      if (error) {
+        console.warn('Could not open in Google Chrome, attempting default browser:', error.message);
+        execFile('open', [reportUrl], () => resolve());
+      } else {
+        console.log(`Opened HTML report in Google Chrome: ${reportUrl}`);
+        resolve();
+      }
+    });
+  });
+}
 
 /**
  * Dispatch desktop notification via macOS AppleScript.
@@ -77,14 +98,15 @@ function formatDuration(offer) {
       ? parseInt(offer.extraDays, 10) || 0
       : 0;
 
+  const tot = offer.totalDays !== undefined ? offer.totalDays : inc + extra;
   if (inc > 0 && extra > 0) {
-    return `${inc}d incl. (+${extra}d extra)`;
+    return `${inc}d incl. (+${extra}d extra, ${tot}d total)`;
   }
   if (inc > 0) {
     return `${inc}d incl.`;
   }
-  if (offer.totalDays) {
-    return `${offer.totalDays}d total`;
+  if (tot) {
+    return `${tot}d total`;
   }
   return offer.includedDays || '';
 }
@@ -176,10 +198,15 @@ async function notifyOffers(newOffers) {
       });
     }
   }
+
+  // Open the HTML report in Google Chrome when new matching offers are found
+  await openReportInChrome();
 }
 
 module.exports = {
   sendMacOSNotification,
   sendWebhookNotification,
+  openReportInChrome,
   notifyOffers,
+  REPORT_FILE_URL,
 };

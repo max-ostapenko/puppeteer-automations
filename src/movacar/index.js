@@ -233,10 +233,17 @@ class MovacarScraper {
         const latestDelivery = formatDate(endDate);
 
         // Durations
+        // In Movacar's API:
+        // `period` is the included rental duration in hours (e.g. 192h = 8 days included).
+        // `extra_period` is the total maximum allowed rental duration in hours (e.g. 288h = 12 days max).
+        // Extra days available is therefore (extra_period - period) / 24, NOT extra_period / 24.
         const periodHours = item.attributes?.period || 24;
         const extraPeriodHours = item.attributes?.extra_period || 0;
         const includedDaysNum = Math.max(1, Math.round(periodHours / 24));
-        const extraDaysNum = Math.round(extraPeriodHours / 24);
+        const extraDaysNum =
+          extraPeriodHours > periodHours
+            ? Math.round((extraPeriodHours - periodHours) / 24)
+            : 0;
         const totalDays = includedDaysNum + extraDaysNum;
         const includedDays = `${includedDaysNum} day${includedDaysNum > 1 ? 's' : ''} incl.`;
         const extraDays =
@@ -549,49 +556,30 @@ class MovacarScraper {
   }
 
   /**
-   * Save structured JSON output, deduplicate legacy files, and synchronize data into index.html
-   * so that opening index.html directly via file:/// works seamlessly with zero CORS issues.
+   * Save structured output to canonical destinations.json and destinations.js for zero-CORS local file:/// viewing.
    */
   _writeToFile(destinations) {
-    // 1. Write the canonical destinations.json file
+    // 1. Write canonical destinations.json file
     fs.writeFileSync(this.tripsJSONfile, JSON.stringify(destinations, null, 2));
     console.log(`Saved trips data to ${this.tripsJSONfile}`);
 
-    // 2. Remove legacy destinations.js if it exists (deduplication)
-    const legacyJsFile = path.join(this.currentDirectory, 'destinations.js');
-    if (fs.existsSync(legacyJsFile)) {
-      try {
-        fs.unlinkSync(legacyJsFile);
-        console.log(`Removed duplicate file: ${legacyJsFile}`);
-      } catch (e) {}
-    }
+    // 2. Write destinations.js to enable instantaneous, CORS-free local browser viewing over file:///
+    const jsFile = path.join(this.currentDirectory, 'destinations.js');
+    fs.writeFileSync(jsFile, `window.movacarData = ${JSON.stringify(destinations)};\n`);
+    console.log(`Saved trips script to ${jsFile}`);
 
-    // 3. Inject embedded data tag into index.html for instant, CORS-free local viewing
+    // 3. Clean any legacy embedded <script id="movacar-data"> from index.html if present
     if (fs.existsSync(this.htmlFile)) {
       try {
         let html = fs.readFileSync(this.htmlFile, 'utf8');
-        const jsonStr = JSON.stringify(destinations);
-        const tagRegex = /<script id="movacar-data" type="application\/json">[\s\S]*?<\/script>/;
-
+        const tagRegex = /<script id="movacar-data" type="application\/json">[\s\S]*?<\/script>\s*/;
         if (tagRegex.test(html)) {
-          html = html.replace(
-            tagRegex,
-            `<script id="movacar-data" type="application/json">${jsonStr}</script>`
-          );
-        } else {
-          html = html.replace(
-            '</head>',
-            `  <script id="movacar-data" type="application/json">${jsonStr}</script>\n</head>`
-          );
+          html = html.replace(tagRegex, '');
+          fs.writeFileSync(this.htmlFile, html);
+          console.log(`Stripped legacy embedded script data from ${this.htmlFile}`);
         }
-
-        // Clean out legacy script reference if still present
-        html = html.replace(/<script src="destinations\.js"><\/script>\s*/g, '');
-
-        fs.writeFileSync(this.htmlFile, html);
-        console.log(`Synchronized data into ${this.htmlFile}`);
       } catch (err) {
-        console.warn('Could not synchronize data into index.html:', err.message);
+        console.warn('Could not inspect index.html:', err.message);
       }
     }
   }
