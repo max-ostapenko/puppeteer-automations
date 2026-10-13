@@ -21,12 +21,16 @@ class MovacarScraper {
   }
 
   _loadConfig() {
-    if (fs.existsSync(this.configFile)) {
+    const configPath = fs.existsSync(this.configFile)
+      ? this.configFile
+      : path.join(this.currentDirectory, 'config.example.json');
+
+    if (fs.existsSync(configPath)) {
       try {
-        const raw = fs.readFileSync(this.configFile, 'utf8');
+        const raw = fs.readFileSync(configPath, 'utf8');
         return JSON.parse(raw);
       } catch (err) {
-        console.warn('Could not parse config.json, falling back to empty defaults:', err.message);
+        console.warn(`Could not parse ${path.basename(configPath)}, falling back to empty defaults:`, err.message);
       }
     }
 

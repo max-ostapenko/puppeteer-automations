@@ -18,6 +18,17 @@ An automated monitor for European 1€ one-way relocation deals from [Movacar](h
   - **Deduplication**: Remembers seen deals in `seen_offers.json` to prevent repetitive alerts.
   - **Automation Daemon**: Background 6-hour execution via macOS LaunchAgent.
 
+#### Configuration
+
+Route rules and filters can be customized in `src/movacar/config.json`:
+
+```bash
+# Copy the example template to get started
+cp src/movacar/config.example.json src/movacar/config.json
+```
+
+If `config.json` is not present, the scraper defaults to `src/movacar/config.example.json`.
+
 #### Running Movacar Manually
 
 ```bash
@@ -33,6 +44,18 @@ npm run movacar:dashboard
 ```
 
 Opens the local static deal dashboard (`src/movacar/index.html`) in your browser with real-time profile tabs, search, days/pace filters, and sortable columns.
+
+#### Background Scheduling (macOS LaunchAgent)
+
+To run the scraper automatically every 6 hours in the background:
+
+```bash
+# Automatically install and schedule the LaunchAgent
+npm run movacar:setup_daemon
+```
+
+* Alternatively, copy and customize `scripts/com.movacar.scraper.plist.example` to `~/Library/LaunchAgents/` and load via `launchctl`.
+* To monitor or edit the schedule via a GUI, use **LaunchControl**: `brew install --cask launchcontrol`.
 
 ---
 
@@ -67,5 +90,5 @@ npm run chrome:enable_flags -- --chrome
 ## Prerequisites
 
 - **Node.js** v20+ / v24+
-- **Google Chrome Canary** installed at `/Applications/Google Chrome Canary.app`
+- **Google Chrome Canary** installed at `/Applications/Google Chrome.app`
 - macOS for desktop notifications (`osascript`)

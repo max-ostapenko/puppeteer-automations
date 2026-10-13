@@ -11,6 +11,7 @@
     "chrome:flags_scan": "node ./src/chrome_flags/",
     "chrome:enable_flags": "node ./src/chrome_flags/enable_flags.js",
     "movacar:routes_scan": "node ./src/movacar/",
-    "movacar:dashboard": "open ./src/movacar/index.html"
+    "movacar:dashboard": "open ./src/movacar/index.html",
+    "movacar:setup_daemon": "bash ./scripts/setup_daemon.sh"
   }
 }

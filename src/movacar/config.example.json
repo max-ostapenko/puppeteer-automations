@@ -1,0 +1,63 @@
+{
+  "rules": [
+    {
+      "id": "southern_routes",
+      "label": "☀️ Southern Europe Routes",
+      "minTotalDays": 4,
+      "maxPrice": null,
+      "fromOrTo": [
+        "Portugal", "Porto", "Lisbon", "Faro",
+        "Spain", "Barcelona", "Madrid", "Málaga", "Sevilla", "València",
+        "France", "Nice", "Marseille", "Bordeaux", "Toulouse", "Lyon",
+        "Italy", "Rome", "Milan", "Bologna", "Florence", "Napoli"
+      ],
+      "blacklistedVehicles": [
+        "Mystery Auto",
+        "Mystery Van"
+      ]
+    },
+    {
+      "id": "home_routes",
+      "label": "🏠 Home Hub Routes",
+      "fromOrTo": ["Frankfurt", "Berlin", "Munich"],
+      "maxPrice": null,
+      "minTotalDays": null,
+      "blacklistedVehicles": [
+        "Mystery Auto",
+        "Mystery Van"
+      ]
+    },
+    {
+      "id": "scandinavia_routes",
+      "label": "❄️ Central Europe ↔ Scandinavia",
+      "minDistanceKm": 800,
+      "between": {
+        "groupA": [
+          "Berlin", "Hamburg", "Hanover", "Bremen", "Copenhagen"
+        ],
+        "groupB": [
+          "Stockholm", "Gothenburg", "Malmö", "Oslo", "Bergen", "Tromsø"
+        ]
+      },
+      "blacklistedVehicles": [
+        "Mystery Auto",
+        "Mystery Van"
+      ]
+    },
+    {
+      "id": "other_routes",
+      "label": "🌍 Other Routes",
+      "excludeRuleIds": [
+        "southern_routes",
+        "home_routes",
+        "scandinavia_routes"
+      ],
+      "blacklistedVehicles": [
+        "Mystery Auto",
+        "Mystery Van"
+      ]
+    }
+  ],
+  "checkIntervalHours": 12,
+  "notifyOnAllMatches": false
+}
