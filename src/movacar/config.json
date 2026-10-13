@@ -1,0 +1,117 @@
+{
+  "rules": [
+    {
+      "id": "southern_routes",
+      "label": "☀️ Southern Routes",
+      "minTotalDays": 4,
+      "maxPrice": null,
+      "fromOrTo": [
+        "Portugal", "Porto", "Lisbon", "Lisboa", "Faro",
+        "Spain", "Bilbao", "Zamudio", "Barcelona", "Viladecans", "Madrid", "Santander", "San Sebastián", "València", "Sevilla", "Málaga",
+        "Nice", "Bordeaux", "Mérignac", "Marseille", "Cabriès", "Toulouse", "Saint-Alban", "Gattières", "Dagneux", "Lyon",
+        "Italy", "Rome", "Roma", "Bologna", "Florence", "Venice", "Venezia", "Milan", "Castellanza", "Bergamo", "Turin", "Napoli", "Pisa", "Olbia", "Cagliari"
+      ],
+      "blacklistedVehicles": [
+        "SURFER SUITE",
+        "BEACH HOSTEL",
+        "CAMPER CABIN",
+        "California Standard",
+        "Active Poptop",
+        "Active Poptop Select",
+        "Active Standard Select",
+        "Active Long Select",
+        "SUNRISE SUITE"
+      ]
+    },
+    {
+      "id": "home_routes",
+      "label": "🏠 Home Routes (Berlin)",
+      "fromOrTo": ["Berlin"],
+      "maxPrice": null,
+      "minTotalDays": null,
+      "blacklistedVehicles": [
+        "Mystery Auto",
+        "Mystery Van"
+      ]
+    },
+    {
+      "id": "western_france_routes",
+      "label": "🌊 Western France Coast ↔ Germany",
+      "between": {
+        "groupA": [
+          "Nantes", "Bordeaux", "Mérignac", "Biarritz", "La Rochelle", "Brest", "Rennes", "Saint-Nazaire"
+        ],
+        "groupB": [
+          "Germany", "Berlin", "Hamburg", "Leipzig", "Dresden", "Flensburg", "Kastorf", "Lübeck",
+          "Laatzen", "Hanover", "Bremen", "Weyhe", "Cuxhaven", "Kassel", "Erfurt", "Bielefeld",
+          "Frankfurt am Main", "Bonn", "Nürnberg", "München", "Stuttgart", "Korntal-Münchingen",
+          "Marburg", "Duisburg", "Dormagen", "Düsseldorf", "Ihringen", "Freiburg", "Aach", "Konstanz",
+          "Ettlingenweier", "Lindau", "Gersthofen", "Augsburg"
+        ]
+      },
+      "blacklistedVehicles": [
+        "SURFER SUITE",
+        "BEACH HOSTEL",
+        "CAMPER CABIN",
+        "California Standard",
+        "Active Poptop",
+        "Active Poptop Select",
+        "Active Standard Select",
+        "Active Long Select",
+        "SUNRISE SUITE"
+      ]
+    },
+    {
+      "id": "scandinavia_routes",
+      "label": "❄️ Germany (near Berlin) ↔ Scandinavia",
+      "minDistanceKm": 1000,
+      "between": {
+        "groupA": [
+          "Berlin", "Hamburg", "Leipzig", "Dresden", "Flensburg", "Kastorf", "Lübeck", "Rostock",
+          "Laatzen", "Hanover", "Magdeburg", "Bremen", "Weyhe", "Cuxhaven", "Kassel", "Erfurt", "Bielefeld"
+        ],
+        "groupB": [
+          "Stockholm", "Gothenburg", "Malmö", "Staffanstorp", "Tromsø", "Bergen", "Oslo", "Maura",
+          "Copenhagen", "København", "Denmark", "Sweden", "Norway", "Danmark", "Sverige", "Norge"
+        ]
+      },
+      "blacklistedVehicles": [
+        "SURFER SUITE",
+        "BEACH HOSTEL",
+        "CAMPER CABIN",
+        "California Standard",
+        "Active Poptop",
+        "Active Poptop Select",
+        "Active Standard Select",
+        "Active Long Select",
+        "SUNRISE SUITE"
+      ]
+    },
+    {
+      "id": "other_routes",
+      "label": "🌍 Other Routes",
+      "excludeRuleIds": [
+        "southern_routes",
+        "home_routes",
+        "western_france_routes",
+        "scandinavia_routes"
+      ],
+      "blacklistedVehicles": [
+        "Mystery Auto",
+        "Mystery Van",
+
+        "SURFER SUITE",
+        "BEACH HOSTEL",
+        "CAMPER CABIN",
+        "California Standard",
+        "Active Poptop",
+        "Active Poptop Select",
+        "Active Standard Select",
+        "Active Long Select",
+        "SUNRISE SUITE"
+      ]
+    }
+  ],
+  "checkIntervalHours": 12,
+  "notifyOnAllMatches": false
+}

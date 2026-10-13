@@ -34,6 +34,21 @@ npm run movacar:dashboard
 
 Opens the local static deal dashboard (`src/movacar/index.html`) in your browser with real-time profile tabs, search, days/pace filters, and sortable columns.
 
+#### Background Scheduling (LaunchAgent)
+
+To run the scraper automatically every 6 hours:
+
+```bash
+# Symlink and enable the background schedule
+ln -sf "$(pwd)/scripts/com.maxostapenko.movacar.plist" ~/Library/LaunchAgents/
+launchctl load ~/Library/LaunchAgents/com.maxostapenko.movacar.plist
+```
+
+To monitor or edit the schedule via UI, use **LaunchControl**:
+```bash
+brew install --cask launchcontrol
+```
+
 ---
 
 ### 2. 🧪 Chrome Flags Tracker (`src/chrome_flags/`)
