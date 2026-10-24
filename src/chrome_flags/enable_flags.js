@@ -43,6 +43,24 @@ const RECOMMENDED_FLAGS = [
     name: 'Glic Context Menu Below Search',
     desc: 'Adds Glic assistant actions directly to browser context menus',
   },
+  {
+    key: 'glic-actor-cursor@1',
+    id: 'glic-actor-cursor',
+    name: 'Glic Actor Cursor',
+    desc: 'Visual cursor showing where the AI agent is interacting on the page',
+  },
+  {
+    key: 'glic-pre-warming@1',
+    id: 'glic-pre-warming',
+    name: 'Glic Pre-Warming',
+    desc: 'Pre-warms the Gemini side-panel web client to eliminate cold-start delay',
+  },
+  {
+    key: 'glic-share-image@1',
+    id: 'glic-share-image',
+    name: 'Create Image with Gemini',
+    desc: 'Adds native Create Image with Gemini action to context menus',
+  },
 
   // 2. DevTools & Web Platform
   {
@@ -119,6 +137,30 @@ const RECOMMENDED_FLAGS = [
     name: 'Pay Now / Pay Later tabs',
     desc: 'Integrates BNPL (Klarna / Affirm) tabs directly into payments autofill',
   },
+  {
+    key: 'autofill-show-gmail-otp-suggestions@1',
+    id: 'autofill-show-gmail-otp-suggestions',
+    name: 'Gmail OTP Suggestions in Autofill',
+    desc: 'Detects 2FA verification codes from Gmail and suggests them directly in 2FA fields',
+  },
+  {
+    key: 'autofill-enable-wallet-gmail-offers@1',
+    id: 'autofill-enable-wallet-gmail-offers',
+    name: 'Wallet & Gmail Deals in Autofill',
+    desc: 'Syncs promotional offers and discount codes from Gmail into payments autofill',
+  },
+  {
+    key: 'autofill-enable-bnpl-klarna-internationalization@1',
+    id: 'autofill-enable-bnpl-klarna-internationalization',
+    name: 'BNPL Klarna Internationalization',
+    desc: 'Enables Klarna Buy Now Pay Later payment option across international markets',
+  },
+  {
+    key: 'autofill-enable-omnibox-gpay-button@1',
+    id: 'autofill-enable-omnibox-gpay-button',
+    name: 'Omnibox Google Pay Button',
+    desc: 'Shows a Google Pay 1-click checkout chip in the address bar on payment forms',
+  },
 
   // 4. Hardware Security & Privacy
   {
@@ -171,6 +213,12 @@ const RECOMMENDED_FLAGS = [
     name: 'Rewriter API',
     desc: 'Native on-device text rewriting and tone-adjustment API (window.ai.rewriter)',
   },
+  {
+    key: 'built-in-ai-mtp@1',
+    id: 'built-in-ai-mtp',
+    name: 'Multi-Token Prediction (MTP) for Built-in AI',
+    desc: 'Enables speculative multi-token decoding for faster client-side AI inference',
+  },
 
   // 6. High-Performance Browsing, Speed & Graphics
   {
@@ -196,6 +244,18 @@ const RECOMMENDED_FLAGS = [
     id: 'enable-quic',
     name: 'Experimental QUIC / HTTP3',
     desc: 'Lowers handshake latency and packet loss recovery over HTTP/3',
+  },
+  {
+    key: 'prerender-until-script@1',
+    id: 'prerender-until-script',
+    name: 'Prerender Until Script',
+    desc: 'Speculatively prerenders pages in memory up until script execution for instant navigation',
+  },
+  {
+    key: 'back-forward-cache-for-component-extension-frames@1',
+    id: 'back-forward-cache-for-component-extension-frames',
+    name: 'BackForwardCache for Extension Frames',
+    desc: 'Allows pages embedding extension frames to qualify for instant Back/Forward cache',
   },
 
   // 7. Workspace, Split View & Tabs
@@ -256,6 +316,26 @@ const RECOMMENDED_FLAGS = [
     id: 'enable-experimental-webassembly-features',
     name: 'Experimental WebAssembly',
     desc: 'Unlocks WasmFX stack switching, relaxed SIMD, and shared-everything threads',
+  },
+
+  // 10. Web Platform, Window Management & Extensions
+  {
+    key: 'window-open-always-on-top@1',
+    id: 'window-open-always-on-top',
+    name: 'Always-On-Top Popups',
+    desc: 'Allows web apps with window-management permission to open floating always-on-top windows',
+  },
+  {
+    key: 'enable-text-detection-api@1',
+    id: 'enable-text-detection-api',
+    name: 'Text Detection API',
+    desc: 'Enables native client-side OCR (Shape Detection API for text) in JavaScript',
+  },
+  {
+    key: 'extension-install-site-access-options@1',
+    id: 'extension-install-site-access-options',
+    name: 'Extension Install Site Access Options',
+    desc: 'Adds granular per-site access controls directly inside extension installation dialogs',
   },
 ];
 
