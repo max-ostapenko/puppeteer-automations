@@ -1,10 +1,31 @@
 const { execFile } = require('child_process');
+const fs = require('fs');
 const https = require('https');
 const http = require('http');
 const path = require('path');
 
 const REPORT_FILE_PATH = path.resolve(__dirname, 'index.html');
 const REPORT_FILE_URL = `file://${REPORT_FILE_PATH}`;
+
+/**
+ * Find available terminal-notifier binary.
+ */
+function getTerminalNotifierBinary() {
+  const home = process.env.HOME || '';
+  const candidates = [
+    path.join(home, 'Applications', 'terminal-notifier.app', 'Contents', 'MacOS', 'terminal-notifier'),
+    '/Applications/terminal-notifier.app/Contents/MacOS/terminal-notifier',
+    '/opt/homebrew/bin/terminal-notifier',
+    '/usr/local/bin/terminal-notifier',
+  ];
+
+  for (const p of candidates) {
+    if (fs.existsSync(p)) {
+      return p;
+    }
+  }
+  return null;
+}
 
 /**
  * Open the HTML report in Google Chrome.
@@ -24,20 +45,44 @@ function openReportInChrome(reportUrl = REPORT_FILE_URL) {
 }
 
 /**
- * Dispatch desktop notification via macOS AppleScript.
+ * Dispatch desktop notification via macOS terminal-notifier (with click-to-open URL)
+ * or fallback to AppleScript (osascript).
  */
-function sendMacOSNotification(title, message, sound = 'Submarine') {
+function sendMacOSNotification(title, message, sound = 'Submarine', openUrl = REPORT_FILE_URL) {
   return new Promise((resolve) => {
-    const escapedMsg = message.replace(/["\\]/g, '\\$&');
-    const escapedTitle = title.replace(/["\\]/g, '\\$&');
-    const script = `display notification "${escapedMsg}" with title "${escapedTitle}" sound name "${sound}"`;
+    const fallbackToAppleScript = () => {
+      const escapedMsg = message.replace(/["\\]/g, '\\$&');
+      const escapedTitle = title.replace(/["\\]/g, '\\$&');
+      const script = `display notification "${escapedMsg}" with title "${escapedTitle}" sound name "${sound}"`;
 
-    execFile('osascript', ['-e', script], (error) => {
-      if (error) {
-        console.error('Failed to send macOS notification:', error.message);
+      execFile('osascript', ['-e', script], (error) => {
+        if (error) {
+          console.error('Failed to send macOS notification:', error.message);
+        }
+        resolve();
+      });
+    };
+
+    const notifierBin = getTerminalNotifierBinary();
+    if (notifierBin) {
+      const args = ['-title', title, '-message', message];
+      if (sound) {
+        args.push('-sound', sound);
       }
-      resolve();
-    });
+      if (openUrl) {
+        args.push('-open', openUrl);
+      }
+
+      execFile(notifierBin, args, (error) => {
+        if (error) {
+          fallbackToAppleScript();
+        } else {
+          resolve();
+        }
+      });
+    } else {
+      fallbackToAppleScript();
+    }
   });
 }
 
@@ -164,7 +209,7 @@ async function notifyOffers(newOffers) {
       } | ${offer.distance || ''}`.trim();
       console.log(`- ${title} (${offer.url})`);
 
-      await sendMacOSNotification(title, details);
+      await sendMacOSNotification(title, details, 'Submarine', REPORT_FILE_URL);
 
       if (webhookUrl) {
         await sendWebhookNotification(webhookUrl, {
@@ -187,7 +232,7 @@ async function notifyOffers(newOffers) {
     const summaryMsg = `${topRoutes}... and ${sortedOffers.length - 3} more. Check destinations.json!`;
     console.log(`- ${summaryTitle}: ${summaryMsg}`);
 
-    await sendMacOSNotification(summaryTitle, summaryMsg);
+    await sendMacOSNotification(summaryTitle, summaryMsg, 'Submarine', REPORT_FILE_URL);
 
     if (webhookUrl) {
       await sendWebhookNotification(webhookUrl, {
@@ -199,8 +244,10 @@ async function notifyOffers(newOffers) {
     }
   }
 
-  // Open the HTML report in Google Chrome when new matching offers are found
-  await openReportInChrome();
+  // Only open report in browser if explicitly requested via environment variable
+  if (process.env.MOVACAR_OPEN_BROWSER === 'true') {
+    await openReportInChrome();
+  }
 }
 
 module.exports = {

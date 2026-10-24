@@ -5,3 +5,5 @@ src/movacar/seen_offers.json
 src/movacar/index.html
 src/movacar/destinations.json
 src/movacar/destinations.js
+src/movacar/config.json
+scripts/com.*.plist
