@@ -24,10 +24,7 @@ jobs:
 
       - name: Enable auto-merge
         if: steps.metadata.outputs.update-type != 'version-update:semver-major'
-        run: gh pr merge --auto --squash "$PR_URL"
+        run: gh pr merge --auto --squash "$PR_URL" || gh pr merge --squash "$PR_URL"
         env:
           PR_URL: ${{ github.event.pull_request.html_url }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # Note: If branch protection rulesets require human approval, use an admin PAT:
-          # GH_TOKEN: ${{ secrets.AUTO_MERGE_PAT }}
-          # and run: gh pr merge --admin --squash "$PR_URL"
