@@ -1,10 +1,10 @@
 {
   "channel": "chrome",
-  "version": "Chrome/155.0.8059.86",
+  "version": "Chrome/156.0.8078.48",
   "counts": {
-    "supported": 602,
-    "unsupported": 35,
-    "total": 637
+    "supported": 584,
+    "unsupported": 37,
+    "total": 621
   },
   "supported": [
     {
@@ -177,7 +177,8 @@
         "Mac",
         "Windows",
         "Linux",
-        "ChromeOS"
+        "ChromeOS",
+        "Android"
       ],
       "options": [
         {
@@ -553,60 +554,6 @@
       ]
     },
     {
-      "id": "autofill-ai-always-trigger-server-model",
-      "name": "Autofill AI always trigger server model",
-      "description": "Queries the server model for every form encountered, ignoring server-side instructions. Intended for testing only.",
-      "isDefault": true,
-      "platforms": [
-        "Mac",
-        "Windows",
-        "Linux",
-        "ChromeOS",
-        "Android"
-      ],
-      "options": [
-        {
-          "name": "Default",
-          "selected": false
-        },
-        {
-          "name": "Enabled",
-          "selected": false
-        },
-        {
-          "name": "Disabled",
-          "selected": false
-        }
-      ]
-    },
-    {
-      "id": "autofill-ai-based-amount-extraction-ignore-seen-terms-for-testing",
-      "name": "Enable ignore AI-based Amount Extraction Terms Acknowledgement",
-      "description": "When enabled, the BNPL flow acts as if the user has not yet seen or the AI terms. This allows the AI terms to be shown repeatedly for testing purposes, regardless of the actual stored user preference.",
-      "isDefault": true,
-      "platforms": [
-        "Mac",
-        "Windows",
-        "Linux",
-        "ChromeOS",
-        "Android"
-      ],
-      "options": [
-        {
-          "name": "Default",
-          "selected": false
-        },
-        {
-          "name": "Enabled",
-          "selected": false
-        },
-        {
-          "name": "Disabled",
-          "selected": false
-        }
-      ]
-    },
-    {
       "id": "autofill-ai-dedupe-entities",
       "name": "Autofill AI dedupe entities",
       "description": "Enables periodic deduplication of Autofill AI entities.",
@@ -939,60 +886,6 @@
       ]
     },
     {
-      "id": "autofill-disable-bnpl-country-check-for-testing",
-      "name": "Disable the country check for BNPL testing",
-      "description": "Enables testing BNPL in countries where it would otherwise be disabled.",
-      "isDefault": true,
-      "platforms": [
-        "Mac",
-        "Windows",
-        "Linux",
-        "ChromeOS",
-        "Android"
-      ],
-      "options": [
-        {
-          "name": "Default",
-          "selected": false
-        },
-        {
-          "name": "Enabled",
-          "selected": false
-        },
-        {
-          "name": "Disabled",
-          "selected": false
-        }
-      ]
-    },
-    {
-      "id": "autofill-enable-ai-based-amount-extraction",
-      "name": "Enable AI-based checkout amount extraction on Chrome",
-      "description": "When enabled, Chrome will extract the checkout amount from the checkout page using server-side AI.",
-      "isDefault": true,
-      "platforms": [
-        "Mac",
-        "Windows",
-        "Linux",
-        "ChromeOS",
-        "Android"
-      ],
-      "options": [
-        {
-          "name": "Default",
-          "selected": false
-        },
-        {
-          "name": "Enabled",
-          "selected": false
-        },
-        {
-          "name": "Disabled",
-          "selected": false
-        }
-      ]
-    },
-    {
       "id": "autofill-enable-ai-card-recommendation",
       "name": "Enable AI-based card recommendations on Autofill",
       "description": "When enabled, AI-based card recommendations will be offered on Autofill when at least two credit card suggestions are shown.",
@@ -1002,33 +895,6 @@
         "Windows",
         "Linux",
         "ChromeOS"
-      ],
-      "options": [
-        {
-          "name": "Default",
-          "selected": false
-        },
-        {
-          "name": "Enabled",
-          "selected": false
-        },
-        {
-          "name": "Disabled",
-          "selected": false
-        }
-      ]
-    },
-    {
-      "id": "autofill-enable-amount-extraction-testing",
-      "name": "Enable amount extraction testing",
-      "description": "Enables testing of the result of checkout amount extraction. This flag will allow amount extraction to run on any website when a CC form is clicked.",
-      "isDefault": true,
-      "platforms": [
-        "Mac",
-        "Windows",
-        "Linux",
-        "ChromeOS",
-        "Android"
       ],
       "options": [
         {
@@ -1154,6 +1020,32 @@
       ]
     },
     {
+      "id": "autofill-enable-cardholder-name-fix-flow",
+      "name": "Enable Autofill Cardholder Name Fix Flow",
+      "description": "When enabled, prompts users to confirm their cardholder name when checking out with a server card that is missing a name, if a name was found.",
+      "isDefault": true,
+      "platforms": [
+        "Mac",
+        "Windows",
+        "Linux",
+        "ChromeOS"
+      ],
+      "options": [
+        {
+          "name": "Default",
+          "selected": false
+        },
+        {
+          "name": "Enabled",
+          "selected": false
+        },
+        {
+          "name": "Disabled",
+          "selected": false
+        }
+      ]
+    },
+    {
       "id": "autofill-enable-expand-iban-regex-pattern",
       "name": "Enable Expand IBAN Regex Pattern",
       "description": "When enabled, IBAN regex pattern matching is expanded to support more formats.",
@@ -1208,16 +1100,15 @@
       ]
     },
     {
-      "id": "autofill-enable-new-amex-network-art",
-      "name": "Enable new American Express network art",
-      "description": "When enabled, updates the American Express network art in Autofill.",
+      "id": "autofill-enable-omnibox-autofill",
+      "name": "Enable Omnibox Autofill chip for payments",
+      "description": "When enabled, an Autofill payments omnibox chip will appear for relevant payment checkout forms.",
       "isDefault": true,
       "platforms": [
         "Mac",
         "Windows",
         "Linux",
-        "ChromeOS",
-        "Android"
+        "ChromeOS"
       ],
       "options": [
         {
@@ -1235,9 +1126,9 @@
       ]
     },
     {
-      "id": "autofill-enable-omnibox-autofill",
-      "name": "Enable Omnibox Autofill chip for payments",
-      "description": "When enabled, an Autofill payments omnibox chip will appear for relevant payment checkout forms.",
+      "id": "autofill-enable-omnibox-gpay-button",
+      "name": "Enable Omnibox Autofill chip for Google Pay buttons",
+      "description": "When enabled, a Google Pay omnibox chip will appear when a Google Pay button is detected on the page, and clicking the chip will simulate clicking the Google Pay button.",
       "isDefault": true,
       "platforms": [
         "Mac",
@@ -1544,7 +1435,8 @@
         "Mac",
         "Windows",
         "Linux",
-        "ChromeOS"
+        "ChromeOS",
+        "Android"
       ],
       "options": [
         {
@@ -1797,14 +1689,16 @@
       ]
     },
     {
-      "id": "browser-launch-metadata-reporting",
-      "name": "Browser launch metadata reporting",
-      "description": "Enables the collection and reporting of browser launch-related metadata for Chrome Enterprise, including CLI switches and launch timestamp",
+      "id": "browsing-history-filter-by-device",
+      "name": "Filter Browsing History By Device",
+      "description": "Enables browser history filtering by device.",
       "isDefault": true,
       "platforms": [
         "Mac",
         "Windows",
-        "Linux"
+        "Linux",
+        "ChromeOS",
+        "Android"
       ],
       "options": [
         {
@@ -1830,7 +1724,35 @@
         "Mac",
         "Windows",
         "Linux",
-        "ChromeOS"
+        "ChromeOS",
+        "Android"
+      ],
+      "options": [
+        {
+          "name": "Default",
+          "selected": false
+        },
+        {
+          "name": "Enabled",
+          "selected": false
+        },
+        {
+          "name": "Disabled",
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "browsing-history-similar-visits-grouping",
+      "name": "Browsing History Grouping Improvements",
+      "description": "Enables improvements to grouping of similar browsing history on the history page.",
+      "isDefault": true,
+      "platforms": [
+        "Mac",
+        "Windows",
+        "Linux",
+        "ChromeOS",
+        "Android"
       ],
       "options": [
         {
@@ -2350,6 +2272,10 @@
           "selected": false
         },
         {
+          "name": "Enabled Enable all",
+          "selected": false
+        },
+        {
           "name": "Disabled",
           "selected": false
         }
@@ -2477,33 +2403,6 @@
       "id": "collaboration-messaging",
       "name": "Collaboration Messaging",
       "description": "Enables the messaging framework within the collaboration feature, including features such as recent activity, dirty dots, and description action chips.",
-      "isDefault": true,
-      "platforms": [
-        "Mac",
-        "Windows",
-        "Linux",
-        "ChromeOS",
-        "Android"
-      ],
-      "options": [
-        {
-          "name": "Default",
-          "selected": false
-        },
-        {
-          "name": "Enabled",
-          "selected": false
-        },
-        {
-          "name": "Disabled",
-          "selected": false
-        }
-      ]
-    },
-    {
-      "id": "collaboration-shared-tab-group-account-data",
-      "name": "Shared Tab Group messaging sync",
-      "description": "Enable the messaging sync backend for shared tab groups.",
       "isDefault": true,
       "platforms": [
         "Mac",
@@ -2688,6 +2587,32 @@
       "id": "composebox-persistent-aim-button-with-x",
       "name": "Composebox Persistent AIM Button With X",
       "description": "Shows an X icon on the persistent AIM button. Only effective if the persistent AIM button is also enabled for the surface.",
+      "isDefault": true,
+      "platforms": [
+        "Mac",
+        "Windows",
+        "Linux",
+        "ChromeOS"
+      ],
+      "options": [
+        {
+          "name": "Default",
+          "selected": false
+        },
+        {
+          "name": "Enabled",
+          "selected": false
+        },
+        {
+          "name": "Disabled",
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "composebox-realbox-outside-click",
+      "name": "Composebox Outside Click (Realbox)",
+      "description": "Clicking outside the Realbox Composebox closes the suggestions dropdown and restores page interaction while keeping the Composebox open.",
       "isDefault": true,
       "platforms": [
         "Mac",
@@ -2922,14 +2847,6 @@
           "selected": false
         },
         {
-          "name": "Enabled Context Management in composebox (realbox closes menu on tab select)",
-          "selected": false
-        },
-        {
-          "name": "Enabled Context management in composebox (realbox keeps menu open on tab select)",
-          "selected": false
-        },
-        {
           "name": "Enabled Context Management in composebox (with tab deselection)",
           "selected": false
         },
@@ -2942,6 +2859,10 @@
           "selected": false
         },
         {
+          "name": "Enabled Context Management in composebox (with favicon skeleton loader)",
+          "selected": false
+        },
+        {
           "name": "Disabled",
           "selected": false
         }
@@ -2951,32 +2872,6 @@
       "id": "context-management-in-omnibox",
       "name": "Context management in the Omnibox",
       "description": "Enables context menu and favicon coins for omnibox",
-      "isDefault": true,
-      "platforms": [
-        "Mac",
-        "Windows",
-        "Linux",
-        "ChromeOS"
-      ],
-      "options": [
-        {
-          "name": "Default",
-          "selected": false
-        },
-        {
-          "name": "Enabled",
-          "selected": false
-        },
-        {
-          "name": "Disabled",
-          "selected": false
-        }
-      ]
-    },
-    {
-      "id": "context-menu-animation-limiting",
-      "name": "Context Menu Animation Limiting",
-      "description": "When enabled, the impressions of the context menu animation will be limited.",
       "isDefault": true,
       "platforms": [
         "Mac",
@@ -3286,6 +3181,33 @@
       ]
     },
     {
+      "id": "contextual-tasks-context-multi-turn-tab-relevance",
+      "name": "Contextual Tasks Context Multi-Turn Tab Relevance",
+      "description": "Enables multi-turn tab relevance model for contextual tasks.",
+      "isDefault": true,
+      "platforms": [
+        "Mac",
+        "Windows",
+        "Linux",
+        "ChromeOS",
+        "Android"
+      ],
+      "options": [
+        {
+          "name": "Default",
+          "selected": false
+        },
+        {
+          "name": "Enabled",
+          "selected": false
+        },
+        {
+          "name": "Disabled",
+          "selected": false
+        }
+      ]
+    },
+    {
       "id": "contextual-tasks-cookie-prefetch",
       "name": "Contextual Tasks Cookie Prefetch",
       "description": "Enables prefetching of cookies for contextual tasks.",
@@ -3378,6 +3300,32 @@
         },
         {
           "name": "Enabled Enabled with circular button next to battery saver",
+          "selected": false
+        },
+        {
+          "name": "Disabled",
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "contextual-tasks-ephemeral-button-context-menu",
+      "name": "Contextual Tasks Ephemeral Button Context Menu",
+      "description": "Enables a context menu on the ephemeral contextual tasks toolbar button to remove it from the toolbar.",
+      "isDefault": true,
+      "platforms": [
+        "Mac",
+        "Windows",
+        "Linux",
+        "ChromeOS"
+      ],
+      "options": [
+        {
+          "name": "Default",
+          "selected": false
+        },
+        {
+          "name": "Enabled",
           "selected": false
         },
         {
@@ -3601,9 +3549,77 @@
       ]
     },
     {
+      "id": "contextual-tasks-updated-entry-points",
+      "name": "Contextual Tasks Updated Entry Points",
+      "description": "Enables updated entry points for contextual tasks.",
+      "isDefault": true,
+      "platforms": [
+        "Mac",
+        "Windows",
+        "Linux",
+        "ChromeOS"
+      ],
+      "options": [
+        {
+          "name": "Default",
+          "selected": false
+        },
+        {
+          "name": "Enabled",
+          "selected": false
+        },
+        {
+          "name": "Enabled with side panel routing",
+          "selected": false
+        },
+        {
+          "name": "Enabled with visual selection only",
+          "selected": false
+        },
+        {
+          "name": "Enabled with omnibox routing",
+          "selected": false
+        },
+        {
+          "name": "Enabled with submenu",
+          "selected": false
+        },
+        {
+          "name": "Disabled",
+          "selected": false
+        }
+      ]
+    },
+    {
       "id": "controlled-frame-web-request-security-info",
       "name": "Enable SecurityInfo in WebRequest API for ControlledFrame",
       "description": "Enables SecurityInfo in WebRequest API for ControlledFrames, allowing listeners to retrieve certificate details of web requests.",
+      "isDefault": true,
+      "platforms": [
+        "Mac",
+        "Windows",
+        "Linux",
+        "ChromeOS"
+      ],
+      "options": [
+        {
+          "name": "Default",
+          "selected": false
+        },
+        {
+          "name": "Enabled",
+          "selected": false
+        },
+        {
+          "name": "Disabled",
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "copy-text-journeys",
+      "name": "Copy-Text Journeys",
+      "description": "Enables offering to reopen a search answer in the Contextual Tasks side panel.",
       "isDefault": true,
       "platforms": [
         "Mac",
@@ -5716,6 +5732,14 @@
           "selected": false
         },
         {
+          "name": "Enabled - Sticky, respecting prefs",
+          "selected": false
+        },
+        {
+          "name": "Enabled - Sticky",
+          "selected": false
+        },
+        {
           "name": "Disabled",
           "selected": false
         }
@@ -6029,6 +6053,58 @@
       "options": []
     },
     {
+      "id": "enable-headless-live-caption",
+      "name": "Headless Live Captions",
+      "description": "Enable features related to headless captions exploration. These are very likely unstable.",
+      "isDefault": true,
+      "platforms": [
+        "Mac",
+        "Windows",
+        "Linux",
+        "ChromeOS"
+      ],
+      "options": [
+        {
+          "name": "Default",
+          "selected": false
+        },
+        {
+          "name": "Enabled",
+          "selected": false
+        },
+        {
+          "name": "Disabled",
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "enable-headless-live-caption-early-start",
+      "name": "Headless Caption Early Start",
+      "description": "Start headless captioning as soon as a profile is loaded.",
+      "isDefault": true,
+      "platforms": [
+        "Mac",
+        "Windows",
+        "Linux",
+        "ChromeOS"
+      ],
+      "options": [
+        {
+          "name": "Default",
+          "selected": false
+        },
+        {
+          "name": "Enabled",
+          "selected": false
+        },
+        {
+          "name": "Disabled",
+          "selected": false
+        }
+      ]
+    },
+    {
       "id": "enable-http-headers-injection",
       "name": "HTTP Headers Injection",
       "description": "Enables injection of custom HTTP headers in network requests.",
@@ -6325,8 +6401,7 @@
         "Mac",
         "Windows",
         "Linux",
-        "ChromeOS",
-        "Android"
+        "ChromeOS"
       ],
       "options": [
         {
@@ -6420,40 +6495,6 @@
         "Android"
       ],
       "options": []
-    },
-    {
-      "id": "enable-ntp-browser-promos",
-      "name": "Enable new tab page browser feature suggestions",
-      "description": "Shows suggestions to explore browser capabilities (eg. signing in) on the new tab page.",
-      "isDefault": true,
-      "platforms": [
-        "Mac",
-        "Windows",
-        "Linux",
-        "ChromeOS"
-      ],
-      "options": [
-        {
-          "name": "Default",
-          "selected": false
-        },
-        {
-          "name": "Enabled",
-          "selected": false
-        },
-        {
-          "name": "Enabled Single-promo",
-          "selected": false
-        },
-        {
-          "name": "Enabled Setup List",
-          "selected": false
-        },
-        {
-          "name": "Disabled",
-          "selected": false
-        }
-      ]
     },
     {
       "id": "enable-oauth-multilogin-standard-cookies-binding",
@@ -7567,21 +7608,24 @@
           "selected": false
         },
         {
+          "name": "Enabled Force Sign-in Required (Authentication)",
+          "selected": false
+        },
+        {
           "name": "Disabled",
           "selected": false
         }
       ]
     },
     {
-      "id": "enterprise-published-skills-policy-enabled",
-      "name": "Enable EnterprisePublishedSkills policy",
-      "description": "Enables the EnterprisePublishedSkills policy in Chrome.",
+      "id": "enterprise-signin-dialogs-refresh",
+      "name": "Enterprise Signin Dialogs Refresh",
+      "description": "Enables the visually refreshed enterprise signin dialogs (enterprise profile welcome/creation, OIDC and the device signals disclaimer). It is no-op if `first-run-desktop-refresh` is disabled.",
       "isDefault": true,
       "platforms": [
         "Mac",
         "Windows",
-        "Linux",
-        "ChromeOS"
+        "Linux"
       ],
       "options": [
         {
@@ -8006,8 +8050,7 @@
         "Mac",
         "Windows",
         "Linux",
-        "ChromeOS",
-        "Android"
+        "ChromeOS"
       ],
       "options": [
         {
@@ -8089,6 +8132,31 @@
         "Linux",
         "ChromeOS",
         "Android"
+      ],
+      "options": [
+        {
+          "name": "Default",
+          "selected": false
+        },
+        {
+          "name": "Enabled",
+          "selected": false
+        },
+        {
+          "name": "Disabled",
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "feedback-disabled-dialog",
+      "name": "Feedback Disabled Dialog",
+      "description": "Enables the dialog shown when user feedback is disabled.",
+      "isDefault": true,
+      "platforms": [
+        "Mac",
+        "Windows",
+        "Linux"
       ],
       "options": [
         {
@@ -8191,6 +8259,32 @@
         "Mac",
         "Windows",
         "Linux"
+      ],
+      "options": [
+        {
+          "name": "Default",
+          "selected": false
+        },
+        {
+          "name": "Enabled",
+          "selected": false
+        },
+        {
+          "name": "Disabled",
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "focus-selection",
+      "name": "Focus Selection",
+      "description": "Allows focusing a selection of ungrouped tabs in the tabstrip.",
+      "isDefault": true,
+      "platforms": [
+        "Mac",
+        "Windows",
+        "Linux",
+        "ChromeOS"
       ],
       "options": [
         {
@@ -8390,7 +8484,7 @@
     {
       "id": "geic-enabled",
       "name": "GEiC enabled",
-      "description": "Enables Gemini Enterprise in Chrome (GEiC) side panel integration.",
+      "description": "Controls Gemini Enterprise in Chrome (GEiC) side panel integration. Set to Enabled to apply a GeminiEnterpriseSettings policy even if this profile is not detected as a managed account. Set to Disabled to opt out of GEiC and fall back to consumer Gemini, even if a Gemini Enterprise policy or experiment applies to this profile.",
       "isDefault": true,
       "platforms": [
         "Mac",
@@ -8398,20 +8492,20 @@
         "Linux",
         "ChromeOS"
       ],
-      "options": []
-    },
-    {
-      "id": "geic-guest-url",
-      "name": "GEiC guest URL",
-      "description": "Configures the guest URL loaded into the GEiC PrivilegedWebContents container.",
-      "isDefault": true,
-      "platforms": [
-        "Mac",
-        "Windows",
-        "Linux",
-        "ChromeOS"
-      ],
-      "options": []
+      "options": [
+        {
+          "name": "Default",
+          "selected": false
+        },
+        {
+          "name": "Enabled",
+          "selected": false
+        },
+        {
+          "name": "Disabled",
+          "selected": false
+        }
+      ]
     },
     {
       "id": "gemma4-for-built-in-ai",
@@ -8594,6 +8688,32 @@
       "id": "glic-actor-autofill-section-label",
       "name": "Glic actor autofill section label",
       "description": "Enables the section label in Glic actor autofill. Only effective if Glic actor autofill is also enabled.",
+      "isDefault": true,
+      "platforms": [
+        "Mac",
+        "Windows",
+        "Linux",
+        "ChromeOS"
+      ],
+      "options": [
+        {
+          "name": "Default",
+          "selected": false
+        },
+        {
+          "name": "Enabled",
+          "selected": false
+        },
+        {
+          "name": "Disabled",
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "glic-actor-cursor",
+      "name": "Glic actor cursor",
+      "description": "Enables the Glic actor cursor",
       "isDefault": true,
       "platforms": [
         "Mac",
@@ -8884,60 +9004,6 @@
       ]
     },
     {
-      "id": "glic-daisy-chain-new-tabs",
-      "name": "Glic Daisy chain new tabs",
-      "description": "Daisy chains new tabs if the active tab when the new tab was create has an open glic side panel",
-      "isDefault": true,
-      "platforms": [
-        "Mac",
-        "Windows",
-        "Linux",
-        "ChromeOS",
-        "Android"
-      ],
-      "options": [
-        {
-          "name": "Default",
-          "selected": false
-        },
-        {
-          "name": "Enabled",
-          "selected": false
-        },
-        {
-          "name": "Disabled",
-          "selected": false
-        }
-      ]
-    },
-    {
-      "id": "glic-default-to-last-active-conversation",
-      "name": "Glic Default To Last Active Conversation",
-      "description": "Enables the last active conversation as the default conversation when opening a new Glic side panel instance.",
-      "isDefault": true,
-      "platforms": [
-        "Mac",
-        "Windows",
-        "Linux",
-        "ChromeOS",
-        "Android"
-      ],
-      "options": [
-        {
-          "name": "Default",
-          "selected": false
-        },
-        {
-          "name": "Enabled",
-          "selected": false
-        },
-        {
-          "name": "Disabled",
-          "selected": false
-        }
-      ]
-    },
-    {
       "id": "glic-disable-actor-safety-checks",
       "name": "Glic disable actor safety checks",
       "description": "Disables actor safety checks in Glic. Use with extreme caution, intended for testing only.",
@@ -8949,6 +9015,33 @@
         "ChromeOS"
       ],
       "options": []
+    },
+    {
+      "id": "glic-experimental-triggering",
+      "name": "Glic experimental triggering",
+      "description": "Enables GLIC experimental triggering",
+      "isDefault": true,
+      "platforms": [
+        "Mac",
+        "Windows",
+        "Linux",
+        "ChromeOS",
+        "Android"
+      ],
+      "options": [
+        {
+          "name": "Default",
+          "selected": false
+        },
+        {
+          "name": "Enabled",
+          "selected": false
+        },
+        {
+          "name": "Disabled",
+          "selected": false
+        }
+      ]
     },
     {
       "id": "glic-experimental-triggering-os-notification",
@@ -8980,6 +9073,32 @@
       "id": "glic-experimental-triggering-screenshot",
       "name": "Glic experimental triggering screenshot",
       "description": "Enables secure client-side screenshot capture and encryption on yield for Glic experimental triggering tasks.",
+      "isDefault": true,
+      "platforms": [
+        "Mac",
+        "Windows",
+        "Linux",
+        "ChromeOS"
+      ],
+      "options": [
+        {
+          "name": "Default",
+          "selected": false
+        },
+        {
+          "name": "Enabled",
+          "selected": false
+        },
+        {
+          "name": "Disabled",
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "glic-experimental-triggering-script-tools",
+      "name": "Glic experimental triggering script tool execution",
+      "description": "Enables direct ScriptTool action execution for Glic experimental triggering tasks.",
       "isDefault": true,
       "platforms": [
         "Mac",
@@ -9297,58 +9416,6 @@
         },
         {
           "name": "Disabled",
-          "selected": false
-        }
-      ]
-    },
-    {
-      "id": "glic-pdf-summarize",
-      "name": "Glic Pdf Summarize",
-      "description": "Enables the pdf summarize button.",
-      "isDefault": true,
-      "platforms": [
-        "Mac",
-        "Windows",
-        "Linux",
-        "ChromeOS"
-      ],
-      "options": [
-        {
-          "name": "Default",
-          "selected": false
-        },
-        {
-          "name": "Enabled",
-          "selected": false
-        },
-        {
-          "name": "Enabled with \"Summarize with Gemini\" button text",
-          "selected": false
-        },
-        {
-          "name": "Disabled",
-          "selected": false
-        }
-      ]
-    },
-    {
-      "id": "glic-selection-prompt",
-      "name": "Glic Selection Prompt",
-      "description": "Enables the Glic prompt suggestion when text is selected.",
-      "isDefault": true,
-      "platforms": [
-        "Mac",
-        "Windows",
-        "Linux",
-        "ChromeOS"
-      ],
-      "options": [
-        {
-          "name": "Default",
-          "selected": false
-        },
-        {
-          "name": "Enabled",
           "selected": false
         }
       ]
@@ -10315,32 +10382,6 @@
       ]
     },
     {
-      "id": "iph-desktop-realbox-contextual-search",
-      "name": "IPH Desktop Realbox Contextual Search",
-      "description": "Enables In-Product Help for Desktop Realbox Contextual Search.",
-      "isDefault": true,
-      "platforms": [
-        "Mac",
-        "Windows",
-        "Linux",
-        "ChromeOS"
-      ],
-      "options": [
-        {
-          "name": "Default",
-          "selected": false
-        },
-        {
-          "name": "Enabled",
-          "selected": false
-        },
-        {
-          "name": "Disabled",
-          "selected": false
-        }
-      ]
-    },
-    {
       "id": "isolate-origins",
       "name": "Isolate additional origins",
       "description": "Requires dedicated processes for an additional set of origins, specified as a comma-separated list.",
@@ -10590,9 +10631,9 @@
       ]
     },
     {
-      "id": "mac-enable-okta-sso",
-      "name": "Enable Okta SSO for enterprise browsers.",
-      "description": "Enables native support for Okta SSO on managed MacOS devices.",
+      "id": "mac-enable-ping-sso",
+      "name": "Enable Ping SSO for enterprise browsers.",
+      "description": "Enables native support for Ping Identity SSO on managed MacOS devices.",
       "isDefault": true,
       "platforms": [
         "Mac"
@@ -10885,53 +10926,6 @@
       ]
     },
     {
-      "id": "mobile-promo-on-desktop-with-qr-code-wave-2",
-      "name": "Mobile Promo On Desktop - QR Code (Wave 2)",
-      "description": "When enabled, shows a mobile promo with a QR code on desktop for eligible users. This version highlights thematic areas as opposed to specific features.",
-      "isDefault": true,
-      "platforms": [
-        "Mac",
-        "Windows",
-        "Linux",
-        "ChromeOS",
-        "Android"
-      ],
-      "options": [
-        {
-          "name": "Default",
-          "selected": false
-        },
-        {
-          "name": "Enabled",
-          "selected": false
-        },
-        {
-          "name": "Enabled  - Safety",
-          "selected": false
-        },
-        {
-          "name": "Enabled  - Best of Google",
-          "selected": false
-        },
-        {
-          "name": "Enabled  - AI",
-          "selected": false
-        },
-        {
-          "name": "Enabled  - Your Chrome",
-          "selected": false
-        },
-        {
-          "name": "Enabled  - Shopping",
-          "selected": false
-        },
-        {
-          "name": "Disabled",
-          "selected": false
-        }
-      ]
-    },
-    {
       "id": "mobile-promo-on-desktop-with-reminder",
       "name": "Mobile Promo On Desktop - Reminder",
       "description": "When enabled, shows a mobile promo with a reminder flow on desktop for eligible users.",
@@ -11017,73 +11011,6 @@
         },
         {
           "name": "Enabled  - Lens Promo with push notification",
-          "selected": false
-        },
-        {
-          "name": "Disabled",
-          "selected": false
-        }
-      ]
-    },
-    {
-      "id": "mobile-promo-on-desktop-with-reminder-wave-2",
-      "name": "Mobile Promo On Desktop - Reminder (Wave 2)",
-      "description": "When enabled, shows a mobile promo with a reminder flow on desktop for eligible users. This version highlights thematic areas as opposed to specific features.",
-      "isDefault": true,
-      "platforms": [
-        "Mac",
-        "Windows",
-        "Linux",
-        "ChromeOS",
-        "Android"
-      ],
-      "options": [
-        {
-          "name": "Default",
-          "selected": false
-        },
-        {
-          "name": "Enabled",
-          "selected": false
-        },
-        {
-          "name": "Enabled  - Safety",
-          "selected": false
-        },
-        {
-          "name": "Enabled  - Safety with push notification",
-          "selected": false
-        },
-        {
-          "name": "Enabled  - Best of Google",
-          "selected": false
-        },
-        {
-          "name": "Enabled  - Best of Google with push notification",
-          "selected": false
-        },
-        {
-          "name": "Enabled  - AI",
-          "selected": false
-        },
-        {
-          "name": "Enabled  - AI with push notification",
-          "selected": false
-        },
-        {
-          "name": "Enabled  - Your Chrome",
-          "selected": false
-        },
-        {
-          "name": "Enabled  - Your Chrome with push notification",
-          "selected": false
-        },
-        {
-          "name": "Enabled  - Shopping",
-          "selected": false
-        },
-        {
-          "name": "Enabled  - Shopping with push notification",
           "selected": false
         },
         {
@@ -11415,7 +11342,8 @@
         "Mac",
         "Windows",
         "Linux",
-        "ChromeOS"
+        "ChromeOS",
+        "Android"
       ],
       "options": [
         {
@@ -11546,7 +11474,8 @@
         "Mac",
         "Windows",
         "Linux",
-        "ChromeOS"
+        "ChromeOS",
+        "Android"
       ],
       "options": [
         {
@@ -11583,6 +11512,32 @@
       "id": "ntp-shortcuts-redesign",
       "name": "NTP Shortcuts Redesign",
       "description": "Enables the redesigned shortcuts on the New Tab Page.",
+      "isDefault": true,
+      "platforms": [
+        "Mac",
+        "Windows",
+        "Linux",
+        "ChromeOS"
+      ],
+      "options": [
+        {
+          "name": "Default",
+          "selected": false
+        },
+        {
+          "name": "Enabled",
+          "selected": false
+        },
+        {
+          "name": "Disabled",
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "ntp-shortcuts-reorder",
+      "name": "NTP Shortcuts Reorder",
+      "description": "Enables shortcut reordering entrypoint on the New Tab Page.",
       "isDefault": true,
       "platforms": [
         "Mac",
@@ -11917,6 +11872,18 @@
         },
         {
           "name": "Enabled with Profile Picker",
+          "selected": false
+        },
+        {
+          "name": "Enabled with Small Font (14px)",
+          "selected": false
+        },
+        {
+          "name": "Enabled with Dynamic Sizing (680px, 14px Font)",
+          "selected": false
+        },
+        {
+          "name": "Enabled with Dynamic Sizing (600px, 14px Font)",
           "selected": false
         },
         {
@@ -12305,7 +12272,7 @@
     {
       "id": "on-device-model-speculative-decoding",
       "name": "Speculative Decoding for Built-in AI",
-      "description": "Enables speculative decoding enhancements for built-in AI APIs. Also enables requisite LiteRT-LM, Gemma 4, and Sampling Mode features. Prompt API sessions must specify compatible sampling options, i.e. `samplingMode:'most-predictable'` or `topK:1` or `temperature:0`. Summarizer API sessions automatically use greedy decoding for default (auto) or capability performance preferences.",
+      "description": "Enables speculative decoding performance enhancements for Built-in AI APIs. Also enables requisite Gemma 4 and Sampling Mode features. Prompt API and Summarizer API sessions automatically use greedy sampling with speculative decoding by default, or when greedy sampling options are specified. Non-greedy sessions run with standard decoding.",
       "isDefault": true,
       "platforms": [
         "Mac",
@@ -12770,6 +12737,32 @@
       ]
     },
     {
+      "id": "pdf-accessibility-heuristic-enhancements",
+      "name": "PDF Accessibility Heuristic Enhancements",
+      "description": "Enables heuristic enhancements for PDF accessibility.",
+      "isDefault": true,
+      "platforms": [
+        "Mac",
+        "Windows",
+        "Linux",
+        "ChromeOS"
+      ],
+      "options": [
+        {
+          "name": "Default",
+          "selected": false
+        },
+        {
+          "name": "Enabled",
+          "selected": false
+        },
+        {
+          "name": "Disabled",
+          "selected": false
+        }
+      ]
+    },
+    {
       "id": "pdf-brotli-decode",
       "name": "PDF Brotli Decode",
       "description": "Enables support for the experimental PDF 2.0 /BrotliDecode filter.",
@@ -12961,45 +12954,6 @@
       ]
     },
     {
-      "id": "permissions-gesture-gated-prompts",
-      "name": "Permissions Gesture Gated Prompts",
-      "description": "Mute non-user-initiated permission requests.",
-      "isDefault": true,
-      "platforms": [
-        "Mac",
-        "Windows",
-        "Linux",
-        "ChromeOS",
-        "Android"
-      ],
-      "options": [
-        {
-          "name": "Default",
-          "selected": false
-        },
-        {
-          "name": "Enabled",
-          "selected": false
-        },
-        {
-          "name": "Enabled Mute Notifications",
-          "selected": false
-        },
-        {
-          "name": "Enabled Mute Geolocation",
-          "selected": false
-        },
-        {
-          "name": "Enabled Mute Both",
-          "selected": false
-        },
-        {
-          "name": "Disabled",
-          "selected": false
-        }
-      ]
-    },
-    {
       "id": "picture-in-picture-mute-control",
       "name": "Picture-in-Picture Mute Control",
       "description": "Adds a mute/unmute button to the Video Picture-in-Picture window.",
@@ -13026,89 +12980,9 @@
       ]
     },
     {
-      "id": "populate-dom-node-id-in-focused-node-details",
-      "name": "Dictation focus supporting code",
-      "description": "Enables additional focus change handling code needed for the dictation feature.",
-      "isDefault": true,
-      "platforms": [
-        "Mac",
-        "Windows",
-        "Linux",
-        "ChromeOS"
-      ],
-      "options": [
-        {
-          "name": "Default",
-          "selected": false
-        },
-        {
-          "name": "Enabled",
-          "selected": false
-        },
-        {
-          "name": "Disabled",
-          "selected": false
-        }
-      ]
-    },
-    {
-      "id": "prefetch-activation-beacon",
-      "name": "Prefetch Activation Beacon",
-      "description": "If enabled, prefetch activation beacon will be sent when a prefetch is activated.",
-      "isDefault": true,
-      "platforms": [
-        "Mac",
-        "Windows",
-        "Linux",
-        "ChromeOS",
-        "Android"
-      ],
-      "options": [
-        {
-          "name": "Default",
-          "selected": false
-        },
-        {
-          "name": "Enabled",
-          "selected": false
-        },
-        {
-          "name": "Disabled",
-          "selected": false
-        }
-      ]
-    },
-    {
       "id": "prepopulated-engines-shadow-variants",
       "name": "Prepopulated Engines Shadow Variants",
       "description": "Enables shadow variants for prepopulated engines resolution, allowing alternative engines to be resolved in specific regions.",
-      "isDefault": true,
-      "platforms": [
-        "Mac",
-        "Windows",
-        "Linux",
-        "ChromeOS",
-        "Android"
-      ],
-      "options": [
-        {
-          "name": "Default",
-          "selected": false
-        },
-        {
-          "name": "Enabled",
-          "selected": false
-        },
-        {
-          "name": "Disabled",
-          "selected": false
-        }
-      ]
-    },
-    {
-      "id": "prerender-activation-beacon",
-      "name": "Prerender Activation Beacon",
-      "description": "If enabled, prerender activation beacon will be sent when a prerender is activated.",
       "isDefault": true,
       "platforms": [
         "Mac",
@@ -13217,33 +13091,6 @@
       ]
     },
     {
-      "id": "privileged-web-contents",
-      "name": "Privileged WebContents",
-      "description": "Enables Privileged WebContents capability infrastructure.",
-      "isDefault": true,
-      "platforms": [
-        "Mac",
-        "Windows",
-        "Linux",
-        "ChromeOS",
-        "Android"
-      ],
-      "options": [
-        {
-          "name": "Default",
-          "selected": false
-        },
-        {
-          "name": "Enabled",
-          "selected": false
-        },
-        {
-          "name": "Disabled",
-          "selected": false
-        }
-      ]
-    },
-    {
       "id": "profile-creation-decline-signin-cta-experiment",
       "name": "Enable CTA experiment for sign-in level up",
       "description": "As part of the Sign In Level Up experiment, changes the decline sign in CTA string in profile creation entry points",
@@ -13252,33 +13099,6 @@
         "Mac",
         "Windows",
         "Linux"
-      ],
-      "options": [
-        {
-          "name": "Default",
-          "selected": false
-        },
-        {
-          "name": "Enabled",
-          "selected": false
-        },
-        {
-          "name": "Disabled",
-          "selected": false
-        }
-      ]
-    },
-    {
-      "id": "profile-signals-reporting-enabled",
-      "name": "Profile Signals Reporting Enabled",
-      "description": "Enables the profile signals reporting flow for Chrome Enterprise.",
-      "isDefault": true,
-      "platforms": [
-        "Mac",
-        "Windows",
-        "Linux",
-        "ChromeOS",
-        "Android"
       ],
       "options": [
         {
@@ -13422,88 +13242,9 @@
       ]
     },
     {
-      "id": "pwm-show-suggestions-on-autofocus",
-      "name": "Showing password suggestions on autofocused password forms",
-      "description": "Enables showing password suggestions without requiring the user to click on the already focused field if the field was autofocused on the page load.",
-      "isDefault": true,
-      "platforms": [
-        "Mac",
-        "Windows",
-        "Linux",
-        "ChromeOS",
-        "Android"
-      ],
-      "options": [
-        {
-          "name": "Default",
-          "selected": false
-        },
-        {
-          "name": "Enabled",
-          "selected": false
-        },
-        {
-          "name": "Disabled",
-          "selected": false
-        }
-      ]
-    },
-    {
       "id": "read-anything-distiller-refactor",
       "name": "Reading Mode Distiller Stability Updates",
       "description": "Optimizes how web page content is prepared and processed for Reading Mode.",
-      "isDefault": true,
-      "platforms": [
-        "Mac",
-        "Windows",
-        "Linux",
-        "ChromeOS"
-      ],
-      "options": [
-        {
-          "name": "Default",
-          "selected": false
-        },
-        {
-          "name": "Enabled",
-          "selected": false
-        },
-        {
-          "name": "Disabled",
-          "selected": false
-        }
-      ]
-    },
-    {
-      "id": "read-anything-docs-integration",
-      "name": "Reading Mode Google Docs Integration",
-      "description": "Allows Reading Mode to work on Google Docs.",
-      "isDefault": true,
-      "platforms": [
-        "Mac",
-        "Windows",
-        "Linux",
-        "ChromeOS"
-      ],
-      "options": [
-        {
-          "name": "Default",
-          "selected": false
-        },
-        {
-          "name": "Enabled",
-          "selected": false
-        },
-        {
-          "name": "Disabled",
-          "selected": false
-        }
-      ]
-    },
-    {
-      "id": "read-anything-docs-load-more-button",
-      "name": "Reading Mode Google Docs Load More Button",
-      "description": "Adds a button to the end of the Reading Mode UI. When clicked, the main page scrolls to show the next page's content.",
       "isDefault": true,
       "platforms": [
         "Mac",
@@ -13893,32 +13634,6 @@
       ]
     },
     {
-      "id": "report-unsafe-site",
-      "name": "Report Unsafe Site",
-      "description": "Enables the 'Report Unsafe Site' menu item in the app Help menu, which enables users to report the webpage in the active tab as unsafe.",
-      "isDefault": true,
-      "platforms": [
-        "Mac",
-        "Windows",
-        "Linux",
-        "ChromeOS"
-      ],
-      "options": [
-        {
-          "name": "Default",
-          "selected": false
-        },
-        {
-          "name": "Enabled",
-          "selected": false
-        },
-        {
-          "name": "Disabled",
-          "selected": false
-        }
-      ]
-    },
-    {
       "id": "rewriter-api",
       "name": "Rewriter API",
       "description": "Enables the Rewriter API, allowing you to rewrite a piece of text with a built-in large language model. The API may be subject to changes including the supported options. Please refer to the built-in AI documentation [1] for details.",
@@ -14138,9 +13853,35 @@
       ]
     },
     {
+      "id": "search-settings-with-more-engines",
+      "name": "Search Settings With More Prepopulated Engines",
+      "description": "Populates the Search settings page with all prepopulated engines.",
+      "isDefault": true,
+      "platforms": [
+        "Mac",
+        "Windows",
+        "Linux",
+        "ChromeOS"
+      ],
+      "options": [
+        {
+          "name": "Default",
+          "selected": false
+        },
+        {
+          "name": "Enabled",
+          "selected": false
+        },
+        {
+          "name": "Disabled",
+          "selected": false
+        }
+      ]
+    },
+    {
       "id": "searchbox-embedded-permission",
       "name": "Searchbox embedded permission dialogue",
-      "description": "Enables embedded permission dialogues for New Tab Page, omnibox popup, and contextual tasks' permission requests.",
+      "description": "Enables embedded permission dialogues for New Tab Page, omnibox popup, and 'chrome://contextual-tasks' (pre-rearchitecture) contextual tasks' permission requests.",
       "isDefault": true,
       "platforms": [
         "Mac",
@@ -14208,6 +13949,31 @@
         },
         {
           "name": "Enabled with fast-follows",
+          "selected": false
+        },
+        {
+          "name": "Disabled",
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "send-tab-to-self-no-target-device-qr-code",
+      "name": "Send Tab to Self No Target Device QR Code",
+      "description": "Shows a QR code to download and sign in to Chrome on mobile when no target devices are found in Send Tab to Self.",
+      "isDefault": true,
+      "platforms": [
+        "Mac",
+        "Windows",
+        "Linux"
+      ],
+      "options": [
+        {
+          "name": "Default",
+          "selected": false
+        },
+        {
+          "name": "Enabled",
           "selected": false
         },
         {
@@ -14370,35 +14136,6 @@
       ]
     },
     {
-      "id": "signin-promo-on-avatar-pill",
-      "name": "Sign in promo on avatar pill",
-      "description": "Feature that shows a Sign in promo on the avatar pill at startup",
-      "isDefault": true,
-      "platforms": [
-        "Mac",
-        "Windows",
-        "Linux"
-      ],
-      "options": [
-        {
-          "name": "Default",
-          "selected": false
-        },
-        {
-          "name": "Enabled",
-          "selected": false
-        },
-        {
-          "name": "Enabled Short delays (for testing)",
-          "selected": false
-        },
-        {
-          "name": "Disabled",
-          "selected": false
-        }
-      ]
-    },
-    {
       "id": "site-isolation-trial-opt-out",
       "name": "Disable site isolation",
       "description": "Disables site isolation (SitePerProcess, IsolateOrigins, etc). Intended for diagnosing bugs that may be due to out-of-process iframes. Opt-out has no effect if site isolation is force-enabled using a command line switch or using an enterprise policy. Caution: this disables important mitigations for the Spectre CPU vulnerability affecting most computers.",
@@ -14461,9 +14198,9 @@
       ]
     },
     {
-      "id": "skills",
-      "name": "Skills",
-      "description": "Enables Skills in Gemini in Chrome",
+      "id": "skills-app-menu",
+      "name": "Skills App Menu",
+      "description": "Shows the Skills sub-menu item in the Chrome app menu.",
       "isDefault": true,
       "platforms": [
         "Mac",
@@ -14504,44 +14241,6 @@
         },
         {
           "name": "Enabled",
-          "selected": false
-        },
-        {
-          "name": "Disabled",
-          "selected": false
-        }
-      ]
-    },
-    {
-      "id": "split-view-horizontal",
-      "name": "Stacked Split Views",
-      "description": "Whether split views can be arranged in a stacked layout.",
-      "isDefault": true,
-      "platforms": [
-        "Mac",
-        "Windows",
-        "Linux",
-        "ChromeOS"
-      ],
-      "options": [
-        {
-          "name": "Default",
-          "selected": false
-        },
-        {
-          "name": "Enabled",
-          "selected": false
-        },
-        {
-          "name": "Enabled Direct Access",
-          "selected": false
-        },
-        {
-          "name": "Enabled Indirect Access",
-          "selected": false
-        },
-        {
-          "name": "Enabled Direct Access for Tab Context Menu",
           "selected": false
         },
         {
@@ -14707,33 +14406,6 @@
       ]
     },
     {
-      "id": "symphonia-demuxing",
-      "name": "Symphonia Demuxing",
-      "description": "Enables using the experimental Symphonia container demuxer instead of using FFmpeg for demuxing media (AAC, FLAC, MP4/ISOM, Matroska/WebM, MP3, Ogg, and RIFF/WAV).",
-      "isDefault": true,
-      "platforms": [
-        "Mac",
-        "Windows",
-        "Linux",
-        "ChromeOS",
-        "Android"
-      ],
-      "options": [
-        {
-          "name": "Default",
-          "selected": false
-        },
-        {
-          "name": "Enabled (All Containers)",
-          "selected": false
-        },
-        {
-          "name": "Disabled (All Containers)",
-          "selected": false
-        }
-      ]
-    },
-    {
       "id": "sync-account-settings",
       "name": "Sync account settings",
       "description": "Enables syncing account settings to the server.",
@@ -14761,32 +14433,6 @@
       ]
     },
     {
-      "id": "sync-ai-threads",
-      "name": "Sync AI Threads",
-      "description": "Acquire AI Threads via sync.",
-      "isDefault": true,
-      "platforms": [
-        "Mac",
-        "Windows",
-        "Linux",
-        "ChromeOS"
-      ],
-      "options": [
-        {
-          "name": "Default",
-          "selected": false
-        },
-        {
-          "name": "Enabled",
-          "selected": false
-        },
-        {
-          "name": "Disabled",
-          "selected": false
-        }
-      ]
-    },
-    {
       "id": "sync-autofill-valuable-metadata",
       "name": "Sync autofill valuable metadata",
       "description": "Enables syncing valuable metadata for autofill to the server.",
@@ -14797,32 +14443,6 @@
         "Linux",
         "ChromeOS",
         "Android"
-      ],
-      "options": [
-        {
-          "name": "Default",
-          "selected": false
-        },
-        {
-          "name": "Enabled",
-          "selected": false
-        },
-        {
-          "name": "Disabled",
-          "selected": false
-        }
-      ]
-    },
-    {
-      "id": "sync-gemini-threads",
-      "name": "Sync Gemini Threads",
-      "description": "Acquire Gemini Threads via sync.",
-      "isDefault": true,
-      "platforms": [
-        "Mac",
-        "Windows",
-        "Linux",
-        "ChromeOS"
       ],
       "options": [
         {
@@ -14998,32 +14618,6 @@
       ]
     },
     {
-      "id": "tab-group-hover-cards",
-      "name": "Tab group header hover cards",
-      "description": "Enables hover cards for tab group headers in the tab strip.",
-      "isDefault": true,
-      "platforms": [
-        "Mac",
-        "Windows",
-        "Linux",
-        "ChromeOS"
-      ],
-      "options": [
-        {
-          "name": "Default",
-          "selected": false
-        },
-        {
-          "name": "Enabled",
-          "selected": false
-        },
-        {
-          "name": "Disabled",
-          "selected": false
-        }
-      ]
-    },
-    {
       "id": "tab-group-ribbon",
       "name": "Tab Group Ribbon",
       "description": "Displays a vertical ribbon on the left side of the browser window for quickly switching between tab groups.",
@@ -15128,9 +14722,9 @@
       ]
     },
     {
-      "id": "temporary-unexpire-flags-m153",
-      "name": "Temporarily unexpire M153 flags.",
-      "description": "Temporarily unexpire flags that expired as of M153. These flags will be removed soon.",
+      "id": "temporary-unexpire-flags-m154",
+      "name": "Temporarily unexpire M154 flags.",
+      "description": "Temporarily unexpire flags that expired as of M154. These flags will be removed soon.",
       "isDefault": true,
       "platforms": [
         "Mac",
@@ -15155,9 +14749,9 @@
       ]
     },
     {
-      "id": "temporary-unexpire-flags-m154",
-      "name": "Temporarily unexpire M154 flags.",
-      "description": "Temporarily unexpire flags that expired as of M154. These flags will be removed soon.",
+      "id": "temporary-unexpire-flags-m155",
+      "name": "Temporarily unexpire M155 flags.",
+      "description": "Temporarily unexpire flags that expired as of M155. These flags will be removed soon.",
       "isDefault": true,
       "platforms": [
         "Mac",
@@ -15249,33 +14843,6 @@
       ]
     },
     {
-      "id": "throttle-main-thread-to-60hz",
-      "name": "throttle-main-thread-to-60hz",
-      "description": "Throttle main thread updates to 60fps, even when VSync rate is higher.",
-      "isDefault": true,
-      "platforms": [
-        "Mac",
-        "Windows",
-        "Linux",
-        "ChromeOS",
-        "Android"
-      ],
-      "options": [
-        {
-          "name": "Default",
-          "selected": false
-        },
-        {
-          "name": "Enabled",
-          "selected": false
-        },
-        {
-          "name": "Disabled",
-          "selected": false
-        }
-      ]
-    },
-    {
       "id": "throttle-repeated-no-damage-frames",
       "name": "Throttle repeated no-damage frames",
       "description": "Throttle main thread updates after we get many frames in a row with no updates.",
@@ -15315,33 +14882,6 @@
         "Android"
       ],
       "options": []
-    },
-    {
-      "id": "tls-trust-anchor-ids",
-      "name": "TLS Trust Anchor IDs",
-      "description": "This option configures TLS Trust Anchor IDs, allowing compatible servers to select between available certificates issued by different CAs.",
-      "isDefault": true,
-      "platforms": [
-        "Mac",
-        "Windows",
-        "Linux",
-        "ChromeOS",
-        "Android"
-      ],
-      "options": [
-        {
-          "name": "Default",
-          "selected": false
-        },
-        {
-          "name": "Enabled",
-          "selected": false
-        },
-        {
-          "name": "Disabled",
-          "selected": false
-        }
-      ]
     },
     {
       "id": "toolbar-glow-up",
@@ -15403,32 +14943,6 @@
         },
         {
           "name": "Enabled",
-          "selected": false
-        }
-      ]
-    },
-    {
-      "id": "translate-open-settings",
-      "name": "Translate Open Settings",
-      "description": "Add an option to the translate bubble menu to open language settings.",
-      "isDefault": true,
-      "platforms": [
-        "Mac",
-        "Windows",
-        "Linux",
-        "ChromeOS"
-      ],
-      "options": [
-        {
-          "name": "Default",
-          "selected": false
-        },
-        {
-          "name": "Enabled",
-          "selected": false
-        },
-        {
-          "name": "Disabled",
           "selected": false
         }
       ]
@@ -15883,32 +15397,6 @@
         "Linux",
         "ChromeOS",
         "Android"
-      ],
-      "options": [
-        {
-          "name": "Default",
-          "selected": false
-        },
-        {
-          "name": "Enabled",
-          "selected": false
-        },
-        {
-          "name": "Disabled",
-          "selected": false
-        }
-      ]
-    },
-    {
-      "id": "web-app-install-dialog",
-      "name": "Web App install dialog",
-      "description": "Enables the new web app install dialog.",
-      "isDefault": true,
-      "platforms": [
-        "Mac",
-        "Windows",
-        "Linux",
-        "ChromeOS"
       ],
       "options": [
         {
@@ -16868,6 +16356,37 @@
       ]
     },
     {
+      "id": "default-browser-sticky-modal",
+      "name": "Default Browser Sticky Modal",
+      "description": "Enables the sticky modal dialog for the default browser prompt. Requires #default-browser-prompt-surfaces to be set to a modal dialog variation.",
+      "isDefault": true,
+      "platforms": [
+        "Windows"
+      ],
+      "options": [
+        {
+          "name": "Default",
+          "selected": false
+        },
+        {
+          "name": "Enabled",
+          "selected": false
+        },
+        {
+          "name": "Enabled with Settings Illustration",
+          "selected": false
+        },
+        {
+          "name": "Enabled without Settings Illustration",
+          "selected": false
+        },
+        {
+          "name": "Disabled",
+          "selected": false
+        }
+      ]
+    },
+    {
       "id": "double-buffer-compositing",
       "name": "Double buffered compositing",
       "description": "Use double buffer for compositing (instead of triple-buffering). Latency should be reduced in some cases. On the other hand, more skipped frames are expected.",
@@ -17196,6 +16715,29 @@
       "id": "ntp-customize-webui-android",
       "name": "Customize WebUI Android",
       "description": "Enables Customize WebUI on Android.",
+      "isDefault": true,
+      "platforms": [
+        "Android"
+      ],
+      "options": [
+        {
+          "name": "Default",
+          "selected": false
+        },
+        {
+          "name": "Enabled",
+          "selected": false
+        },
+        {
+          "name": "Disabled",
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "ntp-enable-instant-api-android",
+      "name": "Enable Instant API on Android",
+      "description": "Enables Instant API for Android devices.",
       "isDefault": true,
       "platforms": [
         "Android"
